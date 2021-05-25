@@ -9,30 +9,30 @@ const FrontPage = () => {
   return (
     <Main>
       <Header
-      title='TANTVERK'
+        title='TANTVERK'
       />
       <Link to='/collage'>
       <Section
-      title='HANTVERK'
-      backgroundColor='#E70410'
+        title='HANTVERK'
+        backgroundColor='#E70410'
       />
       </Link>
       <Link to='/about'>
       <Section
-      title='OM'
-      backgroundColor='#BC0A1E'
+        title='OM'
+        backgroundColor='#BC0A1E'
       />
       </Link>
-      <Link to='/event'>
+      <Link to='/events'>
       <Section
-      title='UTSTÄLLNINGAR'
-      backgroundColor='#70731B'
+        title='UTSTÄLLNINGAR'
+        backgroundColor='#70731B'
       />
       </Link>
       <Link to='/bulletin'>
       <Section
-      title='ANSLAGSTAVLA'
-      backgroundColor='#D6C667'
+        title='ANSLAGSTAVLA'
+        backgroundColor='#D6C667'
       />
       </Link>
     </Main>
@@ -42,6 +42,6 @@ const FrontPage = () => {
 export default FrontPage
 
 const Main = styled.main`
-  background-color: #000;
+  background-color: #000000;
   height: 100vh;
 `

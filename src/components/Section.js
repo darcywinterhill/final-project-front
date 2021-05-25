@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Section = ({ title, backgroundColor }) => {
   return (
     <SectionContainer
-    backgroundColor={backgroundColor}>
+      backgroundColor={backgroundColor}>
     <SectionTitle>
       {title}
     </SectionTitle>

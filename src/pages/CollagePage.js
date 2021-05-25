@@ -4,11 +4,19 @@ import styled from 'styled-components'
 
 import Header from '../components/Header'
 
-const CollagePage = ({ title }) => {
+const CollagePage = () => {
   return (
     <Main>
       <Header
-      title='HANTVERK'
+        title='HANTVERK'
+        backLink='TILLBAKA'
+        backLinkRoute='/'
+        linkOne='OM'
+        linkOneRoute='/about'
+        linkTwo='UTSTÄLLNINGAR'
+        linkTwoRoute='/events'
+        linkThree='ANSLAGSTAVLA'
+        linkThreeRoute='/bulletin'
       />
     </Main>
   )

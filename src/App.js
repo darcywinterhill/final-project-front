@@ -1,4 +1,6 @@
 import React from 'react'
+/* import { Provider } from 'react-redux' */
+/* import { combineReducers, configureStore } from '@reduxjs/toolkit' */
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import FrontPage from './pages/FrontPage'
@@ -14,7 +16,7 @@ export const App = () => {
         <Route path='/' exact component={FrontPage}/>
         <Route path='/collage' exact component={CollagePage}/>
         <Route path='/about' exact component={AboutPage}/>
-        <Route path='/event' exact component={EventPage}/>
+        <Route path='/events' exact component={EventPage}/>
         <Route path='/bulletin' exact component={BulletinPage}/>
       {/* </Provider> */}
     </BrowserRouter>

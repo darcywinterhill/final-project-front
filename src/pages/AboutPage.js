@@ -4,11 +4,19 @@ import styled from 'styled-components'
 
 import Header from '../components/Header'
 
-const AboutPage = ({ title }) => {
+const AboutPage = () => {
   return (
     <Main>
       <Header
-      title='OM'
+        title='OM'
+        backLink='TILLBAKA'
+        backLinkRoute='/'
+        linkOne='HANTVERK'
+        linkOneRoute='/collage'
+        linkTwo='UTSTÄLLNINGAR'
+        linkTwoRoute='/events'
+        linkThree='ANSLAGSTAVLA'
+        linkThreeRoute='/bulletin'
       />
     </Main>
   )

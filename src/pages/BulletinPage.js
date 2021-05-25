@@ -4,11 +4,19 @@ import styled from 'styled-components'
 
 import Header from '../components/Header'
 
-const BulletinPage = ({ title }) => {
+const BulletinPage = () => {
   return (
     <Main>
       <Header
-      title='ANSLAGSTAVLA'
+        title='ANSLAGSTAVLA'
+        backLink='TILLBAKA'
+        backLinkRoute='/'
+        linkOne='OM'
+        linkOneRoute='/about'
+        linkTwo='HANTVERK'
+        linkTwoRoute='/collage'
+        linkThree='UTSTÄLLNINGAR'
+        linkThreeRoute='/events'
       />
     </Main>
   )
