@@ -1,6 +1,6 @@
 import React from 'react'
-/* import { Provider } from 'react-redux' */
-/* import { combineReducers, configureStore } from '@reduxjs/toolkit' */
+import { Provider } from 'react-redux'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import FrontPage from './pages/FrontPage'
@@ -9,16 +9,24 @@ import AboutPage from './pages/AboutPage'
 import EventPage from './pages/EventPage'
 import BulletinPage from './pages/BulletinPage'
 
+import messages from './reducers/messages'
+
+const reducer = combineReducers({
+  messages: messages.reducer
+})
+
+const store = configureStore({ reducer })
+
 export const App = () => {
   return (
     <BrowserRouter>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <Route path='/' exact component={FrontPage}/>
         <Route path='/collage' exact component={CollagePage}/>
         <Route path='/about' exact component={AboutPage}/>
         <Route path='/events' exact component={EventPage}/>
         <Route path='/bulletin' exact component={BulletinPage}/>
-      {/* </Provider> */}
+      </Provider>
     </BrowserRouter>
   )
 }

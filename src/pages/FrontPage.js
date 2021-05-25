@@ -11,30 +11,30 @@ const FrontPage = () => {
       <Header
         title='TANTVERK'
       />
-      <Link to='/collage'>
+      <SectionLink to='/collage'>
       <Section
         title='HANTVERK'
         backgroundColor='#E70410'
       />
-      </Link>
-      <Link to='/about'>
+      </SectionLink>
+      <SectionLink to='/about'>
       <Section
         title='OM'
         backgroundColor='#BC0A1E'
       />
-      </Link>
-      <Link to='/events'>
+      </SectionLink>
+      <SectionLink to='/events'>
       <Section
         title='UTSTÄLLNINGAR'
         backgroundColor='#70731B'
       />
-      </Link>
-      <Link to='/bulletin'>
+      </SectionLink>
+      <SectionLink to='/bulletin'>
       <Section
         title='ANSLAGSTAVLA'
         backgroundColor='#D6C667'
       />
-      </Link>
+      </SectionLink>
     </Main>
   )
 }
@@ -42,6 +42,9 @@ const FrontPage = () => {
 export default FrontPage
 
 const Main = styled.main`
-  background-color: #000000;
+  background-color: #2A2522;
   height: 100vh;
+`
+const SectionLink = styled(Link)`
+text-decoration: none;
 `

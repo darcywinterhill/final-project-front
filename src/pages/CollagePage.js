@@ -3,20 +3,19 @@ import React/* , { useState } */ from 'react'
 import styled from 'styled-components'
 
 import Header from '../components/Header'
+import NavBar from '../components/NavBar'
 
 const CollagePage = () => {
   return (
     <Main>
       <Header
         title='HANTVERK'
-        backLink='TILLBAKA'
-        backLinkRoute='/'
-        linkOne='OM'
-        linkOneRoute='/about'
-        linkTwo='UTSTÄLLNINGAR'
-        linkTwoRoute='/events'
-        linkThree='ANSLAGSTAVLA'
-        linkThreeRoute='/bulletin'
+      />
+      <NavBar
+        collage='HANTVERK'
+        about='OM'
+        events='EVENTS'
+        bulletin='ANSLAGSTAVLA'
       />
     </Main>
   )

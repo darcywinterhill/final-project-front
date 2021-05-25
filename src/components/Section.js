@@ -23,11 +23,12 @@ const SectionContainer = styled.div.attrs(props => ({
   height: 17%;
   margin-bottom: 10px;
   background-color: ${props => props.backgroundColor};
-  border-top: dashed 3px white;
-  border-bottom: dashed 3px white;
+  border-top: dashed 2px white;
+  border-bottom: dashed 2px white;
 `
 const SectionTitle = styled.h2`
   color: #ffffff;
   margin: 0;
+  text-decoration: none;
 `
 
