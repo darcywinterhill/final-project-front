@@ -1,17 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
 /* import HeaderLinks from '../UI/HeaderLinks' */
-import img from '../assets/headerimg.jpg'
 import BackButton from '../UI/BackButton'
 
 const Header = ({
   title,
+  height
 }) => {
 
   return (
-    <HeaderContainer>
+    <HeaderContainer
+    height={height}>
       <HeaderTitle>
         {title}
       </HeaderTitle>
@@ -24,18 +25,16 @@ const Header = ({
 
 export default Header
 
-const HeaderContainer = styled.header`
-  position: relative;
+const HeaderContainer = styled.header.attrs(props => ({
+  height: props.height
+}))`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(${img});
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  height: 130px;
-  margin-bottom: 5px;
+  justify-self: start;
+  background-color: #BC0A1E;
+  height: ${props => props.height};
 `
 const NavLink = styled(Link)`
   text-decoration: none;

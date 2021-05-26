@@ -1,13 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
-const Section = ({ title, backgroundColor }) => {
+const Section = ({ title, containerWidth, backgroundColor }) => {
   return (
     <SectionContainer
-      backgroundColor={backgroundColor}>
-    <SectionTitle>
-      {title}
-    </SectionTitle>
+      containerWidth={containerWidth}
+      >
+      <SectionPatch
+        backgroundColor={backgroundColor}>
+        <SectionTitle>
+          {title}
+        </SectionTitle>
+    </SectionPatch>
   </SectionContainer>
   )
 }
@@ -15,20 +19,28 @@ const Section = ({ title, backgroundColor }) => {
 export default Section
 
 const SectionContainer = styled.div.attrs(props => ({
-  backgroundColor: props.backgroundColor
+  width: props.containerWidth
 }))`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 17%;
-  margin-bottom: 10px;
+  background-color: #2A2522;
+  width: ${props => props.containerWidth};
+  height: 100%;
+`
+const SectionPatch = styled.div.attrs(props => ({
+  backgroundColor: props.backgroundColor
+}))`
+  padding: 5px;
   background-color: ${props => props.backgroundColor};
-  border-top: dashed 2px white;
-  border-bottom: dashed 2px white;
 `
 const SectionTitle = styled.h2`
   color: #ffffff;
+  font-size: 18px;
   margin: 0;
+  padding: 5px 10px;
   text-decoration: none;
+  border: dashed black 1px;
 `
 
