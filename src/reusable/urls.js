@@ -1,0 +1,1 @@
+export const MESSAGE_API = 'https://tantverk.herokuapp.com/messages'

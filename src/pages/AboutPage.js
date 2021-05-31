@@ -1,16 +1,18 @@
 import React/* , { useState } */ from 'react'
-/* import { Link } from 'react-router-dom' */
 import styled from 'styled-components/macro'
 
 import Header from '../components/Header'
 import NavBar from '../components/NavBar'
+import BackButton from '../components/UI/BackButton'
 
 const AboutPage = () => {
   return (
     <Main>
       <Header
         title='OM'
-      />
+      >
+       <BackButton />
+      </Header>
       <NavBar
         collage='HANTVERK'
         about='OM'

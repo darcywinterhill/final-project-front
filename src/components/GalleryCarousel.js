@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import img1 from '../assets/mamma.jpg'
 
@@ -32,7 +32,7 @@ const GalleryCarousel = () => {
       <Carousel responsive={responsive}>
 
         <GalleryLink to='/collage/grannlåtsbroderi'>
-        <ImageContainer style={{backgroundImage: `url(${img1})`}}>
+        <ImageContainer /* style={{backgroundImage: `url(${img1})`}} */>
           <BlurContainer>
             <CollageTitle>
               GRANNLÅTSBRODERI

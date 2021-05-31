@@ -3,31 +3,27 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
 /* import HeaderLinks from '../UI/HeaderLinks' */
-import BackButton from '../components/UI/BackButton'
 
 import headerimg from '../assets/fabric-mobile.jpg'
 
 const Header = ({
-  title
+  title,
+  children
 }) => {
 
   return (
     <HeaderContainer>
       <HeaderTitle>
+        {children}
         {title}
       </HeaderTitle>
-      <NavLink to='/'>
-        <BackButton />
-      </NavLink>
     </HeaderContainer>
   )
 }
 
 export default Header
 
-const HeaderContainer = styled.header.attrs(props => ({
-  height: props.height,
-}))`
+const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,13 +33,22 @@ const HeaderContainer = styled.header.attrs(props => ({
   background-size: cover;
   overflow: hidden;
   height: 40%;
+    @media (min-width: 1025px) {
+      height: 100vh;
+    }
 `
-const NavLink = styled(Link)`
+/* const NavLink = styled(Link)`
   text-decoration: none;
-`
+` */
 const HeaderTitle = styled.h1`
 font-family: 'Noto Serif SC', serif;
   font-size: 35px;
   color: #ffffff;
   margin: 0;
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+    @media (min-width: 1025px) {
+      font-size: 62px;
+    }
 `

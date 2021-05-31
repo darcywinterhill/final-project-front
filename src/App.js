@@ -11,11 +11,9 @@ import EventPage from './pages/EventPage'
 import BulletinPage from './pages/BulletinPage'
 
 import messages from './reducers/messages'
-import sections from './reducers/sections'
 
 const reducer = combineReducers({
-  messages: messages.reducer,
-  sections: sections.reducer
+  messages: messages.reducer
 })
 
 const store = configureStore({ reducer })

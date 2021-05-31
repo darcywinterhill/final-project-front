@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oranienbaum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 body {
@@ -22,116 +23,104 @@ code {
   box-sizing: border-box;
 }
 
-/* :root {
-	font-size: 14px;
-}
-@media screen and (max-width: 767px){
-	:root {
-		font-size: 12px;
-	}
-}
-html,body{
-	padding: 0;
-	margin: 0;
-	font-family: Lato;
-}
-.slider {
-	width: 95vw;
-	height: 250px;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	line-height: 240px;
-  margin: auto;
-}
-.slider > .radio {
-	display: none;
-}
-
-/* slide items */
-/* .slider > .item {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-.slider > .radio:checked ~ .item {
-	transition: all .4s ease 0s;
+/* body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #1a1e23;
 } */
-/* labels ( prev. and next button ) */
-/* .slider > .label {
-	display: none;
-	position: absolute;
-	z-index: 4;
-	top: 0;
-	height: 100%;
-	width: 40px;
-	background-color: rgba( 255, 255, 255, .5 );
-	opacity: 0;
-	transition: opacity .2s ease 0s;
-}
-.slider:hover > .label {
-	opacity: 1;
-	transition: opacity .2s ease 0s;
+/* ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
 } */
-/* indicators */
-/* .slider > .indicator {
-	position: relative;
-	display: inline-block;
-	bottom: 5px;
-	z-index: 5;
-	width: 10px;
-	height: 10px;
-	border-radius: 5px;
-	background-color: rgba( 255, 255, 255, .5 );
-	vertical-align: bottom;
-	line-height: 1;
-	opacity: 0;
-	transition: opacity .2s ease 0s;
+/* ul li {
+  padding: 6px 0;
+} */
+/* ul li a {
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  font-family: Lato, sans-serif;
+  color: #ecf0f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+} */
+/* ul li a::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
 }
-.slider:hover > .indicator {
-	opacity: 1;
-	transition: opacity .2s ease 0s;
+ul li a:hover {
+  color: #95a5a6;
 }
-.slider > .indicator label {
-	display: block;
-	width: 100%;
-	height: 100%;
+ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 } */
 
 
-/* [ active slide item ] asterisks: slide.length - 1 */
-/* .slider > .radio:checked + * + * + * + * + .item {
-	left: 0;
-	z-index: 3;
+input.checkbox-menu[type="checkbox"] {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input.checkbox-menu[type="checkbox"]:checked ~ div.menu-block {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-icon {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0.5em;
+  vertical-align: middle;
+  
+}
+
+.menu-block {
+  display: inline-block;
+  opacity: 0;
+  vertical-align: middle;
+  visibility: hidden;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+ul.navUL {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ul.navUL li {
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+ul.navUL li a {
+  color: #999999;
+  display: block;
+  padding: 3px;
+  text-decoration: none;
 } */
-/* [ previous slide item ] asterisks: slide.length - 2 */
-/* .slider > .radio:checked + * + * + * + .item,
-.slider > .radio:first-of-type:checked ~ .item:last-of-type {
-	left: -100%;
-	z-index: 2;
+
+/* ul.navUL li a:hover {
+  color: #000000;
+  text-decoration: none;
 } */
-/* [ next slide item ] asterisks: slide.length */
-/* .slider > .radio:checked + * + * + * + * + * + .item,
-.slider > .radio:last-of-type:checked ~ .item:first-of-type {
-	left: 100%;
-	z-index: 2;
-} */
-/* [ previous button ] asterisks: ( slide.length - 1 ) * 2 */
-/* .slider > .radio:checked + * + * + * + * + * + * + * + * + .label,
-.slider > .radio:first-of-type:checked ~ .label:last-of-type {
-	left: 0;
-	display: block;
-} */
-/* [ next button ] asterisks: slide.length * 2 */
-/* .slider > .radio:checked + * + * + * + * + * + * + * + * + * + * + .label,
-.slider > .radio:last-of-type:checked ~ .label:first-of-type {
-	right: 0;
-	display: block;
-} */
-/* [ active indicator ] asterisks: ( slide.length * 3 ) - 1 */
-/* .slider > .radio:checked + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .indicator {
-	background-color: rgba( 127, 127, 127, .5 );
-}  */
+

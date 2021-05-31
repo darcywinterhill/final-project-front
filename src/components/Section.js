@@ -1,72 +1,63 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
+
 const Section = ({
   title,
   number,
   text,
-  flex,
   color,
-  img,
-  alt,
-  height,
-  width,
-  backgroundColor,
-  margin
+  backgroundColor
 }) => {
 
   return (
     <SectionContainer
       backgroundColor={backgroundColor}
-      flex={flex}>
-      <SectionText>
-        {number}
-      </SectionText>
+    >
+
       <SectionTitle
         color={color}
-        margin={margin}>
-          {title}
+      >
+        {title}
       </SectionTitle>
-      <SectionText>
-        {text}
-      </SectionText>
-      <img
-        src={img}
-        alt={alt}
-        height={height}
-        width={width}
-      />
+
     </SectionContainer>
   )
 }
 
 export default Section
 
-const SectionContainer = styled.div.attrs(props => ({
-  backgroundColor: props.backgroundColor,
-  flex: props.flex
-}))`
+const SectionContainer = styled.div`
   display: flex;
-  flex-direction: ${props => props.flex};
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 150px;
   background-color: ${props => props.backgroundColor};
   padding: 2.5%;
 `
-const SectionTitle = styled.h2.attrs(props => ({
-  color: props.color,
-  margin: props.margin
-}))`
+const SectionTitle = styled.h2`
   font-family: 'Noto Serif SC', serif;
   color: ${props => props.color};
   font-size: 28px;
-  margin: ${props => props.margin};
   text-decoration: none;
-`
-const SectionText = styled.p`
-  color: white;
-  font-size: 14px;
-  text-align: center;
-  padding
+  -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+    :hover {
+    font-size: 2.5em;
+    }
+      @media (min-width: 768px) {
+        font-size: 38px;
+        :hover {
+          font-size: 3em;      
+        }
+      }
+      @media (min-width: 1025px) {
+        font-size: 44px;
+        :hover {
+          font-size: 3em;
+        }   
+      }
 `

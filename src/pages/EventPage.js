@@ -3,6 +3,7 @@ import React/* , { useState } */ from 'react'
 import styled from 'styled-components'
 
 import Header from '../components/Header'
+import BackButton from '../components/UI/BackButton'
 import NavBar from '../components/NavBar'
 
 const EventPage = () => {
@@ -10,7 +11,9 @@ const EventPage = () => {
     <Main>
       <Header
         title='EVENTS'
-      />
+      >
+        <BackButton />
+      </Header>
       <NavBar
         collage='HANTVERK'
         about='OM'

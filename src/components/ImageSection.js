@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import img from '../assets/headerimg.jpg'
+/* import img from '../assets/headerimg.jpg' */
 
-const ImageSection = ({ backgroundColor, text }) => {
+const ImageSection = ({ backgroundColor, backgroundImage, text }) => {
   return (
     <SectionContainer
     backgroundColor={backgroundColor}>
-        <ImageContainer>
+        <ImageContainer
+        backgroundImage={backgroundImage}>
           <QuoteContainer>
             <Quote>
               {text}
@@ -27,7 +28,7 @@ const SectionContainer = styled.div`
   padding: 2.5%;
 `
 const ImageContainer = styled.div`
-background-image: url(${img});
+background-image: url(${props => props.backgroundImage});
 background-color: rgba(0,0,0, 0.5);
 background-size: cover;
 overflow: hidden;

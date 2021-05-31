@@ -5,71 +5,41 @@ import styled from 'styled-components/macro'
 import Header from '../components/Header'
 import Section from '../components/Section'
 import ImageSection from '../components/ImageSection'
-import AboutSection from '../components/AboutSection'
+import headerimg from '../assets/fabric-mobile.jpg'
 
-import img from '../assets/mamma.jpg'
-
+import img1 from '../assets/headerimg.jpg'
+import img2 from '../assets/section-mobile.jpg'
 
 const FrontPage = () => {
   return (
     <Main>
-      <Header
-        title='TANTVERK'
-      />
-      <SectionWrapper>
-        <AboutSection />
-
-        <SectionLink to='/collage'>
-        <Section
-          title='Hantverk'
-          number='1.'
-          flex='column'
-          backgroundColor='#ebe2ab'
-          color='#330202'
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-        />
-        </SectionLink>
-
-        <ImageSection
-          backgroundColor='#D6C667'
-          text='Some quote goes here'
-        />
-
-        <SectionLink to='/events'>
-        <Section
-          title='Events'
-          number='2.'
-          backgroundColor='#ebe2ab'
-          color='#330202'
-          margin='auto'
-        />
-        </SectionLink>
-
-        <SectionLink to='/about'>
-        <Section
-          title='Om'
-          number='3.'
-          img={img}
-          height='100px'
-          width='auto'
-          alt='Image of Lotta'
-          backgroundColor='#D6C667'
-          color='white'
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'
-        />
-        </SectionLink>
-
-        <SectionLink to='/bulletin'>
-        <Section
-          title='Anslagstavla'
-          number='4.'
-          backgroundColor='#ebe2ab'
-          color='#330202'
-          margin='auto'
-        />
-        </SectionLink>
-
-      </SectionWrapper>
+      <HeaderTitle>
+        TANTVERK
+      </HeaderTitle>
+      <MenuContainer>
+    <Menu>
+      <SectionLink to='/collage'>
+      <ListItem>
+        hantverk
+      </ListItem>
+      </SectionLink>
+      <SectionLink to='/about'>
+      <ListItem>
+        om
+      </ListItem>
+      </SectionLink>
+      <SectionLink to='/events'>
+      <ListItem>
+        events
+      </ListItem>
+      </SectionLink>
+      <SectionLink to='/events'>
+      <ListItem>
+        anslagstavla
+      </ListItem>
+      </SectionLink>
+    </Menu>
+    </MenuContainer>
     </Main>
   )
 }
@@ -78,15 +48,72 @@ export default FrontPage
 
 const Main = styled.main`
 height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+justify-self: start;
+background-image: url(${headerimg});
+background-size: cover;
+overflow: hidden;
 `
-const SectionWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+const HeaderTitle = styled.h1`
+font-family: 'Noto Serif SC', serif;
+  font-size: 42px;
+  color: #ffffff;
+  margin: 0;
+  border-bottom: dashed white 2px;
+    @media (min-width: 768px) {
+      font-size: 62px;
+      border-bottom: dashed white 3px;
+    }
+    @media (min-width: 1025px) {
+      font-size: 72px;
+    }
+`
+const MenuContainer = styled.div`
+border-left: dashed white 2px;
+    @media (min-width: 768px) {
+      border-left: dashed white 3px;
+    }
+`
+const Menu = styled.ul`
+display: flex;
+flex-direction: column;
+align-items: start;
+list-style-type: none;
+padding-left: 10px;
+`
+const ListItem = styled.li`
+padding: 6px 0;
 `
 const SectionLink = styled(Link)`
+position: relative;
+display: block;
+padding: 4px 0;
+font-family: Lato, sans-serif;
+color: #ffffff;
+font-size: 24px;
 text-decoration: none;
-width: 100%;
+text-transform: uppercase;
+transition: 0.5s;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3c7322;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
 `
