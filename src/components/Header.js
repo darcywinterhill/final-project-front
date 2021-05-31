@@ -3,16 +3,16 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
 /* import HeaderLinks from '../UI/HeaderLinks' */
-import BackButton from '../UI/BackButton'
+import BackButton from '../components/UI/BackButton'
+
+import headerimg from '../assets/fabric-mobile.jpg'
 
 const Header = ({
-  title,
-  height
+  title
 }) => {
 
   return (
-    <HeaderContainer
-    height={height}>
+    <HeaderContainer>
       <HeaderTitle>
         {title}
       </HeaderTitle>
@@ -26,22 +26,24 @@ const Header = ({
 export default Header
 
 const HeaderContainer = styled.header.attrs(props => ({
-  height: props.height
+  height: props.height,
 }))`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   justify-self: start;
-  background-color: #BC0A1E;
-  height: ${props => props.height};
+  background-image: url(${headerimg});
+  background-size: cover;
+  overflow: hidden;
+  height: 40%;
 `
 const NavLink = styled(Link)`
   text-decoration: none;
 `
 const HeaderTitle = styled.h1`
-  font-family: 'Oranienbaum', serif;
-  font-size: 45px;
+font-family: 'Noto Serif SC', serif;
+  font-size: 35px;
   color: #ffffff;
   margin: 0;
 `

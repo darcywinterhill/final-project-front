@@ -1,18 +1,21 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import FrontPage from './pages/FrontPage'
 import CollagePage from './pages/CollagePage'
+import CraftPage from './pages/CraftPage'
 import AboutPage from './pages/AboutPage'
 import EventPage from './pages/EventPage'
 import BulletinPage from './pages/BulletinPage'
 
 import messages from './reducers/messages'
+import sections from './reducers/sections'
 
 const reducer = combineReducers({
-  messages: messages.reducer
+  messages: messages.reducer,
+  sections: sections.reducer
 })
 
 const store = configureStore({ reducer })
@@ -21,11 +24,14 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <Route path='/' exact component={FrontPage}/>
-        <Route path='/collage' exact component={CollagePage}/>
-        <Route path='/about' exact component={AboutPage}/>
-        <Route path='/events' exact component={EventPage}/>
-        <Route path='/bulletin' exact component={BulletinPage}/>
+        <Switch>
+          <Route path='/' exact component={FrontPage}/>
+          <Route path='/collage' component={CollagePage}/>
+          <Route path='/collage/:craft' component={CraftPage} />
+          <Route path='/about' component={AboutPage}/>
+          <Route path='/events' component={EventPage}/>
+          <Route path='/bulletin' component={BulletinPage}/>
+        </Switch>
       </Provider>
     </BrowserRouter>
   )

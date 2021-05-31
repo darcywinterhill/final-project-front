@@ -24,6 +24,6 @@ const BulletinPage = () => {
 export default BulletinPage
 
 const Main = styled.main`
-  background-color: #D6C667;
+  background-color: #ebe2ab;
   height: 100vh;
 `

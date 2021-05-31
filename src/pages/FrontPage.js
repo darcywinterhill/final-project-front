@@ -4,45 +4,71 @@ import styled from 'styled-components/macro'
 
 import Header from '../components/Header'
 import Section from '../components/Section'
+import ImageSection from '../components/ImageSection'
+import AboutSection from '../components/AboutSection'
+
+import img from '../assets/mamma.jpg'
+
 
 const FrontPage = () => {
   return (
     <Main>
       <Header
         title='TANTVERK'
-        height='40%'
       />
       <SectionWrapper>
+        <AboutSection />
+
         <SectionLink to='/collage'>
         <Section
-          title='HANTVERK'
-          containerWidth='180px'
-          backgroundColor='#E70410'
-        />
-        </SectionLink>
-        <SectionLink to='/events'>
-        <Section
-          title='EVENTS'
-          containerWidth='130px'
-          backgroundColor='#70731B'
+          title='Hantverk'
+          number='1.'
+          flex='column'
+          backgroundColor='#ebe2ab'
+          color='#330202'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
         />
         </SectionLink>
 
+        <ImageSection
+          backgroundColor='#D6C667'
+          text='Some quote goes here'
+        />
+
+        <SectionLink to='/events'>
+        <Section
+          title='Events'
+          number='2.'
+          backgroundColor='#ebe2ab'
+          color='#330202'
+          margin='auto'
+        />
+        </SectionLink>
 
         <SectionLink to='/about'>
         <Section
-          title='OM'
-          containerWidth='110px'
-          backgroundColor='#BC0A1E'
+          title='Om'
+          number='3.'
+          img={img}
+          height='100px'
+          width='auto'
+          alt='Image of Lotta'
+          backgroundColor='#D6C667'
+          color='white'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'
         />
         </SectionLink>
+
         <SectionLink to='/bulletin'>
         <Section
-          title='ANSLAGSTAVLA'
-          containerWidth='200px'
-          backgroundColor='#D6C667'
+          title='Anslagstavla'
+          number='4.'
+          backgroundColor='#ebe2ab'
+          color='#330202'
+          margin='auto'
         />
         </SectionLink>
+
       </SectionWrapper>
     </Main>
   )
@@ -51,11 +77,7 @@ const FrontPage = () => {
 export default FrontPage
 
 const Main = styled.main`
-  background-color: #ffffff;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+height: 100vh;
 `
 const SectionWrapper = styled.div`
   display: flex;
@@ -63,10 +85,8 @@ const SectionWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  margin-bottom: 10%;
 `
 const SectionLink = styled(Link)`
 text-decoration: none;
-height: 50%;
+width: 100%;
 `

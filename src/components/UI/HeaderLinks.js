@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -34,4 +34,4 @@ top: 0;
 width: 100%;
 `
 const PageLink = styled.h4`
-`
+` */

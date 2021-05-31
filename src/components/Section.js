@@ -1,46 +1,72 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-const Section = ({ title, containerWidth, backgroundColor }) => {
+const Section = ({
+  title,
+  number,
+  text,
+  flex,
+  color,
+  img,
+  alt,
+  height,
+  width,
+  backgroundColor,
+  margin
+}) => {
+
   return (
     <SectionContainer
-      containerWidth={containerWidth}
-      >
-      <SectionPatch
-        backgroundColor={backgroundColor}>
-        <SectionTitle>
+      backgroundColor={backgroundColor}
+      flex={flex}>
+      <SectionText>
+        {number}
+      </SectionText>
+      <SectionTitle
+        color={color}
+        margin={margin}>
           {title}
-        </SectionTitle>
-    </SectionPatch>
-  </SectionContainer>
+      </SectionTitle>
+      <SectionText>
+        {text}
+      </SectionText>
+      <img
+        src={img}
+        alt={alt}
+        height={height}
+        width={width}
+      />
+    </SectionContainer>
   )
 }
 
 export default Section
 
 const SectionContainer = styled.div.attrs(props => ({
-  width: props.containerWidth
+  backgroundColor: props.backgroundColor,
+  flex: props.flex
 }))`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 17%;
-  background-color: #2A2522;
-  width: ${props => props.containerWidth};
-  height: 100%;
-`
-const SectionPatch = styled.div.attrs(props => ({
-  backgroundColor: props.backgroundColor
-}))`
-  padding: 5px;
+  flex-direction: ${props => props.flex};
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
   background-color: ${props => props.backgroundColor};
+  padding: 2.5%;
 `
-const SectionTitle = styled.h2`
-  color: #ffffff;
-  font-size: 18px;
-  margin: 0;
-  padding: 5px 10px;
+const SectionTitle = styled.h2.attrs(props => ({
+  color: props.color,
+  margin: props.margin
+}))`
+  font-family: 'Noto Serif SC', serif;
+  color: ${props => props.color};
+  font-size: 28px;
+  margin: ${props => props.margin};
   text-decoration: none;
-  border: dashed black 1px;
 `
-
+const SectionText = styled.p`
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding
+`

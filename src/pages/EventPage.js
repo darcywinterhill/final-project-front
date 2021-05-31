@@ -24,6 +24,6 @@ const EventPage = () => {
 export default EventPage
 
 const Main = styled.main`
-  background-color: #70731B;
+  background-color: #ebe2ab;
   height: 100vh;
 `
