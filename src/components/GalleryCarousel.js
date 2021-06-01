@@ -4,9 +4,6 @@ import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import img1 from '../assets/mamma.jpg'
-
-
 const GalleryCarousel = () => {
 
   const responsive = {
@@ -34,9 +31,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/collage/grannlåtsbroderi'>
         <ImageContainer /* style={{backgroundImage: `url(${img1})`}} */>
           <BlurContainer>
-            <CollageTitle>
-              GRANNLÅTSBRODERI
-            </CollageTitle>
+              grannlåtsbroderi
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -44,9 +39,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              TRÅDSLÖJD
-            </CollageTitle>
+              trådslöjd
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -54,9 +47,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              CEMENTGJUTNING
-            </CollageTitle>
+              cementgjutning
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -64,9 +55,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              FRITT BRODERI
-            </CollageTitle>
+              fritt broderi
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -74,9 +63,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              SKINN/LÄDER
-            </CollageTitle>
+              skinn/läder
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -84,9 +71,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              TENNTRÅDSSLÖJD
-            </CollageTitle>
+              tenntrådsslöjd
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -94,9 +79,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              HÄLSOMÅLNING
-            </CollageTitle>
+              hälsomålning
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -104,9 +87,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              BILDVÄVNING
-            </CollageTitle>
+              bildvävning
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -114,9 +95,7 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
-            <CollageTitle>
-              ULLPROJEKT
-            </CollageTitle>
+              ullprojekt
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -130,27 +109,36 @@ const GalleryCarousel = () => {
 export default GalleryCarousel
 
 const Main = styled.div`
-width: 100vw;
+  width: 100vw;
 `
-
 const ImageContainer = styled.div`
-width: 100%;
-height: 55vh;
-background-size: cover;
-overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  overflow: hidden;
+    @media (min-width: 768px) {
+      height: 40vh;
+    }
+    @media (min-width: 1025px) {
+      height: 55vh;
+    }
 `
 const BlurContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: rgba(0, 0, 0, 0.24);
-width: 100%;
-height: 100%;
-`
-const CollageTitle = styled.h2`
-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
 `
 const GalleryLink = styled(Link)`
-text-decoration: none;
-width: 100%;
+  text-decoration: none;
+  width: 100%;
+  font-family: Lato, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 22px;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
 `

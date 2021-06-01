@@ -1,28 +1,21 @@
-import React/* , { useState } */ from 'react'
-/* import { Link } from 'react-router-dom'*/
+import React from 'react'
 import styled from 'styled-components'
 
-import Header from '../components/Header'
 import NavBar from '../components/NavBar'
-import BackButton from '../components/UI/BackButton'
+import Backdrop from '../components/Backdrop'
+import MessageForm from '../components/bulletin/MessageForm'
 /* import Messages from '../components/bulletin/Messages' */
+import headerimg from '../assets/fabric-mobile.jpg'
 
 const BulletinPage = () => {
 
   return (
     <Main>
-      <Header
-        title='ANSLAGSTAVLA'
-      >
-        <BackButton />
-      </Header>
-      <NavBar
-        collage='HANTVERK'
-        about='OM'
-        events='EVENTS'
-        bulletin='ANSLAGSTAVLA'
-      />
-{/*       <Messages /> */}
+      <NavBar/>
+      <MessageForm />
+      <Backdrop>
+      {/* <Messages /> */}
+      </Backdrop>
     </Main>
   )
 }
@@ -30,6 +23,20 @@ const BulletinPage = () => {
 export default BulletinPage
 
 const Main = styled.main`
-  background-color: #ebe2ab;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 15vh 0 5vh 0;
+  background-image: url(${headerimg});
+  background-size: cover;
+  overflow: hidden;
+    @media (min-width: 1025px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
 `

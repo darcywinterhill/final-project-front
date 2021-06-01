@@ -1,28 +1,28 @@
-/* import React, { useEffect, useState}  from 'react'
+import React  from 'react'
 
-import { MESSAGE_API } from 'reusable/urls'
+/* import { MESSAGE_API } from 'reusable/urls' */
 
 const Messages = () => {
-  const [messages, setMessages] = useState([])
-  
-  useEffect(() => {
-      fetch(MESSAGE_API)
-      .then(res => res.json())
-      .then(json => {
-          setMessages(json.messages)
-          console.log(json.messages)
-      })
-  }, [])
-
+ 
   return (
-    <>
+<>
     {messages.map((message) => (
-    <div {...message} key={message._id}/>
-    ))}
-</>
-  
+    <div key={message._id}>
+    <p>
+      {message.message}
+    </p>
+
+      <p>
+      {message.name}
+      </p>
+
+{/*     <p>
+      {moment(message.createdAt).fromNow()}
+    </p> */}
+
+  </div>))}
+  </>
   )
 }
 
 export default Messages
- */
