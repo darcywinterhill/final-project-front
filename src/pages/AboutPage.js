@@ -2,17 +2,21 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import NavBar from '../components/NavBar'
+import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
 
 import headerimg from '../assets/fabric-mobile.jpg'
 import bgimg from '../assets/profilebg.jpg'
-import profileimg from '../assets/mamma.jpg'
+import profileimg from '../assets/lotta.jpg'
 
 const AboutPage = () => {
 
   return (
     <Main>
       <NavBar />
+      <Title
+        title='OM'
+      />
       <ProfileContainer>
       <ProfileImg />
         <HeaderTitle>
@@ -20,7 +24,8 @@ const AboutPage = () => {
         </HeaderTitle>
       </ProfileContainer>
       <Backdrop
-        flex='column'>
+        flex='column'
+        width='60vw'>
         <AboutText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tellus risus, ornare eu mi in, malesuada venenatis dui. Duis scelerisque augue et tristique cursus. Vivamus consectetur mauris velit, fringilla rutrum ipsum suscipit quis. Vivamus eu nisi tempor, semper ex venenatis, hendrerit eros. Maecenas diam est, lobortis vitae odio quis, malesuada viverra neque. Maecenas in semper odio, et varius tortor. Nunc suscipit scelerisque lectus eget dignissim. Curabitur a convallis metus, eget pellentesque arcu. Donec sollicitudin mauris magna.
         </AboutText>
@@ -37,25 +42,28 @@ export default AboutPage
 const Main = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
   min-height: 100vh;
-  width: 100vw;
-  padding: 15vh 0 5vh 0;
+  max-width: 100vw;
   background-image: url(${headerimg});
   background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;
+  padding: 80px 0 30px 0;
+    @media (min-width: 768px) {
+      padding: 120px 0 30px 0;
+    }
 `
 const ProfileContainer = styled.div`
   display: flex;
-  padding: 10px;
-  margin-bottom: 15px;
+  width: 85vw;
   background-image: url(${bgimg});
   background-size: cover;
   border: dashed 2px #ffffff;
   border-radius: 12px;
-  width: 85vw;
+  margin-bottom: 15px;
+  padding: 10px;
     @media (min-width: 768px) {
       padding: 15px;
     }
@@ -67,10 +75,10 @@ const ProfileContainer = styled.div`
 const HeaderTitle = styled.h1`
   font-family: 'Noto Serif SC', serif;
   font-size: 32px;
-  width: 50%;
   color: #ffffff;
   display: flex;
   align-items: flex-end;
+  width: 50%;
   border-bottom: dashed 2px #e70410;
     @media (min-width: 768px) {
       font-size: 50px;
@@ -84,12 +92,12 @@ const HeaderTitle = styled.h1`
 const ProfileImg = styled.div`
   width: 120px;
   height: 120px;
-  margin-right: 15px;
-  border-radius: 50%;
   background-image: url(${profileimg});
   background-size: cover;
   overflow: hidden;
-  border: solid black 1px;
+  border: solid #70731b 2px;
+  border-radius: 50%;
+  margin-right: 15px;
    @media (min-width: 768px) {
     width: 180px;
     height: 180px;
@@ -98,8 +106,8 @@ const ProfileImg = styled.div`
 `
 const AboutText = styled.p`
   font-family: Lato, sans-serif;
-  color: #ffffff;
   font-size: 14px;
+  color: #ffffff;
   padding-top: 15px;
    @media (min-width: 768px) {
      font-size: 16px;

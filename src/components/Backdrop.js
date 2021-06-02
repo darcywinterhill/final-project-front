@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-const Backdrop = ({ children, flex, justify, align }) => {
+const Backdrop = ({ children, flex, justify, align, width }) => {
   return (
     <Container
       flex={flex}
       justify={justify}
-      align={align}>
+      align={align}
+      width={width}>
       {children}
     </Container>
   )
@@ -29,7 +30,7 @@ const Container = styled.div`
       min-height: 50vh;
     }
     @media (min-width: 1025px) {
-      width: 60vw;
-      min-height: 70vh;
+      width: ${props => props.width};
+      min-height: 50vh;
     }
 `

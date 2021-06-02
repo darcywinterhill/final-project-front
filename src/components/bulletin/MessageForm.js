@@ -47,64 +47,69 @@ const MessageForm = () => {
 export default MessageForm
 
 const FormContainer = styled.div`
+  display: flex;
   width: 85vw;
-  padding: 15px;
   background-image: url(${messageimg});
   background-size: cover;
   overflow: hidden;
-  border-radius: 12px;
   border: dashed 2px #ffffff;
+  border-radius: 12px;
   margin-bottom: 15px;
-   @media (min-width: 1025px) {
-     width: 60vw;
-   }
+  padding: 15px;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
    @media (min-width: 1025px) {
     width: 20vw;
     margin-right: 20px;
   }
 `
 const Form = styled.form`
-width: 100%;
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+    @media (min-width: 1025px) {
+      width: 100%;
+    }
 `
 const Label = styled.label`
-font-family: Lato, sans-serif;
-color: #2a2522;
-font-size: 18px;
-font-weight: bolder;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #2a2522;
+    @media (min-width: 768px) {
+      color: #ffffff;
+    }
+    @media (min-width: 1025px) {
+      color: #2a2522;
+    }
 `
 const NameInput = styled.input`
-font-family: Lato, sans-serif;
-padding: 5px;
-border-radius: 5px;
-margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
 `
 const MessageInput = styled.textarea`
-font-family: Lato, sans-serif;
-padding: 5px;
-height: 70px;
-border-radius: 5px;
-resize: none;
+  height: 70px;
+  font-family: Lato, sans-serif;
+  border-radius: 5px;
+  padding: 5px;
+  resize: none;
 `
 const Button = styled.button`
-font-family: Lato, sans-serif;
-margin-top: 10px;
-width: 100%;
-height: 50px;
-background-color: #bc0a1e;
-border: dashed 2px #ffffff;
-border-radius: 10px;
-color: #ffffff;
-@media (min-width: 768px) {
-  width: 30%;
-  align-self: flex-end;
-}
-@media (min-width: 1025px) {
   width: 100%;
-}
-
+  height: 50px;
+  background-color: #bc0a1e;
+  font-family: Lato, sans-serif;
+  color: #ffffff;
+  border: dashed 2px #ffffff;
+  border-radius: 10px;
+  margin-top: 10px;
 `
 const Icon = styled.i`
-margin-left: 10px;
+  margin-left: 10px;
 `

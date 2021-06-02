@@ -1,11 +1,15 @@
 import React from 'react'
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-const GalleryCarousel = () => {
+import img1 from '../assets/gallery/grannlåtsbroderi.jpg'
+import img6 from '../assets/gallery/tenntrådsslöjd.jpg'
+import img8 from '../assets/gallery/bildvävning.jpg'
+import img9 from '../assets/gallery/ullprojekt.jpg'
 
+const GalleryCarousel = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -23,13 +27,14 @@ const GalleryCarousel = () => {
       breakpoint: { max: 464, min: 0 },
       items: 1
     }
-  };
+  }
+
   return (
     <Main>
       <Carousel responsive={responsive}>
 
         <GalleryLink to='/collage/grannlåtsbroderi'>
-        <ImageContainer /* style={{backgroundImage: `url(${img1})`}} */>
+        <ImageContainer style={{backgroundImage: `url(${img1})`}}>
           <BlurContainer>
               grannlåtsbroderi
           </BlurContainer>
@@ -69,9 +74,9 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer>
+        <ImageContainer style={{backgroundImage: `url(${img6})`}}>
           <BlurContainer>
-              tenntrådsslöjd
+              tenntrådsbroderi
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -85,7 +90,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer>
+        <ImageContainer style={{backgroundImage: `url(${img8})`}}>
           <BlurContainer>
               bildvävning
           </BlurContainer>
@@ -93,7 +98,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer>
+        <ImageContainer style={{backgroundImage: `url(${img9})`}}>
           <BlurContainer>
               ullprojekt
           </BlurContainer>
@@ -109,35 +114,40 @@ const GalleryCarousel = () => {
 export default GalleryCarousel
 
 const Main = styled.div`
+
   width: 100vw;
+    @media (min-width: 1025px) {
+      width: 80vw;
+    }
 `
 const ImageContainer = styled.div`
-  width: 100%;
-  height: 50vh;
+  width: 300px;
+  height: 300px;
+  margin: auto;
   background-size: cover;
   overflow: hidden;
+  border: dashed 2px #ffffff;
+  border-radius: 12px;
     @media (min-width: 768px) {
-      height: 40vh;
-    }
-    @media (min-width: 1025px) {
-      height: 55vh;
+      width: 350px;
+      height: 350px;
     }
 `
 const BlurContainer = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.24);
+  background-color: rgba(0, 0, 0, 0.5);
 `
 const GalleryLink = styled(Link)`
-  text-decoration: none;
-  width: 100%;
   font-family: Lato, sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
   font-size: 22px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
     @media (min-width: 768px) {
       font-size: 30px;
     }

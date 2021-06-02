@@ -61,24 +61,25 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background-image: url(${headerimg});
   background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;
+  height: 100vh;
 `
 const HeaderTitle = styled.h1`
   font-family: 'Noto Serif SC', serif;
   font-size: 48px;
   color: #ffffff;
-  margin: 0;
-  padding: 0 10px;
   border-bottom: dashed white 2px;
   border-right: dashed white 2px;
+  margin: 0;
+  padding: 0 10px;
     @media (min-width: 768px) {
       font-size: 66px;
+      border-bottom: dashed #ffffff 3px;
+      border-right: dashed #ffffff 3px;
       padding: 0 15px;
-      border-bottom: dashed white 3px;
-      border-right: dashed white 3px;
     }
     @media (min-width: 1025px) {
       font-size: 72px;
@@ -87,15 +88,15 @@ const HeaderTitle = styled.h1`
 const MenuContainer = styled.div`
   border-left: dashed white 2px;
     @media (min-width: 768px) {
-      border-left: dashed white 3px;
+      border-left: dashed #ffffff 3px;
     }
 `
 const Menu = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: start;
-  list-style-type: none;
   padding-left: 10px;
+  list-style-type: none;
 `
 const ListItem = styled.li`
   padding: 6px 0;
@@ -107,14 +108,14 @@ const Icon = styled.i`
    }
 `
 const SectionLink = styled(Link)`
-  position: relative;
-  display: block;
-  padding: 4px 0;
   font-family: Lato, sans-serif;
   color: #ffffff;
   font-size: 22px;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;  
+  position: relative;
+  padding: 4px 0;
   transition: 0.5s;
     &::after {
       position: absolute;

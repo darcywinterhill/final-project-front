@@ -67,9 +67,9 @@ const NavBar = () => {
 export default NavBar
 
 const NavContainer = styled.div`
-  width: 100%;
-  position: absolute;
+  position: absolute;  
   top: 0;
+  width: 100%;
 `
 const Menu = styled.nav`
   padding-top: 20px;
@@ -82,15 +82,15 @@ const Label = styled.label`
 `
 const NavDiv = styled.div`
   display: inline-block;
-  padding: 0 15px;
   vertical-align: middle;
+  padding: 0 15px;
    @media (min-width: 768px) {
     padding: 0 20px;
    }
 `
 const MenuIcon = styled.i`
-  color: white;
   font-size: 26px;
+  color: white;
     @media (min-width: 768px) {
       font-size: 48px;
     }
@@ -102,15 +102,16 @@ const MenuList = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
+  width: 80vw;
   margin: 0;
   padding: 0;
-  width: 80vw;
-  @media (min-width: 768px) {
-    justify-content: flex-end;
-  }
-  @media (min-width: 1025px) {
-    width: 85vw;
-  }
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+      width: 82vw;
+    }
+    @media (min-width: 1025px) {
+      width: 88vw;
+    }
 `
 const ListItem = styled.li`
   display: inline-block;
@@ -118,14 +119,16 @@ const ListItem = styled.li`
 const NavLink = styled(Link)`
 `
 const Icon = styled.i`
-  color: white;
   font-size: 22px;
-  padding: 10px;
-  border-radius: 5px;
+  color: white;
   border: dashed 1px #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px rgba(33,33,33,.7);
     @media (min-width: 768px) {
       font-size: 36px;
-      margin: 0 0 0 35px;
       border: dashed 2px #ffffff;
+      margin: 0 0 0 35px;
+      box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     }
 `

@@ -22,11 +22,8 @@ const PostItContainer = styled.div`
   height: 250px;
   background-color: #ffffff;
   padding: 10px;
-  margin-bottom: 10px;
-    @media (min-width: 1025px) {
-      width: 450px;
-      height: 450px;
-    }
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 `
 const Title = styled.h3`
