@@ -6,14 +6,13 @@ import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
 import PostIt from '../components/PostIt'
 
-import headerimg from '../assets/fabric-mobile.jpg'
-
 const EventPage = () => {
   return (
     <Main>
-      <NavBar />
+      <Container>
+        <NavBar />
       <Title
-        title='EVENTS'
+        title='SEVÄRT'
       />
       <Backdrop
       flex='row'
@@ -41,6 +40,7 @@ const EventPage = () => {
         date='2020-08-15'
         /* backgroundImage={headerimg} *//>
         </Backdrop>
+      </Container>
     </Main>
   )
 }
@@ -53,14 +53,17 @@ const Main = styled.main`
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  background-image: url(${headerimg});
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
+
   min-height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
   padding: 80px 0 30px 0;
     @media (min-width: 768px) {
       padding: 120px 0 30px 0;
+    }
+`
+const Container = styled.div`
+  width: 85vw;
+    @media (min-width: 1025px) {
+      width: 60vw;
     }
 `

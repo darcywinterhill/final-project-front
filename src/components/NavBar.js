@@ -72,6 +72,7 @@ const NavContainer = styled.div`
   width: 100%;
 `
 const Menu = styled.nav`
+width: 100%;
   padding-top: 20px;
   @media (min-width: 768px) {
     padding-top: 30px;
@@ -83,14 +84,11 @@ const Label = styled.label`
 const NavDiv = styled.div`
   display: inline-block;
   vertical-align: middle;
-  padding: 0 15px;
-   @media (min-width: 768px) {
-    padding: 0 20px;
-   }
 `
 const MenuIcon = styled.i`
   font-size: 26px;
   color: white;
+  margin-right: 8px;
     @media (min-width: 768px) {
       font-size: 48px;
     }
@@ -100,35 +98,34 @@ const MenuIcon = styled.i`
 `
 const MenuList = styled.ul`
   display: flex;
-  justify-content: space-around;
   list-style: none;
-  width: 80vw;
   margin: 0;
   padding: 0;
     @media (min-width: 768px) {
-      justify-content: flex-end;
-      width: 82vw;
     }
     @media (min-width: 1025px) {
-      width: 88vw;
     }
 `
 const ListItem = styled.li`
   display: inline-block;
 `
 const NavLink = styled(Link)`
+width: 100%;
+height: 100%;
 `
 const Icon = styled.i`
   font-size: 22px;
   color: white;
   border: dashed 1px #ffffff;
   border-radius: 5px;
-  padding: 10px;
+  margin: 0 8px;
+  padding: 5px;
   box-shadow: 4px 4px 6px rgba(33,33,33,.7);
     @media (min-width: 768px) {
       font-size: 36px;
       border: dashed 2px #ffffff;
       margin: 0 0 0 35px;
+      padding: 8px;
       box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     }
 `

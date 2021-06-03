@@ -16,11 +16,11 @@ const GalleryCarousel = () => {
       items: 5
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 2999, min: 1025 },
       items: 3
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 465 },
       items: 2
     },
     mobile: {
@@ -34,7 +34,7 @@ const GalleryCarousel = () => {
       <Carousel responsive={responsive}>
 
         <GalleryLink to='/collage/grannlåtsbroderi'>
-        <ImageContainer style={{backgroundImage: `url(${img1})`}}>
+        <ImageContainer style={{ backgroundImage: `url(${img1})` }}>
           <BlurContainer>
               grannlåtsbroderi
           </BlurContainer>
@@ -74,7 +74,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer style={{backgroundImage: `url(${img6})`}}>
+        <ImageContainer style={{ backgroundImage: `url(${img6})` }}>
           <BlurContainer>
               tenntrådsbroderi
           </BlurContainer>
@@ -90,7 +90,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer style={{backgroundImage: `url(${img8})`}}>
+        <ImageContainer style={{ backgroundImage: `url(${img8})` }}>
           <BlurContainer>
               bildvävning
           </BlurContainer>
@@ -98,7 +98,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer style={{backgroundImage: `url(${img9})`}}>
+        <ImageContainer style={{ backgroundImage: `url(${img9})` }}>
           <BlurContainer>
               ullprojekt
           </BlurContainer>
@@ -114,7 +114,6 @@ const GalleryCarousel = () => {
 export default GalleryCarousel
 
 const Main = styled.div`
-
   width: 100vw;
     @media (min-width: 1025px) {
       width: 80vw;
@@ -124,6 +123,7 @@ const ImageContainer = styled.div`
   width: 300px;
   height: 300px;
   margin: auto;
+  margin-top: 60px;
   background-size: cover;
   overflow: hidden;
   border: dashed 2px #ffffff;
@@ -131,6 +131,7 @@ const ImageContainer = styled.div`
     @media (min-width: 768px) {
       width: 350px;
       height: 350px;
+      margin-top: 100px;
     }
 `
 const BlurContainer = styled.div`

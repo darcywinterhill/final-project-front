@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar'
 import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
 
-import headerimg from '../assets/fabric-mobile.jpg'
 import bgimg from '../assets/profilebg.jpg'
 import profileimg from '../assets/lotta.jpg'
 
@@ -13,6 +12,7 @@ const AboutPage = () => {
 
   return (
     <Main>
+      <Container>
       <NavBar />
       <Title
         title='OM'
@@ -25,14 +25,63 @@ const AboutPage = () => {
       </ProfileContainer>
       <Backdrop
         flex='column'
-        width='60vw'>
+        width='60vw'
+      >
         <AboutText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tellus risus, ornare eu mi in, malesuada venenatis dui. Duis scelerisque augue et tristique cursus. Vivamus consectetur mauris velit, fringilla rutrum ipsum suscipit quis. Vivamus eu nisi tempor, semper ex venenatis, hendrerit eros. Maecenas diam est, lobortis vitae odio quis, malesuada viverra neque. Maecenas in semper odio, et varius tortor. Nunc suscipit scelerisque lectus eget dignissim. Curabitur a convallis metus, eget pellentesque arcu. Donec sollicitudin mauris magna.
+          Vem är jag? En dotter, en sökande ung kvinna som reste och plockade apelsiner, badade med Ingo i Florida, utforskade de grekiska öarna samt besökte Bolsjojteatern i Moskva
+          m.m. En fästmö som blev en fru och sen en mamma till två nya världsmedborgare som nu har vuxit ur barnsängen och gör sina egna lärdomar och misstag samt lyckliga framsteg. Genom dem så kommer mina
+          gener att leva vidare till nya medborgare som ska föra livets fana framåt. Nu kom jag nog lite ur spår... tillbaka till mig.
+          Livet tog en vändning som den gör ibland och jag är nu gift med en annan man som har fört in mitt liv i lite andra banor.
         </AboutText>
         <AboutText>
-          Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vel urna aliquet, ultrices eros et, dignissim ligula. In placerat, augue ultrices iaculis tristique, tellus justo interdum nibh, eget ultricies diam odio et velit. Duis facilisis nunc euismod nulla viverra mattis. Suspendisse potenti. Praesent at nulla lectus. Etiam congue metus purus, in hendrerit nisi interdum pellentesque. Duis dictum felis ex, sit amet aliquet lorem scelerisque vitae. Suspendisse dignissim porta nibh, quis ornare ligula malesuada sed. Ut vehicula mi eros. Mauris maximus est a velit semper rutrum.
+          Men var kommer min skaparlust ifrån? Redan som liten virkade jag cigarettfodral till min mammas cigaretter. John Silver utan filter (hard stuff). Jag virkade kläder åt mina gosedjur och jag målade med vattenfärger hej vilt.
         </AboutText>
-      </Backdrop>
+        <AboutText>
+          Jag och några andra glada individer har även provat på att göra spiktavlor. Vad är det? Jo på glada 70-talet tror jag det var så slog man i små spikar i en platta och sen vevade man runt med en glimmande
+          tråd. Mitt alster blev en fjäril. Finns kvar i min ägo, men ej på väggen. Batiken kom in i mitt liv och batiktröjornas period lyste upp min dag. Började även försöka sy kläder med mer eller mindre lyckade
+          resultat. Minns min väst som jag aldrig bar.
+        </AboutText>
+        <AboutText>
+          Ett år på Kävesta Estetlinje 83-84 förgyllde min vardag.
+          Halmslöjd, oljemålning, luffarslöjd m.m. Varför gick jag där... jo, för att jag ville.
+        </AboutText>
+        <AboutText>
+          -86 kom mitt första barn och -88 mitt andra. Mina kära barn fick bära hemstickade tröjor och även en overall som jag tryckt små konstiga djur på. Ett
+          skidfodrall med tryckta figurer finns också i mitt bagage. Småbarnsåren - tiden rann iväg och så mycket egentid fanns inte att hitta. Men i mitt hjärta så fanns
+          längtan kvar att skapa och göra något med mina händer. Jag uppskattade alltid mina barns teckningar, sugrörsgirlanger till granen och trolldegstroll. Tror mig ha
+          uppmuntrat dem till att skapa både inom teckning, målning samt musik. Ibland gick jag någon korta kurser med keramik, tovning, m.m.
+          Jag jobbade inom barnomsorgen länge och väl – tyckte om att vara i målarrummet med de små, se deras små alster växa fram.
+          </AboutText>
+          <AboutText>
+            Cirka 2012 bytte jag bana. Jobbar fortfarande med människor, men äldre och med en annan problematik. Trivs bäst när jag får med mig några ner till hantverksrummet och ser hur de, trots olika hinder, kan skapa och få fram alster som är väl värda att njuta av.
+          </AboutText>
+          <AboutText>
+            Nu tillbaka till mitt skapande. Är medlem i Örebro Slöjdförening och har varit med på en hel del av deras endagars "prova-på". Jag har varit med på Hälsomålningskurs och kommer att fortsätta med den. Jag har
+            gått de första 17 stegen i Vedic Art. Så har jag av egen fri vilja börjat prova på att jobba med läder, tennbroderi, broderi, knyppling, luffarslöjd, korgflätning, trådslöjd, halmslöjd samt gjuter en del i cement.
+            Testar och provar ofta med mer eller mindre perfekt utgång. Jag gör det för att jag tycker om att jobba med mina händer samt att jag är nyfiken och prova på olika tekniker.
+            Mitt skapande är väl som med allt annat. Det går i perioder – ibland mer – ibland mindre. Ibland vill man mer än kroppen och knoppen orkar med.
+          </AboutText>
+          <TextBox>
+            <ItalicText>
+              Kommer den här sidan vara intressant för andra?
+            </ItalicText>
+            <ItalicText>
+              Kommer den att utveckla någon annan?
+            </ItalicText>
+            <ItalicText>
+              Kommer den att visa fantastiska underverk och nyskapande?
+            </ItalicText>
+          </TextBox>
+          <AboutText>
+            Kanske inte för alla, men för Dig som är som mig och vill testa och prova och göra något för din egen kreativitet kan det kanske vara en liten öppning. Vi ska inte vara rädda att prova nya saker och vi ska
+            våga visa upp vad vi gör och vara stolta över vad våra egna händer kan framställa. Frambringa. Välkommen in och se några av mina alster. Ta dem som de är – nybörjarlust och skaparlust.
+            Vi kan kanske hitta varandra, ni likasinnade vänner som vill prova, testa och misslyckas och lyckas med vad ni gör. 
+          </AboutText>
+          <EndText>
+            Tänk att allt är ett steg framåt.
+          </EndText>
+        </Backdrop>
+        </Container>
     </Main>
   )
 }
@@ -45,14 +94,16 @@ const Main = styled.main`
   align-items: center;
   position: relative;
   min-height: 100vh;
-  max-width: 100vw;
-  background-image: url(${headerimg});
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
+  width: 100vw;
   padding: 80px 0 30px 0;
     @media (min-width: 768px) {
       padding: 120px 0 30px 0;
+    }
+`
+const Container = styled.div`
+  width: 85vw;
+    @media (min-width: 1025px) {
+      width: 60vw;
     }
 `
 const ProfileContainer = styled.div`
@@ -78,7 +129,8 @@ const HeaderTitle = styled.h1`
   color: #ffffff;
   display: flex;
   align-items: flex-end;
-  width: 50%;
+  justify-content: flex-end;
+  width: 60%;
   border-bottom: dashed 2px #e70410;
     @media (min-width: 768px) {
       font-size: 50px;
@@ -105,12 +157,50 @@ const ProfileImg = styled.div`
    }
 `
 const AboutText = styled.p`
-  font-family: Lato, sans-serif;
+
   font-size: 14px;
   color: #ffffff;
-  padding-top: 15px;
+  padding: 8px 0;
+   @media (min-width: 768px) {
+     font-size: 16px;
+     padding: 10px;
+   }
+   @media (min-width: 1025px) {
+    padding: 15px 30px;
+  }
+`
+const TextBox = styled.div`
+  padding: 10px 0;
+    @media (min-width: 768px) {
+      padding: 10px;
+    }
+    @media (min-width: 1025px) {
+      padding: 15px 30px;
+    }
+`
+const ItalicText = styled.p`
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
    @media (min-width: 768px) {
      font-size: 16px;
    }
+   @media (min-width: 1025px) {
+  }
+
+`
+const EndText = styled.p`
+  font-size: 16px;
+  padding: 15px 0;
+  color: #ffffff;
+  font-style: italic;
+  align-self: flex-end;
+   @media (min-width: 768px) {
+     font-size: 18px;
+     padding: 10px;
+   }
+  @media (min-width: 1025px) {
+    padding: 30px;
+  }
 
 `

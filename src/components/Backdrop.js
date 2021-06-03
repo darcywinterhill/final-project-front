@@ -21,16 +21,11 @@ const Container = styled.div`
   justify-content: ${props => props.justify};
   align-items: ${props => props.align};
   flex-wrap: wrap;
-  width: 85vw;
-  min-height: 45vh;
+  width: 100%;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.24);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
-    @media (min-width: 768px) {
-      min-height: 50vh;
-    }
     @media (min-width: 1025px) {
       width: ${props => props.width};
-      min-height: 50vh;
     }
 `

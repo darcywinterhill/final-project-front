@@ -7,12 +7,11 @@ import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
 
-import headerimg from '../assets/fabric-mobile.jpg'
-
 const BulletinPage = () => {
 
   return (
     <Main>
+      <Container>
       <NavBar/>
       <Title
         title='ANSLAGSTAVLA'
@@ -24,6 +23,7 @@ const BulletinPage = () => {
         <Messages />
         </Backdrop>
       </BulletinContainer>
+      </Container>
     </Main>
   )
 }
@@ -35,15 +35,17 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-image: url(${headerimg});
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
   min-height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
   padding: 80px 0 30px 0;
     @media (min-width: 768px) {
       padding: 120px 0 30px 0;
+    }
+`
+const Container = styled.div`
+  width: 85vw;
+    @media (min-width: 1025px) {
+      width: 60vw;
     }
 `
 const BulletinContainer = styled.div`

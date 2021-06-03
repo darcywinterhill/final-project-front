@@ -1,13 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch, batch } from 'react-redux'
 import styled from 'styled-components/macro'
+
+import messages from 'reducers/messages'
+
+import { MESSAGE_API } from 'reusable/urls'
 
 import messageimg from '../../assets/profilebg.jpg'
 
 const MessageForm = () => {
+  const [messageInput, setMessageInput] = useState('')
+  const [nameInput, setNameInput] = useState('')
+
+  const dispatch = useDispatch()
+
+  const onFormSubmit = (e) => {
+    e.preventDefault()
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        messageInput,
+        nameInput
+      })
+    }
+
+    fetch(MESSAGE_API, options)
+      .then(res => res.json())
+      .then((res) => {
+        if (res) {
+          batch(() => {
+            dispatch(messages.actions.setNewMessage(res.messages))
+            dispatch(messages.actions.setErrors(null))
+          })
+        } else {
+          dispatch(messages.actions.setErrors())
+        }
+      })
+      setMessageInput('')
+      setNameInput('')
+    }
 
   return (
     <FormContainer>
-      <Form>
+      <Form /* onSubmit={onFormSubmit} */>
         <Label htmlFor='name'>
           Namn:
         </Label>
@@ -17,8 +56,8 @@ const MessageForm = () => {
           minLength='2'
           maxLength='30'
           required
-          /* value */
-          onChange
+          value={nameInput}
+          onChange={event => setNameInput(event.target.value)}
         />
 
         <Label htmlFor='newMessage'>
@@ -30,11 +69,13 @@ const MessageForm = () => {
           minLength='3'
           maxLength='140'
           required
-          /* value */
-          onChange
+          value={messageInput}
+          onChange={event => setMessageInput(event.target.value)}
         />
 
-        <Button type='submit'>
+        <Button
+          type='submit'
+          onClick={onFormSubmit}>
           SKICKA MEDDELANDE
           <Icon className="far fa-paper-plane"></Icon>
         </Button>

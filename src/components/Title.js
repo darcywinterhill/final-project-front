@@ -21,7 +21,7 @@ const TitleContainer = styled.div`
     }
 `
 const TitleText = styled.h1`
-  font-family: Lato, sans-serif;
+font-family: 'Lato', sans-serif;
   font-size: 34px;
   color: #ffffff;
   margin: 0;

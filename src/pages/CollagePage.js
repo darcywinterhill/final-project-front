@@ -5,18 +5,16 @@ import NavBar from '../components/NavBar'
 import Title from '../components/Title'
 import GalleryCarousel from '../components/GalleryCarousel'
 
-import headerimg from '../assets/fabric-mobile.jpg'
-
 const CollagePage = () => {
   return (
     <Main>
+      <NavContainer>
       <NavBar />
+      </NavContainer>
       <Title
         title='HANTVERK'
       />
-      <GalleryContainer>
         <GalleryCarousel />
-      </GalleryContainer>
     </Main>
   )
 }
@@ -28,19 +26,16 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-image: url(${headerimg});
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   padding: 80px 0 0 0;
     @media (min-width: 768px) {
       padding: 120px 0 0 0;
     }
 `
-const GalleryContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 80%;
+const NavContainer = styled.div`
+width: 85vw;
+@media (min-width: 1025px) {
+  width: 60vw;
+}
 `

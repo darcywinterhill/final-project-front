@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import headerimg from '../assets/fabric-mobile.jpg'
-
 const FrontPage = () => {
   return (
     <Main>
@@ -35,7 +33,7 @@ const FrontPage = () => {
           <ListItem>
           <Icon className='far fa-calendar-alt'>
           </Icon>
-            events
+            sevärt
           </ListItem>
           </SectionLink>
 
@@ -61,16 +59,12 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(${headerimg});
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
   height: 100vh;
+  width: 100vw;
 `
 const HeaderTitle = styled.h1`
   font-family: 'Noto Serif SC', serif;
   font-size: 48px;
-  color: #ffffff;
   border-bottom: dashed white 2px;
   border-right: dashed white 2px;
   margin: 0;
@@ -86,7 +80,7 @@ const HeaderTitle = styled.h1`
     }
 `
 const MenuContainer = styled.div`
-  border-left: dashed white 2px;
+  border-left: dashed #ffffff 2px;
     @media (min-width: 768px) {
       border-left: dashed #ffffff 3px;
     }
@@ -108,7 +102,7 @@ const Icon = styled.i`
    }
 `
 const SectionLink = styled(Link)`
-  font-family: Lato, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #ffffff;
   font-size: 22px;
   text-decoration: none;

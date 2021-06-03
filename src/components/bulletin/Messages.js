@@ -1,4 +1,5 @@
 import React, { useEffect, useState }  from 'react'
+/* import { useDispatch, useSelector, batch} from 'react-redux' */
 import moment from 'moment'
 import styled from 'styled-components/macro'
 /* import messages from 'reducers/messages' */
@@ -6,12 +7,32 @@ import styled from 'styled-components/macro'
 import { MESSAGE_API } from 'reusable/urls'
 
 const Messages = () => {
+/*   const [message, setMessage] = useState('') */
   const [messageList, setMessageList] = useState([])
+/*   const [newMessage, setNewMessage] = useState('') */
+
+/*   const messageItems = useSelector((store) => store.messages.messages) */
+
+ /*  const dispatch = useDispatch() */
  
   useEffect(() => {
     fetchMessageList()
   }, [])
 
+/*   const fetchMessageList = () => {
+    fetch(MESSAGE_API)
+      .then(res => res.json())
+      .then((res) => {
+        if (res) {
+          batch(() =>{
+            dispatch(messages.actions.setMessages())
+            dispatch(messages.actions.setErrors(null))
+          })
+        } else {
+          dispatch(messages.actions.setErrors())
+        }
+      })
+  } */
   const fetchMessageList = () => {
     fetch(MESSAGE_API)
       .then(res => res.json())
@@ -46,7 +67,7 @@ const MessageContainer = styled.div`
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: stretch;
       justify-content: space-evenly;
     }
 `
@@ -55,14 +76,21 @@ const MessageNote = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 210px;
-  height: 210px;
+  width: 100%;
   background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px rgba(33,33,33,.7);
   margin: 10px 5px;
   padding: 12px;
     @media (min-width: 768px) {
-      width: 250px;
-      height: 250px;
+      width: 45%;
+      margin: 15px 15px;
+    }
+    @media (min-width: 1025px) {
+      width: 40%;
+    }
+    @media (min-width: 2000px) {
+      width: 30%;
       margin: 15px 15px;
     }
 `
@@ -71,11 +99,15 @@ const ContentContainer = styled.div`
   flex-direction: column;
 `
 const MessageText = styled.p`
+  color: #2a2522;
   padding: 12px 0;
 `
 const MessageName = styled.p`
+  color: #2a2522;
   align-self: flex-end;
   font-style: italic;
+  padding-bottom: 12px;
 `
 const MessageCreatedAt = styled.p`
+  color: #2a2522;
 `

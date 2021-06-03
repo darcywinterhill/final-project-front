@@ -27,6 +27,7 @@ const PostItContainer = styled.div`
 }
 `
 const Title = styled.h3`
+  color: black;
 `
 const Date = styled.h4`
 `
