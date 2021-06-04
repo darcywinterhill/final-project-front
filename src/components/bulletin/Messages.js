@@ -1,48 +1,46 @@
 import React, { useEffect, useState }  from 'react'
-/* import { useDispatch, useSelector, batch} from 'react-redux' */
+import { useDispatch, useSelector, batch} from 'react-redux'
 import moment from 'moment'
 import styled from 'styled-components/macro'
-/* import messages from 'reducers/messages' */
+
+import messages from 'reducers/messages'
 
 import { MESSAGE_API } from 'reusable/urls'
 
 const Messages = () => {
-/*   const [message, setMessage] = useState('') */
-  const [messageList, setMessageList] = useState([])
-/*   const [newMessage, setNewMessage] = useState('') */
+  const messageItems = useSelector(store => store.messages.messages)
+  
+  const dispatch = useDispatch()
 
-/*   const messageItems = useSelector((store) => store.messages.messages) */
-
- /*  const dispatch = useDispatch() */
- 
   useEffect(() => {
-    fetchMessageList()
-  }, [])
-
-/*   const fetchMessageList = () => {
     fetch(MESSAGE_API)
       .then(res => res.json())
-      .then((res) => {
-        if (res) {
-          batch(() =>{
-            dispatch(messages.actions.setMessages())
-            dispatch(messages.actions.setErrors(null))
+      .then(data => {
+        if (data) {
+          batch(() => {
+            dispatch(messages.actions.setMessages(data));
+            dispatch(messages.actions.setErrors(null));
           })
         } else {
-          dispatch(messages.actions.setErrors())
+          dispatch(messages.actions.setErrors(data));
         }
       })
-  } */
+  }, [])
+
+ /*  useEffect(() => {
+    fetchMessageList()
+  }, [])
+    
   const fetchMessageList = () => {
     fetch(MESSAGE_API)
       .then(res => res.json())
-      .then(messages => setMessageList(messages))
+      .then(data => setMessageList(data))
       .catch(err => console.error(err))
-  }
+  } */
 
   return (
     <MessageContainer>
-    {messageList.map((message) => (
+    {messageItems.map((message) => (
       <MessageNote key={message._id}>
         <ContentContainer>
           <MessageText>{message.message}</MessageText>
