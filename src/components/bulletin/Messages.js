@@ -1,11 +1,11 @@
-import React, { useEffect, useState }  from 'react'
+import React, { useEffect }  from 'react'
 import { useDispatch, useSelector, batch} from 'react-redux'
 import moment from 'moment'
 import styled from 'styled-components/macro'
 
-import messages from 'reducers/messages'
+import { fetchMessageList } from 'reducers/messages'
 
-import { MESSAGE_API } from 'reusable/urls'
+/* import { MESSAGE_API } from 'reusable/urls' */
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
@@ -13,29 +13,34 @@ const Messages = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    fetch(MESSAGE_API)
-      .then(res => res.json())
-      .then(data => {
-        if (data) {
-          batch(() => {
-            dispatch(messages.actions.setMessages(data));
-            dispatch(messages.actions.setErrors(null));
-          })
-        } else {
-          dispatch(messages.actions.setErrors(data));
-        }
-      })
-  }, [])
+    dispatch(fetchMessageList())
+/*     fetch(MESSAGE_API)
+    .then(res => res.json())
+    .then(data => {
+      if (data) {
+        batch(() => {
+          dispatch(messages.actions.setMessages(data));
+          dispatch(messages.actions.setErrors(null));
+        })
+      } else {
+        dispatch(messages.actions.setErrors(data));
+      }
+    }) */
+  }, [dispatch])
 
- /*  useEffect(() => {
-    fetchMessageList()
-  }, [])
-    
-  const fetchMessageList = () => {
+/*   const fetchMessageList = () => {
     fetch(MESSAGE_API)
-      .then(res => res.json())
-      .then(data => setMessageList(data))
-      .catch(err => console.error(err))
+    .then(res => res.json())
+    .then(data => {
+      if (data) {
+        batch(() => {
+          dispatch(messages.actions.setMessages(data));
+          dispatch(messages.actions.setErrors(null));
+        })
+      } else {
+        dispatch(messages.actions.setErrors(data));
+      }
+    })
   } */
 
   return (
