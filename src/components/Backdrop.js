@@ -12,10 +12,11 @@ const Backdrop = ({ children, flex, justify, align, width }) => {
     </Container>
   )
 }
-
+/* background-color: rgba(0, 0, 0, 0.5); */
 export default Backdrop
 
 const Container = styled.div`
+position: relative;
   display: flex;
   flex-direction: ${props => props.flex};
   justify-content: ${props => props.justify};
@@ -23,7 +24,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
   border-radius: 12px;
     @media (min-width: 1025px) {
       width: ${props => props.width};

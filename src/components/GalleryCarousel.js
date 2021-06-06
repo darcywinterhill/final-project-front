@@ -106,32 +106,32 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
       </Carousel>
-    </Main>
+ </Main>
   )
 }
 
 
 export default GalleryCarousel
-
 const Main = styled.div`
-  width: 100vw;
-    @media (min-width: 1025px) {
-      width: 80vw;
-    }
+padding-top: 150px;
+  width: 80vw;
+  height: 100vh;
 `
 const ImageContainer = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: auto;
-  margin-top: 60px;
   background-size: cover;
   overflow: hidden;
   border: dashed 2px #ffffff;
   border-radius: 12px;
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+    @media (min-width: 1025px) {
       width: 350px;
       height: 350px;
-      margin-top: 100px;
     }
 `
 const BlurContainer = styled.div`
@@ -150,6 +150,6 @@ const GalleryLink = styled(Link)`
   text-transform: uppercase;
   width: 100%;
     @media (min-width: 768px) {
-      font-size: 30px;
+      font-size: 26px;
     }
 `

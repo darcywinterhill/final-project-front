@@ -14,7 +14,7 @@ const Title = ({ title }) => {
 export default Title
 
 const TitleContainer = styled.div`
-  width: 85vw;
+  width: 100%;
   margin-bottom: 15px;
     @media (min-width: 1025px) {
       width: 60vw;

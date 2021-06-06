@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import NavBar from '../components/NavBar'
 import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
+import SimpleAccordion from '../components/SimpleAccordion'
 import PostIt from '../components/PostIt'
 
 const EventPage = () => {
@@ -19,26 +20,36 @@ const EventPage = () => {
       justify='space-evenly'
       align='center'
       width='60vw'>
-      <PostIt
-        title='Utställning X'
-        date='2021-07-18'
-        /* backgroundImage={headerimg} *//>
-              <PostIt
-        title='Utställning Y'
-        date='2021-04-15'
-        /* backgroundImage={headerimg} *//>
-                      <PostIt
-        title='Utställning Z'
-        date='2021-02-17'
-        /* backgroundImage={headerimg} *//>
-                      <PostIt
-        title='Utställning XY'
-        date='2020-08-15'
-        /* backgroundImage={headerimg} *//>
-                              <PostIt
-        title='Utställning XY'
-        date='2020-08-15'
-        /* backgroundImage={headerimg} *//>
+      
+        <PostIt
+          title='Utställning XY'
+          date='2020-08-15'
+        /* backgroundImage={headerimg} */
+        />
+
+        <PostIt
+          title='Utställning Y'
+          date='2021-04-15'
+          /* backgroundImage={headerimg} */
+        />
+
+        <SimpleAccordion>
+          <PostIt
+            title='Utställning X'
+            date='2020-17-17'
+          />
+          <PostIt
+            title='Utställning Y'
+            date='2021-04-15'
+            /* backgroundImage={headerimg} */
+          />
+          <PostIt
+            title='Utställning X'
+            date='2021-07-18'
+            /* backgroundImage={headerimg} */
+          />
+        </SimpleAccordion> 
+                              
         </Backdrop>
       </Container>
     </Main>

@@ -1,32 +1,27 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import NavBar from '../components/NavBar'
-import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
+import MiniDrawer from '../components/MiniDrawer'
+import Title from '../components/Title'
 
-import bgimg from '../assets/profilebg.jpg'
 import profileimg from '../assets/lotta.jpg'
 
 const AboutPage = () => {
 
   return (
     <Main>
-      <Container>
-      <NavBar />
+    <MiniDrawer header='OM'>
       <Title
-        title='OM'
-      />
-      <ProfileContainer>
-      <ProfileImg />
-        <HeaderTitle>
+        title='OM'/>
+     <Container>
+        <Backdrop
+          flex='column'
+          width='60%'>
+        <ProfileImg />
+        <TitleText>
           Lotta Winkler
-        </HeaderTitle>
-      </ProfileContainer>
-      <Backdrop
-        flex='column'
-        width='60vw'
-      >
+        </TitleText>
         <AboutText>
           Vem är jag? En dotter, en sökande ung kvinna som reste och plockade apelsiner, badade med Ingo i Florida, utforskade de grekiska öarna samt besökte Bolsjojteatern i Moskva
           m.m. En fästmö som blev en fru och sen en mamma till två nya världsmedborgare som nu har vuxit ur barnsängen och gör sina egna lärdomar och misstag samt lyckliga framsteg. Genom dem så kommer mina
@@ -51,37 +46,38 @@ const AboutPage = () => {
           längtan kvar att skapa och göra något med mina händer. Jag uppskattade alltid mina barns teckningar, sugrörsgirlanger till granen och trolldegstroll. Tror mig ha
           uppmuntrat dem till att skapa både inom teckning, målning samt musik. Ibland gick jag någon korta kurser med keramik, tovning, m.m.
           Jag jobbade inom barnomsorgen länge och väl – tyckte om att vara i målarrummet med de små, se deras små alster växa fram.
-          </AboutText>
-          <AboutText>
-            Cirka 2012 bytte jag bana. Jobbar fortfarande med människor, men äldre och med en annan problematik. Trivs bäst när jag får med mig några ner till hantverksrummet och ser hur de, trots olika hinder, kan skapa och få fram alster som är väl värda att njuta av.
-          </AboutText>
-          <AboutText>
-            Nu tillbaka till mitt skapande. Är medlem i Örebro Slöjdförening och har varit med på en hel del av deras endagars "prova-på". Jag har varit med på Hälsomålningskurs och kommer att fortsätta med den. Jag har
-            gått de första 17 stegen i Vedic Art. Så har jag av egen fri vilja börjat prova på att jobba med läder, tennbroderi, broderi, knyppling, luffarslöjd, korgflätning, trådslöjd, halmslöjd samt gjuter en del i cement.
-            Testar och provar ofta med mer eller mindre perfekt utgång. Jag gör det för att jag tycker om att jobba med mina händer samt att jag är nyfiken och prova på olika tekniker.
-            Mitt skapande är väl som med allt annat. Det går i perioder – ibland mer – ibland mindre. Ibland vill man mer än kroppen och knoppen orkar med.
-          </AboutText>
-          <TextBox>
-            <ItalicText>
-              Kommer den här sidan vara intressant för andra?
-            </ItalicText>
-            <ItalicText>
-              Kommer den att utveckla någon annan?
-            </ItalicText>
-            <ItalicText>
-              Kommer den att visa fantastiska underverk och nyskapande?
-            </ItalicText>
-          </TextBox>
-          <AboutText>
-            Kanske inte för alla, men för Dig som är som mig och vill testa och prova och göra något för din egen kreativitet kan det kanske vara en liten öppning. Vi ska inte vara rädda att prova nya saker och vi ska
-            våga visa upp vad vi gör och vara stolta över vad våra egna händer kan framställa. Frambringa. Välkommen in och se några av mina alster. Ta dem som de är – nybörjarlust och skaparlust.
-            Vi kan kanske hitta varandra, ni likasinnade vänner som vill prova, testa och misslyckas och lyckas med vad ni gör. 
-          </AboutText>
-          <EndText>
-            Tänk att allt är ett steg framåt.
-          </EndText>
+        </AboutText>
+        <AboutText>
+          Cirka 2012 bytte jag bana. Jobbar fortfarande med människor, men äldre och med en annan problematik. Trivs bäst när jag får med mig några ner till hantverksrummet och ser hur de, trots olika hinder, kan skapa och få fram alster som är väl värda att njuta av.
+        </AboutText>
+        <AboutText>
+          Nu tillbaka till mitt skapande. Är medlem i Örebro Slöjdförening och har varit med på en hel del av deras endagars "prova-på". Jag har varit med på Hälsomålningskurs och kommer att fortsätta med den. Jag har
+          gått de första 17 stegen i Vedic Art. Så har jag av egen fri vilja börjat prova på att jobba med läder, tennbroderi, broderi, knyppling, luffarslöjd, korgflätning, trådslöjd, halmslöjd samt gjuter en del i cement.
+          Testar och provar ofta med mer eller mindre perfekt utgång. Jag gör det för att jag tycker om att jobba med mina händer samt att jag är nyfiken och prova på olika tekniker.
+          Mitt skapande är väl som med allt annat. Det går i perioder – ibland mer – ibland mindre. Ibland vill man mer än kroppen och knoppen orkar med.
+        </AboutText>
+        <TextBox>
+          <ItalicText>
+            Kommer den här sidan vara intressant för andra?
+          </ItalicText>
+          <ItalicText>
+            Kommer den att utveckla någon annan?
+          </ItalicText>
+          <ItalicText>
+            Kommer den att visa fantastiska underverk och nyskapande?
+          </ItalicText>
+        </TextBox>
+        <AboutText>
+          Kanske inte för alla, men för Dig som är som mig och vill testa och prova och göra något för din egen kreativitet kan det kanske vara en liten öppning. Vi ska inte vara rädda att prova nya saker och vi ska
+          våga visa upp vad vi gör och vara stolta över vad våra egna händer kan framställa. Frambringa. Välkommen in och se några av mina alster. Ta dem som de är – nybörjarlust och skaparlust.
+          Vi kan kanske hitta varandra, ni likasinnade vänner som vill prova, testa och misslyckas och lyckas med vad ni gör. 
+        </AboutText>
+        <EndText>
+          Tänk att allt är ett steg framåt.
+        </EndText>
         </Backdrop>
         </Container>
+    </MiniDrawer>
     </Main>
   )
 }
@@ -92,56 +88,20 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   min-height: 100vh;
-  width: 100vw;
-  padding: 80px 0 30px 0;
-    @media (min-width: 768px) {
-      padding: 120px 0 30px 0;
-    }
+  width: 100%;
+  padding-bottom: 50px;
 `
 const Container = styled.div`
-  width: 85vw;
-    @media (min-width: 1025px) {
-      width: 60vw;
-    }
-`
-const ProfileContainer = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
-  width: 85vw;
-  background-image: url(${bgimg});
-  background-size: cover;
-  border: dashed 2px #ffffff;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  padding: 10px;
-    @media (min-width: 768px) {
-      padding: 15px;
-    }
-    @media (min-width: 1025px) {
-      width: 60vw;
-    }
-`
-
-const HeaderTitle = styled.h1`
-  font-family: 'Noto Serif SC', serif;
-  font-size: 32px;
-  color: #ffffff;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  width: 60%;
-  border-bottom: dashed 2px #e70410;
-    @media (min-width: 768px) {
-      font-size: 50px;
-      width: 60%
-      border-bottom: dashed 3px #e70410;
-    }
-    @media (min-width: 1025px) {
-      font-size: 48px;
-    }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 const ProfileImg = styled.div`
+align-self: center;
   width: 120px;
   height: 120px;
   background-image: url(${profileimg});
@@ -149,17 +109,17 @@ const ProfileImg = styled.div`
   overflow: hidden;
   border: solid #70731b 2px;
   border-radius: 50%;
-  margin-right: 15px;
+  margin: 15px;
    @media (min-width: 768px) {
     width: 180px;
     height: 180px;
-    margin-right: 25px;
    }
 `
-const AboutText = styled.p`
+const TitleText = styled.h2`
 
+`
+const AboutText = styled.p`
   font-size: 14px;
-  color: #ffffff;
   padding: 8px 0;
    @media (min-width: 768px) {
      font-size: 16px;
@@ -180,7 +140,6 @@ const TextBox = styled.div`
 `
 const ItalicText = styled.p`
   font-size: 14px;
-  color: #ffffff;
   font-style: italic;
    @media (min-width: 768px) {
      font-size: 16px;
@@ -192,7 +151,6 @@ const ItalicText = styled.p`
 const EndText = styled.p`
   font-size: 16px;
   padding: 15px 0;
-  color: #ffffff;
   font-style: italic;
   align-self: flex-end;
    @media (min-width: 768px) {

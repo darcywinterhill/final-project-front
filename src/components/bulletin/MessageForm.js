@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch/* , useSelector, batch */ } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 
 import messages, { fetchMessageList } from 'reducers/messages'
@@ -11,8 +11,6 @@ import messageimg from '../../assets/profilebg.jpg'
 const MessageForm = () => {
   const [messageInput, setMessageInput] = useState('')
   const [nameInput, setNameInput] = useState('')
-
- /*  const messageItems = useSelector(store => store.messages.messages) */
 
   const dispatch = useDispatch()
 
@@ -27,7 +25,6 @@ const MessageForm = () => {
       body: JSON.stringify({
         message: messageInput,
         name: nameInput,
-        createdAt: Date.now()
       })
     }
 
@@ -36,10 +33,6 @@ const MessageForm = () => {
       .then((res) => {
         if (res) {
           fetchMessageList()
-/*           batch(() => {
-            dispatch(messages.actions.setNewMessage(res.messages))
-            dispatch(messages.actions.setErrors(null))
-          }) */
         } else {
           dispatch(messages.actions.setErrors())
         }
@@ -79,7 +72,7 @@ const MessageForm = () => {
 
         <Button
           type='submit'
-          onClick={() => dispatch(messages.actions.setNewMessage())}>
+        >
           SKICKA MEDDELANDE
           <Icon className="far fa-paper-plane"></Icon>
         </Button>

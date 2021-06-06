@@ -19,11 +19,10 @@ export default PostIt
 
 const PostItContainer = styled.div`
   width: 250px;
-  height: 250px;
-  background-color: #ffffff;
+  min-height: 200px;
+  background-color: #d6c667;
   padding: 10px;
   margin-bottom: 15px;
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 `
 const Title = styled.h3`

@@ -64,6 +64,7 @@ const Main = styled.main`
 `
 const HeaderTitle = styled.h1`
   font-family: 'Noto Serif SC', serif;
+  color: #ffffff;
   font-size: 48px;
   border-bottom: dashed white 2px;
   border-right: dashed white 2px;

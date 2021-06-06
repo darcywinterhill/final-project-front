@@ -1,11 +1,10 @@
+  
 import React, { useEffect }  from 'react'
-import { useDispatch, useSelector, batch} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import moment from 'moment'
 import styled from 'styled-components/macro'
 
 import { fetchMessageList } from 'reducers/messages'
-
-/* import { MESSAGE_API } from 'reusable/urls' */
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
@@ -14,34 +13,7 @@ const Messages = () => {
 
   useEffect(() => {
     dispatch(fetchMessageList())
-/*     fetch(MESSAGE_API)
-    .then(res => res.json())
-    .then(data => {
-      if (data) {
-        batch(() => {
-          dispatch(messages.actions.setMessages(data));
-          dispatch(messages.actions.setErrors(null));
-        })
-      } else {
-        dispatch(messages.actions.setErrors(data));
-      }
-    }) */
   }, [dispatch])
-
-/*   const fetchMessageList = () => {
-    fetch(MESSAGE_API)
-    .then(res => res.json())
-    .then(data => {
-      if (data) {
-        batch(() => {
-          dispatch(messages.actions.setMessages(data));
-          dispatch(messages.actions.setErrors(null));
-        })
-      } else {
-        dispatch(messages.actions.setErrors(data));
-      }
-    })
-  } */
 
   return (
     <MessageContainer>

@@ -1,10 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-
 import { batch } from 'react-redux'
 
 import { MESSAGE_API } from 'reusable/urls'
-
-/* const dispatch = useDispatch() */
 
 const messages = createSlice({
 
@@ -17,9 +14,6 @@ const messages = createSlice({
     setMessages: (store, action) => {
       store.messages = action.payload
     },
-    setNewMessage: (store, action) => {
-      store.messages = action.payload
-    },
     setErrors: (store, action) => {
       store.errors = action.payload
     } 
@@ -29,7 +23,7 @@ const messages = createSlice({
 export default messages
 
 export const fetchMessageList = () => {
-  return (dispatch/* , getState */) => {
+  return (dispatch) => {
     fetch(MESSAGE_API)
     .then(res => res.json())
     .then(data => {
@@ -43,5 +37,4 @@ export const fetchMessageList = () => {
       }
     })
   }
-
 }
