@@ -106,16 +106,19 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
       </Carousel>
- </Main>
+    </Main>
   )
 }
 
 
 export default GalleryCarousel
 const Main = styled.div`
-padding-top: 150px;
+  padding-top: 30px;
   width: 80vw;
-  height: 100vh;
+  height: 60vh;
+    @media (min-width: 768px) {
+      padding-top: 60px;
+    }
 `
 const ImageContainer = styled.div`
   width: 250px;
@@ -125,10 +128,10 @@ const ImageContainer = styled.div`
   overflow: hidden;
   border: dashed 2px #ffffff;
   border-radius: 12px;
-  @media (min-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
+    @media (min-width: 768px) {
+      width: 300px;
+      height: 300px;
+    }
     @media (min-width: 1025px) {
       width: 350px;
       height: 350px;

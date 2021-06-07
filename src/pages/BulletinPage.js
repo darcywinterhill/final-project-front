@@ -1,7 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
+import MessageIcon from '@material-ui/icons/Message';
 
-import NavBar from '../components/NavBar'
+import MiniDrawer from '../components/MiniDrawer'
 import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
@@ -11,11 +12,19 @@ const BulletinPage = () => {
 
   return (
     <Main>
-      <Container>
-      <NavBar/>
+      <MiniDrawer>
       <Title
+        icon={<MessageIcon
+          style={{
+            fontSize: '50px',
+            color: '#ffffff',
+            marginRight: '10px'
+          }}
+        />}
         title='ANSLAGSTAVLA'
       />
+      <Container>
+
       <BulletinContainer>
         <MessageForm />
         <Backdrop
@@ -24,6 +33,7 @@ const BulletinPage = () => {
         </Backdrop>
       </BulletinContainer>
       </Container>
+      </MiniDrawer>
     </Main>
   )
 }
@@ -36,14 +46,11 @@ const Main = styled.main`
   align-items: center;
   position: relative;
   min-height: 100vh;
-  width: 100vw;
-  padding: 80px 0 30px 0;
-    @media (min-width: 768px) {
-      padding: 120px 0 30px 0;
-    }
+  width: 100%;
+  padding-bottom: 50px;
 `
 const Container = styled.div`
-  width: 85vw;
+  width: 100%;
     @media (min-width: 1025px) {
       width: 60vw;
     }

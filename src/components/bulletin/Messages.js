@@ -52,7 +52,7 @@ const MessageNote = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #d6c667;
   border-radius: 5px;
   box-shadow: 4px 4px 6px rgba(33,33,33,.7);
   margin: 10px 5px;

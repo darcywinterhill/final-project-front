@@ -86,7 +86,7 @@ export default MessageForm
 
 const FormContainer = styled.div`
   display: flex;
-  width: 85vw;
+  width: 100%;
   background-image: url(${messageimg});
   background-size: cover;
   overflow: hidden;

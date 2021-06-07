@@ -28,37 +28,17 @@ const SimpleAccordion = ({ children }) => {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls='panel1a-content'
+          id='panel1a-header'
         >
-          <Typography className={classes.heading}>Tidigare utställningar</Typography>
+          <Typography className={classes.heading}>Tidigare sevärdheter</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <PostItContainer>
             {children}
           </PostItContainer>
-            {/* <PostIt /> */}
-{/*           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography> */}
         </AccordionDetails>
       </Accordion>
-{/*       <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Tidigare utställningar</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion> */}
     </div>
   )
 }
@@ -69,4 +49,10 @@ const PostItContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
 `

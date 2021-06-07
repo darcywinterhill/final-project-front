@@ -104,7 +104,7 @@ const MiniDrawer = ({ header, children }) => {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
+        position='fixed'
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -116,10 +116,10 @@ const MiniDrawer = ({ header, children }) => {
           }}
         >
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            color='inherit'
+            aria-label='open drawer'
             onClick={handleDrawerOpen}
-            edge="start"
+            edge='start'
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
@@ -127,16 +127,16 @@ const MiniDrawer = ({ header, children }) => {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant='h1'
             noWrap
-            style={{fontFamily: 'Noto Serif SC', fontSize: '30px'}}
+            style={{fontFamily: 'Lato', fontSize: '30px'}}
           >
             TANTVERK
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="permanent"
+        variant='permanent'
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
           [classes.drawerClose]: !open,
@@ -156,7 +156,9 @@ const MiniDrawer = ({ header, children }) => {
           className={classes.toolbar}
         >
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon style={{color: '#ffffff'}}/> : <ChevronLeftIcon style={{color: '#ffffff'}}/>}
+            {theme.direction === 'rtl' ? 
+            <ChevronRightIcon style={{color: '#ffffff'}}/> :
+            <ChevronLeftIcon style={{color: '#ffffff'}}/>}
           </IconButton>
         </div>
         <Divider />

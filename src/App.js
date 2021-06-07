@@ -43,6 +43,7 @@ export const App = () => {
 const Main = styled.main`
   background-image: url(${headerimg});
   background-size: cover;
+  repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
 `

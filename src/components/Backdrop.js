@@ -12,11 +12,11 @@ const Backdrop = ({ children, flex, justify, align, width }) => {
     </Container>
   )
 }
-/* background-color: rgba(0, 0, 0, 0.5); */
+
 export default Backdrop
 
 const Container = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: ${props => props.flex};
   justify-content: ${props => props.justify};
