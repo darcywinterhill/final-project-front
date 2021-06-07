@@ -1,25 +1,18 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import EventIcon from '@material-ui/icons/Event';
 
 import MiniDrawer from '../components/MiniDrawer'
 import Title from '../components/Title'
 import Backdrop from '../components/Backdrop'
 import SimpleAccordion from '../components/SimpleAccordion'
 import PostIt from '../components/PostIt'
+import ReadMoreButton from '../components/UI/ReadMoreButton'
 
 const EventPage = () => {
   return (
     <Main>
       <MiniDrawer>
         <Title
-          icon={<EventIcon
-            style={{
-              fontSize: '50px',
-              color: '#ffffff',
-              marginRight: '10px'
-            }}
-          />}
           title='SEVÄRT'
         />
         <Container>
@@ -34,10 +27,13 @@ const EventPage = () => {
               place='Lorem ipsum'
               date='23/11 - 1/12 2021'
               text='Chocolate apple pie donut apple pie. Croissant marzipan bonbon. Sweet jelly-o apple pie. Jelly beans jelly beans icing jelly beans.'
-            />
+              
+            >
+              <ReadMoreButton/>
+              </PostIt>
 
             <PostIt
-              type='Försäljning'
+              type='Utställning'
               place='Lorem ipsum'
               date='10/10 - 11/11 2021'
               text='Cotton candy lollipop marzipan chocolate cake macaroon candy cookie gummies.'
@@ -48,13 +44,6 @@ const EventPage = () => {
               place='Lorem ipsum'
               date='8/8 - 18/8 2021'
               text='Sesame snaps fruitcake muffin. Marzipan cookie jelly biscuit brownie caramels cheesecake. '
-            />
-
-            <PostIt
-              type='Utställning'
-              place='Lorem ipsum'
-              date='7/7 - 8/7 2021'
-              text='Jelly-o icing brownie jelly lollipop cupcake cake sweet sweet roll. Soufflé jujubes gummies bonbon wafer bear claw bonbon.'
             />
 
             <SimpleAccordion>
@@ -76,7 +65,7 @@ const EventPage = () => {
 
               <PostIt
                 type='Utställning'
-                place='Örebro Konstahall'
+                place='Örebro Konsthall'
                 date='13/6 - 30/8 2020'
                 text='Trådspår – porträtt av min man.'
               />

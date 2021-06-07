@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import PaletteIcon from '@material-ui/icons/Palette';
 
 import Title from '../components/Title'
 import GalleryCarousel from '../components/GalleryCarousel'
@@ -11,18 +10,11 @@ const CollagePage = () => {
     <Main>
       <MiniDrawer>
         <Title
-          icon={<PaletteIcon
-            style={{
-              fontSize: '50px',
-              color: '#ffffff',
-              marginRight: '10px'
-            }}
-          />}
           title='HANTVERK'
         />
-        <Container>
+        {/* <Container> */}
         <GalleryCarousel />
-        </Container>
+        {/* </Container> */}
       </MiniDrawer>
     </Main>
   )
@@ -31,12 +23,13 @@ const CollagePage = () => {
 export default CollagePage
 
 const Main = styled.main`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   width: 100%;
 `
-const Container = styled.div`
+/* const Container = styled.div`
   width: 100%;
-`
+` */

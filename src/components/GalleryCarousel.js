@@ -36,7 +36,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/collage/grannlåtsbroderi'>
         <ImageContainer style={{ backgroundImage: `url(${img1})` }}>
           <BlurContainer>
+            <Category>
               grannlåtsbroderi
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -44,7 +46,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
+            <Category>
               trådslöjd
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -52,7 +56,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
+            <Category>
               cementgjutning
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -60,7 +66,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
+            <Category>
               fritt broderi
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -68,7 +76,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
+            <Category>
               skinn/läder
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -76,7 +86,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer style={{ backgroundImage: `url(${img6})` }}>
           <BlurContainer>
+            <Category>
               tenntrådsbroderi
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -84,7 +96,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer>
           <BlurContainer>
+            <Category>
               hälsomålning
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -92,7 +106,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer style={{ backgroundImage: `url(${img8})` }}>
           <BlurContainer>
+            <Category>
               bildvävning
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -100,7 +116,9 @@ const GalleryCarousel = () => {
         <GalleryLink to='/'>
         <ImageContainer style={{ backgroundImage: `url(${img9})` }}>
           <BlurContainer>
+            <Category>
               ullprojekt
+            </Category>
           </BlurContainer>
         </ImageContainer>
         </GalleryLink>
@@ -110,27 +128,28 @@ const GalleryCarousel = () => {
   )
 }
 
-
 export default GalleryCarousel
 const Main = styled.div`
-  padding-top: 30px;
-  width: 80vw;
+  padding-top: 80px;
+  width: 72vw;
   height: 60vh;
     @media (min-width: 768px) {
-      padding-top: 60px;
+      width: 84vw;
+    }
+    @media (min-width: 1025px) {
+      width: 100vw;
     }
 `
 const ImageContainer = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   margin: auto;
   background-size: cover;
   overflow: hidden;
-  border: dashed 2px #ffffff;
   border-radius: 12px;
     @media (min-width: 768px) {
-      width: 300px;
-      height: 300px;
+      width: 280px;
+      height: 280px;
     }
     @media (min-width: 1025px) {
       width: 350px;
@@ -139,20 +158,26 @@ const ImageContainer = styled.div`
 `
 const BlurContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
   height: 100%;
+  border: solid 2px #2a2522;
+  border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.5);
 `
 const GalleryLink = styled(Link)`
-  font-family: Lato, sans-serif;
-  font-size: 22px;
-  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
-    @media (min-width: 768px) {
-      font-size: 26px;
-    }
+`
+const Category = styled.h3`
+font-family: Lato, sans-serif;
+font-size: 20px;
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+padding-bottom: 10px;
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
 `

@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-const Title = ({ icon, title }) => {
+const Title = ({ title }) => {
   return (
     <TitleContainer>
-      {icon}
       <TitleText>
         {title}
       </TitleText>
@@ -30,8 +29,11 @@ const TitleText = styled.h1`
   width: 100%;
   margin-bottom: 15px;
   border-bottom: dashed #ffffff 2px;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    } 
     @media (min-width: 1025px) {
-      font-size: 45px;
-      margin-bottom: 30px;
+      font-size: 35px;
+      margin-bottom: 20px;
     }
 `

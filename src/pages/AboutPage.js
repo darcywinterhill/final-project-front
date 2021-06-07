@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import PersonIcon from '@material-ui/icons/Person';
 
 import Backdrop from '../components/Backdrop'
 import MiniDrawer from '../components/MiniDrawer'
@@ -14,14 +13,8 @@ const AboutPage = () => {
     <Main>
       <MiniDrawer>
         <Title
-          icon={<PersonIcon 
-            style={{
-              fontSize: '50px',
-              color: '#ffffff',
-              marginRight: '10px'
-            }}
-          />}
-          title='OM'/>
+          title='OM'
+        />
         <Container>
           <Backdrop
             flex='column'
@@ -106,7 +99,7 @@ const Container = styled.div`
   align-items: center;
 `
 const ProfileImg = styled.div`
-align-self: center;
+  align-self: center;
   width: 120px;
   height: 120px;
   background-image: url(${profileimg});
@@ -121,7 +114,15 @@ align-self: center;
    }
 `
 const TitleText = styled.h2`
-
+  font-size: 16px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+      padding: 0 10px;
+    }
+    @media (min-width: 1025px) {
+      font-size: 22px;
+      padding: 0 30px;
+    }
 `
 const AboutText = styled.p`
   font-size: 14px;

@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
+import PaletteIcon from '@material-ui/icons/Palette'
+import PersonIcon from '@material-ui/icons/Person'
+import EventIcon from '@material-ui/icons/Event'
+import MessageIcon from '@material-ui/icons/Message'
 
 const FrontPage = () => {
   return (
@@ -15,33 +19,37 @@ const FrontPage = () => {
 
           <SectionLink to='/collage'>
           <ListItem>
-          <Icon className="fas fa-palette">
-          </Icon>
-            hantverk
+{/*             <Icon className="fas fa-palette">
+            </Icon> */}
+            <PaletteIcon style={{fontSize: '30px', marginRight: '15px'}}/>
+              hantverk
           </ListItem>
           </SectionLink>
 
           <SectionLink to='/about'>
           <ListItem>
-          <Icon className='far fa-user'>
-          </Icon>
-            om
+            <PersonIcon style={{fontSize: '30px', marginRight: '15px'}}/>
+{/*             <Icon className='far fa-user'>
+            </Icon> */}
+              om
           </ListItem>
           </SectionLink>
 
           <SectionLink to='/events'>
           <ListItem>
-          <Icon className='far fa-calendar-alt'>
-          </Icon>
-            sevärt
+          <EventIcon style={{fontSize: '30px', marginRight: '15px'}}/>
+{/*             <Icon className='far fa-calendar-alt'>
+            </Icon> */}
+              sevärt
           </ListItem>
           </SectionLink>
 
           <SectionLink to='/bulletin'>
           <ListItem>
-          <Icon className='far fa-comment-alt'>
-          </Icon>
-            anslagstavla
+            <MessageIcon style={{fontSize: '30px', marginRight: '15px'}}/>
+{/*             <Icon className='far fa-comment-alt'>
+            </Icon> */}
+              anslagstavla
           </ListItem>
           </SectionLink>
 

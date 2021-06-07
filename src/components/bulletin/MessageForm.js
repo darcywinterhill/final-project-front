@@ -90,7 +90,7 @@ const FormContainer = styled.div`
   background-image: url(${messageimg});
   background-size: cover;
   overflow: hidden;
-  border: dashed 2px #ffffff;
+  
   border-radius: 12px;
   margin-bottom: 15px;
   padding: 15px;

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import MessageIcon from '@material-ui/icons/Message';
 
 import MiniDrawer from '../components/MiniDrawer'
 import Title from '../components/Title'
@@ -14,13 +13,6 @@ const BulletinPage = () => {
     <Main>
       <MiniDrawer>
       <Title
-        icon={<MessageIcon
-          style={{
-            fontSize: '50px',
-            color: '#ffffff',
-            marginRight: '10px'
-          }}
-        />}
         title='ANSLAGSTAVLA'
       />
       <Container>
