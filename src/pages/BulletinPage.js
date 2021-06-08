@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import MiniDrawer from '../components/MiniDrawer'
-/* import Title from '../components/Title' */
 import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
@@ -12,19 +11,14 @@ const BulletinPage = () => {
   return (
     <Main>
       <MiniDrawer>
-{/*       <Title
-        title='ANSLAGSTAVLA'
-      /> */}
-      <Container>
-
-      <BulletinContainer>
-        <MessageForm />
-        <Backdrop
-          width='40vw'>
-        <Messages />
-        </Backdrop>
-      </BulletinContainer>
-      </Container>
+        <Container>
+          <BulletinContainer>
+            <MessageForm />
+            <Backdrop width='40vw'>
+              <Messages />
+            </Backdrop>
+          </BulletinContainer>
+        </Container>
       </MiniDrawer>
     </Main>
   )

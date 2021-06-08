@@ -7,7 +7,7 @@ import EventIcon from '@material-ui/icons/Event'
 import MessageIcon from '@material-ui/icons/Message'
 
 import bgimage from '../assets/fabric-mobile.jpg'
-import Footer from '../components/Footer'
+/* import Footer from '../components/Footer' */
 
 const FrontPage = () => {
   return (
@@ -19,7 +19,6 @@ const FrontPage = () => {
 
       <MenuContainer>
         <Menu>
-
           <SectionLink to='/collage'>
           <ListItem>
             <PaletteIcon
@@ -31,7 +30,6 @@ const FrontPage = () => {
               hantverk
           </ListItem>
           </SectionLink>
-
           <SectionLink to='/about'>
           <ListItem>
             <PersonIcon
@@ -43,7 +41,6 @@ const FrontPage = () => {
               om
           </ListItem>
           </SectionLink>
-
           <SectionLink to='/events'>
           <ListItem>
             <EventIcon
@@ -55,7 +52,6 @@ const FrontPage = () => {
               sevärt
           </ListItem>
           </SectionLink>
-
           <SectionLink to='/bulletin'>
           <ListItem>
             <MessageIcon
@@ -67,27 +63,24 @@ const FrontPage = () => {
               anslagstavla
           </ListItem>
           </SectionLink>
-
         </Menu>
       </MenuContainer>
-              <ShortInfoContainer>
-                <ShortInfo>
-                Välkommen in till en sida med samlad nybörjar- och skaparlust!
-                </ShortInfo>
-                <ShortInfo>
-                   För dig som vill prova, testa, misslyckas och lyckas med hantverk för din egen kreativitets skull
-                  <i
-                    className='fas fa-heart'
-                      style={{
-                        marginLeft: '10px',
-                        color: '#bc0a1e'
-                      }}>
-                  </i>
-                </ShortInfo>
-                
-              </ShortInfoContainer>
-
-    <Footer/>
+      <ShortInfoContainer>
+        <ShortInfo>
+          Välkommen in till en sida med samlad nybörjar- och skaparlust!
+        </ShortInfo>
+        <ShortInfo>
+          För dig som vill prova, testa, misslyckas och lyckas med hantverk för din egen kreativitets skull
+          <i
+            className='fas fa-heart'
+              style={{
+                marginLeft: '10px',
+                color: '#bc0a1e'
+              }}>
+          </i>
+        </ShortInfo>
+      </ShortInfoContainer>
+      {/* <Footer/> */}
     </Main>
   )
 }

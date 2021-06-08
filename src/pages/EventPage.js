@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import MiniDrawer from '../components/MiniDrawer'
-/* import Title from '../components/Title' */
 import Backdrop from '../components/Backdrop'
 import SimpleAccordion from '../components/SimpleAccordion'
 import PostIt from '../components/PostIt'
@@ -12,9 +11,6 @@ const EventPage = () => {
   return (
     <Main>
       <MiniDrawer>
-{/*         <Title
-          title='SEVÄRT'
-        /> */}
         <Container>
           <Backdrop
             flex='row'
@@ -28,13 +24,13 @@ const EventPage = () => {
               date='23/11 - 1/12 2021'
               text='Chocolate apple pie donut apple pie. Croissant marzipan bonbon. Sweet jelly-o apple pie. Jelly beans jelly beans icing jelly beans.'
             >
-              <a
+              <Link
                 href='https://google.com'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                <ReadMoreButton/>
-              </a>
+              </Link>
             </PostIt>
 
             <PostIt
@@ -104,4 +100,9 @@ const Main = styled.main`
 `
 const Container = styled.div`
   width: 100%;
+`
+const Link = styled.a`
+  text-decoration: none;
+  align-self: center;
+  margin: 20px;
 `

@@ -3,7 +3,6 @@ import styled from 'styled-components/macro'
 
 import Backdrop from '../components/Backdrop'
 import MiniDrawer from '../components/MiniDrawer'
-/* import Title from '../components/Title' */
 
 import profileimg from '../assets/lotta.jpg'
 
@@ -12,9 +11,6 @@ const AboutPage = () => {
   return (
     <Main>
       <MiniDrawer>
-{/*         <Title
-          title='OM'
-        /> */}
         <Container>
           <Backdrop
             flex='column'
@@ -78,7 +74,7 @@ const AboutPage = () => {
               Tänk att allt är ett steg framåt.
             </EndText>
           </Backdrop>
-          </Container>
+        </Container>
       </MiniDrawer>
     </Main>
   )
