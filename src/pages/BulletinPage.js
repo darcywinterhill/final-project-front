@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import MiniDrawer from '../components/MiniDrawer'
-import Title from '../components/Title'
+/* import Title from '../components/Title' */
 import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
@@ -12,9 +12,9 @@ const BulletinPage = () => {
   return (
     <Main>
       <MiniDrawer>
-      <Title
+{/*       <Title
         title='ANSLAGSTAVLA'
-      />
+      /> */}
       <Container>
 
       <BulletinContainer>
@@ -33,6 +33,8 @@ const BulletinPage = () => {
 export default BulletinPage
 
 const Main = styled.main`
+  background-color: #2a2522;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

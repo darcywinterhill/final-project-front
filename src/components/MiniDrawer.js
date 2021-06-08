@@ -24,6 +24,8 @@ import HomeIcon from '@material-ui/icons/Home'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import styled from 'styled-components/macro'
 
+import img from '../assets/header.jpg'
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -112,8 +114,9 @@ const MiniDrawer = ({ header, children }) => {
       >
         <Toolbar
           style={{
-            backgroundColor: '#2a2522',
-            height: '75px'
+            backgroundImage: `url(${img})`,
+            backgroundSize: 'cover',
+            height: '100px'
           }}
         >
           <IconButton
@@ -125,12 +128,19 @@ const MiniDrawer = ({ header, children }) => {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon />
+            <MenuIcon 
+              style={{
+                fontSize: '35px'
+              }}/>
           </IconButton>
           <Typography
             variant='h1'
             noWrap
-            style={{fontFamily: 'Lato', fontSize: '30px'}}
+              style={{
+                fontFamily: 'Noto Serif SC',
+                fontSize: '30px',
+                fontWeight: 'bolder'
+              }}
           >
             TANTVERK
           </Typography>
@@ -152,14 +162,24 @@ const MiniDrawer = ({ header, children }) => {
         <div 
           style={{
             backgroundColor: '#2a2522',
-            height: '75px'
+            height: '100px'
           }}
           className={classes.toolbar}
         >
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? 
-            <ChevronRightIcon style={{color: '#ffffff'}}/> :
-            <ChevronLeftIcon style={{color: '#ffffff'}}/>}
+            <ChevronRightIcon
+              style={{
+                color: '#ffffff',
+                fontSize: '35px'
+              }}
+            /> :
+            <ChevronLeftIcon
+              style={{
+                color: '#ffffff',
+                fontSize: '35px'
+              }}
+            />}
           </IconButton>
         </div>
         <Divider />
@@ -271,7 +291,7 @@ const MiniDrawer = ({ header, children }) => {
         </List>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar} style={{paddingTop: '75px'}} />
+        <div className={classes.toolbar} style={{paddingTop: '100px'}} />
           {children}
       </main>
     </div>

@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 
 import Backdrop from '../components/Backdrop'
 import MiniDrawer from '../components/MiniDrawer'
-import Title from '../components/Title'
+/* import Title from '../components/Title' */
 
 import profileimg from '../assets/lotta.jpg'
 
@@ -12,13 +12,13 @@ const AboutPage = () => {
   return (
     <Main>
       <MiniDrawer>
-        <Title
+{/*         <Title
           title='OM'
-        />
+        /> */}
         <Container>
           <Backdrop
             flex='column'
-            width='60vw'
+            width='50vw'
           >
             <ProfileImg />
             <TitleText>
@@ -87,6 +87,8 @@ const AboutPage = () => {
 export default AboutPage
 
 const Main = styled.main`
+  background-color: #2a2522;
+  padding-top: 30px;
   min-height: 100vh;
   width: 100%;
   padding-bottom: 50px;
@@ -99,9 +101,11 @@ const Container = styled.div`
   align-items: center;
 `
 const ProfileImg = styled.div`
+  position: absolute;
+  top: -50px;
   align-self: center;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   background-image: url(${profileimg});
   background-size: cover;
   overflow: hidden;
@@ -114,9 +118,11 @@ const ProfileImg = styled.div`
    }
 `
 const TitleText = styled.h2`
+  margin-top: 90px;
   font-size: 16px;
     @media (min-width: 768px) {
       font-size: 18px;
+      margin-top: 115px;
       padding: 0 10px;
     }
     @media (min-width: 1025px) {

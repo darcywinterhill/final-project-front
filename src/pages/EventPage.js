@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import MiniDrawer from '../components/MiniDrawer'
-import Title from '../components/Title'
+/* import Title from '../components/Title' */
 import Backdrop from '../components/Backdrop'
 import SimpleAccordion from '../components/SimpleAccordion'
 import PostIt from '../components/PostIt'
@@ -12,14 +12,14 @@ const EventPage = () => {
   return (
     <Main>
       <MiniDrawer>
-        <Title
+{/*         <Title
           title='SEVÄRT'
-        />
+        /> */}
         <Container>
           <Backdrop
             flex='row'
             justify='space-evenly'
-            align='center'
+            align='stretch'
             width='60vw'
           >
             <PostIt
@@ -27,10 +27,15 @@ const EventPage = () => {
               place='Lorem ipsum'
               date='23/11 - 1/12 2021'
               text='Chocolate apple pie donut apple pie. Croissant marzipan bonbon. Sweet jelly-o apple pie. Jelly beans jelly beans icing jelly beans.'
-              
             >
-              <ReadMoreButton/>
-              </PostIt>
+              <a
+                href='https://google.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+               <ReadMoreButton/>
+              </a>
+            </PostIt>
 
             <PostIt
               type='Utställning'
@@ -88,14 +93,15 @@ const EventPage = () => {
 export default EventPage
 
 const Main = styled.main`
+  background-color: #2a2522;
+  padding-top: 30px;
   min-height: 100vh;
   width: 100%;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 const Container = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `

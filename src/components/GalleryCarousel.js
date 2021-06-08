@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 import img1 from '../assets/gallery/grannlåtsbroderi.jpg'
+import img2 from '../assets/gallery/trådslöjd.jpg'
+import img4 from '../assets/gallery/broderi.jpg'
 import img6 from '../assets/gallery/tenntrådsslöjd.jpg'
 import img8 from '../assets/gallery/bildvävning.jpg'
 import img9 from '../assets/gallery/ullprojekt.jpg'
@@ -44,7 +46,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer>
+        <ImageContainer style={{ backgroundImage: `url(${img2})` }}>
           <BlurContainer>
             <Category>
               trådslöjd
@@ -64,7 +66,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/'>
-        <ImageContainer>
+        <ImageContainer style={{ backgroundImage: `url(${img4})` }}>
           <BlurContainer>
             <Category>
               fritt broderi
@@ -137,7 +139,7 @@ const Main = styled.div`
       width: 84vw;
     }
     @media (min-width: 1025px) {
-      width: 100vw;
+      width: 90vw;
     }
 `
 const ImageContainer = styled.div`
@@ -156,20 +158,6 @@ const ImageContainer = styled.div`
       height: 350px;
     }
 `
-const BlurContainer = styled.div`
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border: solid 2px #2a2522;
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.5);
-`
-const GalleryLink = styled(Link)`
-  text-decoration: none;
-  text-transform: uppercase;
-`
 const Category = styled.h3`
 font-family: Lato, sans-serif;
 font-size: 20px;
@@ -180,4 +168,24 @@ padding-bottom: 10px;
   @media (min-width: 768px) {
     font-size: 26px;
   }
+`
+const BlurContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: solid #ffffff 2px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+    &:hover ${Category} {
+      color: rgba(0, 0, 0, 0.0);
+    }
+`
+const GalleryLink = styled(Link)`
+  text-decoration: none;
+  text-transform: uppercase;
 `

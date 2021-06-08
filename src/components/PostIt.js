@@ -27,15 +27,14 @@ const PostItContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 90%;
-  min-height: 150px;
+  min-height: 200px;
   background-color: #d6c667;
   padding: 10px;
   margin: 0 15px 15px 15px;
   border-radius: 5px;
   box-shadow: 4px 4px 6px rgba(33,33,33,.7);
     @media (min-width: 768px) {
-      flex: 0 0 44%;
-      min-height: 200px;
+      width: 44%;
     }
     @media (min-width: 1025px) {
       flex: 0 0 28%;

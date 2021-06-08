@@ -6,6 +6,9 @@ import PersonIcon from '@material-ui/icons/Person'
 import EventIcon from '@material-ui/icons/Event'
 import MessageIcon from '@material-ui/icons/Message'
 
+import bgimage from '../assets/fabric-mobile.jpg'
+import Footer from '../components/Footer'
+
 const FrontPage = () => {
   return (
     <Main>
@@ -19,43 +22,72 @@ const FrontPage = () => {
 
           <SectionLink to='/collage'>
           <ListItem>
-{/*             <Icon className="fas fa-palette">
-            </Icon> */}
-            <PaletteIcon style={{fontSize: '30px', marginRight: '15px'}}/>
+            <PaletteIcon
+              style={{
+                fontSize: '35px',
+                marginRight: '15px'
+              }}
+            />
               hantverk
           </ListItem>
           </SectionLink>
 
           <SectionLink to='/about'>
           <ListItem>
-            <PersonIcon style={{fontSize: '30px', marginRight: '15px'}}/>
-{/*             <Icon className='far fa-user'>
-            </Icon> */}
+            <PersonIcon
+              style={{
+                fontSize: '35px',
+                marginRight: '15px'
+              }}
+            />
               om
           </ListItem>
           </SectionLink>
 
           <SectionLink to='/events'>
           <ListItem>
-          <EventIcon style={{fontSize: '30px', marginRight: '15px'}}/>
-{/*             <Icon className='far fa-calendar-alt'>
-            </Icon> */}
+            <EventIcon
+              style={{
+                fontSize: '35px',
+                marginRight: '15px'
+              }}
+            />
               sevärt
           </ListItem>
           </SectionLink>
 
           <SectionLink to='/bulletin'>
           <ListItem>
-            <MessageIcon style={{fontSize: '30px', marginRight: '15px'}}/>
-{/*             <Icon className='far fa-comment-alt'>
-            </Icon> */}
+            <MessageIcon
+              style={{
+                fontSize: '35px',
+                marginRight: '15px'
+              }}
+            />
               anslagstavla
           </ListItem>
           </SectionLink>
 
         </Menu>
       </MenuContainer>
+              <ShortInfoContainer>
+                <ShortInfo>
+                Välkommen in till en sida med samlad nybörjar- och skaparlust!
+                </ShortInfo>
+                <ShortInfo>
+                   För dig som vill prova, testa, misslyckas och lyckas med hantverk för din egen kreativitets skull
+                  <i
+                    className='fas fa-heart'
+                      style={{
+                        marginLeft: '10px',
+                        color: '#bc0a1e'
+                      }}>
+                  </i>
+                </ShortInfo>
+                
+              </ShortInfoContainer>
 
+    <Footer/>
     </Main>
   )
 }
@@ -63,12 +95,16 @@ const FrontPage = () => {
 export default FrontPage
 
 const Main = styled.main`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  background-image: url(${bgimage});
+  background-size: cover;
+  overflow: hidden;
 `
 const HeaderTitle = styled.h1`
   font-family: 'Noto Serif SC', serif;
@@ -90,6 +126,7 @@ const HeaderTitle = styled.h1`
 `
 const MenuContainer = styled.div`
   border-left: dashed #ffffff 2px;
+  padding-bottom: 30px;
     @media (min-width: 768px) {
       border-left: dashed #ffffff 3px;
     }
@@ -102,13 +139,9 @@ const Menu = styled.ul`
   list-style-type: none;
 `
 const ListItem = styled.li`
+  display: flex;
+  align-items: center;
   padding: 6px 0;
-`
-const Icon = styled.i`
-  padding-right: 10px;
-   @media (min-width: 768px) {
-    padding-right: 20px;
-   }
 `
 const SectionLink = styled(Link)`
   font-family: 'Lato', sans-serif;
@@ -127,7 +160,7 @@ const SectionLink = styled(Link)`
       left: 0;
       width: 100%;
       height: 2px;
-      background: #d6c667;
+      background: #ffffff;
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 0.5s;
@@ -138,5 +171,26 @@ const SectionLink = styled(Link)`
     }
     @media (min-width: 768px) {
       font-size: 30px;
+    }
+`
+const ShortInfoContainer = styled.div`
+  width: 80vw;
+  border: dashed #ffffff 2px;
+  padding: 15px;
+  background-color: rgb(42, 37, 34, 0.7);
+    @media (min-width: 768px) {
+      border: dashed #ffffff 3px;
+      padding: 25px;
+    }
+    @media (min-width: 1025px) {
+      width: 45vw;
+    }
+`
+const ShortInfo = styled.p`
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+    @media (min-width: 768px) {
+      font-size: 22px;
     }
 `

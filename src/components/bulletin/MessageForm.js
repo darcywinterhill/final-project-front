@@ -32,7 +32,7 @@ const MessageForm = () => {
       .then(res => res.json())
       .then((res) => {
         if (res) {
-          fetchMessageList()
+          dispatch(fetchMessageList())
         } else {
           dispatch(messages.actions.setErrors())
         }
@@ -90,7 +90,7 @@ const FormContainer = styled.div`
   background-image: url(${messageimg});
   background-size: cover;
   overflow: hidden;
-  
+  border: solid #ffffff 2px;
   border-radius: 12px;
   margin-bottom: 15px;
   padding: 15px;
@@ -147,6 +147,7 @@ const Button = styled.button`
   border: dashed 2px #ffffff;
   border-radius: 10px;
   margin-top: 10px;
+  cursor: pointer;
 `
 const Icon = styled.i`
   margin-left: 10px;

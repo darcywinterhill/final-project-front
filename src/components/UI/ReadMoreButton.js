@@ -16,8 +16,8 @@ const ReadMoreButton = () => {
       size='small'
       className={classes.margin}
         style={{
-          margin: '10px',
-          alignSelf: 'center'
+          margin: '20px',
+          alignSelf: 'center',
         }}
     >
     LÄS MER
