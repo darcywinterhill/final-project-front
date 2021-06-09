@@ -24,7 +24,7 @@ export default messages
 
 export const fetchMessageList = () => {
   return (dispatch) => {
-    fetch(`${MESSAGE_API}?per_page=10&page=1`)
+    fetch(`${MESSAGE_API}?per_page=8&page=1`) //the page nr needs to be a slug
     .then(res => res.json())
     .then(data => {
       if (data) {

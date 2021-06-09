@@ -7,7 +7,7 @@ import EventIcon from '@material-ui/icons/Event'
 import MessageIcon from '@material-ui/icons/Message'
 
 import bgimage from '../assets/fabric-mobile.jpg'
-/* import Footer from '../components/Footer' */
+import patch from '../assets/profilebg.jpg'
 
 const FrontPage = () => {
   return (
@@ -80,7 +80,6 @@ const FrontPage = () => {
           </i>
         </ShortInfo>
       </ShortInfoContainer>
-      {/* <Footer/> */}
     </Main>
   )
 }
@@ -169,8 +168,11 @@ const SectionLink = styled(Link)`
 const ShortInfoContainer = styled.div`
   width: 80vw;
   border: dashed #ffffff 2px;
+  color: #ffffff;
   padding: 15px;
-  background-color: rgb(42, 37, 34, 0.7);
+  background-image: url(${patch});
+  background-size: cover;
+  overflow: hidden;
     @media (min-width: 768px) {
       border: dashed #ffffff 3px;
       padding: 25px;
@@ -181,9 +183,9 @@ const ShortInfoContainer = styled.div`
 `
 const ShortInfo = styled.p`
   font-family: 'Lato', sans-serif;
-  color: #ffffff;
   font-size: 16px;
     @media (min-width: 768px) {
       font-size: 22px;
     }
 `
+/* background-color: rgb(42, 37, 34, 0.7); */
