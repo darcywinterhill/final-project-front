@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 
-import messages, { fetchMessageList } from 'reducers/messages'
+import messages from 'reducers/messages'
 
 import { MESSAGE_API } from 'reusable/urls'
 
@@ -32,7 +32,7 @@ const MessageForm = () => {
       .then(res => res.json())
       .then((res) => {
         if (res) {
-          dispatch(fetchMessageList())
+          dispatch(messages.actions.setSingleMessage(res))
         } else {
           dispatch(messages.actions.setErrors())
         }

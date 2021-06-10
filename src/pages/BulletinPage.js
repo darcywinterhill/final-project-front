@@ -5,6 +5,7 @@ import MiniDrawer from '../components/MiniDrawer'
 import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
+/* import Stepper from '../components/UI/Stepper' */
 
 const BulletinPage = () => {
 
@@ -14,8 +15,12 @@ const BulletinPage = () => {
         <Container>
           <BulletinContainer>
             <MessageForm />
-            <Backdrop width='40vw'>
+            <Backdrop
+              width='40vw'
+              flex='column'
+              align='center'>
               <Messages />
+              {/* <Stepper /> */}
             </Backdrop>
           </BulletinContainer>
         </Container>

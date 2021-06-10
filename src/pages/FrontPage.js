@@ -7,7 +7,6 @@ import EventIcon from '@material-ui/icons/Event'
 import MessageIcon from '@material-ui/icons/Message'
 
 import bgimage from '../assets/fabric-mobile.jpg'
-import patch from '../assets/profilebg.jpg'
 
 const FrontPage = () => {
   return (
@@ -65,7 +64,7 @@ const FrontPage = () => {
           </SectionLink>
         </Menu>
       </MenuContainer>
-      <ShortInfoContainer>
+{/*       <ShortInfoContainer>
         <ShortInfo>
           Välkommen in till en sida med samlad nybörjar- och skaparlust!
         </ShortInfo>
@@ -79,7 +78,7 @@ const FrontPage = () => {
               }}>
           </i>
         </ShortInfo>
-      </ShortInfoContainer>
+      </ShortInfoContainer> */}
     </Main>
   )
 }
@@ -165,14 +164,14 @@ const SectionLink = styled(Link)`
       font-size: 30px;
     }
 `
-const ShortInfoContainer = styled.div`
+/* const ShortInfoContainer = styled.div`
   width: 80vw;
   border: dashed #ffffff 2px;
   color: #ffffff;
   padding: 15px;
-  background-image: url(${patch});
-  background-size: cover;
-  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgb(42, 37, 34, 0.7);
+
     @media (min-width: 768px) {
       border: dashed #ffffff 3px;
       padding: 25px;
@@ -184,8 +183,8 @@ const ShortInfoContainer = styled.div`
 const ShortInfo = styled.p`
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  
     @media (min-width: 768px) {
       font-size: 22px;
     }
-`
-/* background-color: rgb(42, 37, 34, 0.7); */
+` */

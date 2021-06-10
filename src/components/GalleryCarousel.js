@@ -35,7 +35,7 @@ const GalleryCarousel = () => {
     <Main>
       <Carousel responsive={responsive}>
 
-        <GalleryLink to='/collage/grannlåtsbroderi'>
+        <GalleryLink to='/category'>
         <ImageContainer style={{ backgroundImage: `url(${img1})` }}>
           <BlurContainer>
             <Category>
@@ -45,7 +45,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer style={{ backgroundImage: `url(${img2})` }}>
           <BlurContainer>
             <Category>
@@ -55,7 +55,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -65,7 +65,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer style={{ backgroundImage: `url(${img4})` }}>
           <BlurContainer>
             <Category>
@@ -75,7 +75,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -85,7 +85,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer style={{ backgroundImage: `url(${img6})` }}>
           <BlurContainer>
             <Category>
@@ -95,7 +95,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -105,7 +105,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer style={{ backgroundImage: `url(${img8})` }}>
           <BlurContainer>
             <Category>
@@ -115,7 +115,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/'>
+        <GalleryLink to='/category'>
         <ImageContainer style={{ backgroundImage: `url(${img9})` }}>
           <BlurContainer>
             <Category>

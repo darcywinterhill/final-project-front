@@ -15,6 +15,14 @@ const Messages = () => {
     dispatch(fetchMessageList())
   }, [dispatch])
 
+  if (!messageItems) {
+    return (
+      <p>
+        Loading...
+      </p>
+    )
+  } else {
+
   return (
     <MessageContainer>
     {messageItems.map((message) => (
@@ -35,6 +43,7 @@ const Messages = () => {
     </MessageContainer>
 
   )
+}
 }
 
 export default Messages

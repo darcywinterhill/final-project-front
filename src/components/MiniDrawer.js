@@ -24,8 +24,6 @@ import HomeIcon from '@material-ui/icons/Home'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import styled from 'styled-components/macro'
 
-import img from '../assets/header.jpg'
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -114,8 +112,7 @@ const MiniDrawer = ({ header, children }) => {
       >
         <Toolbar
           style={{
-            backgroundImage: `url(${img})`,
-            backgroundSize: 'cover',
+            backgroundColor: '#581314',
             height: '100px'
           }}
         >

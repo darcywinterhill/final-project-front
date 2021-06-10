@@ -14,6 +14,9 @@ const messages = createSlice({
     setMessages: (store, action) => {
       store.messages = action.payload
     },
+    setSingleMessage: (store, action) => {
+      store.messages = [action.payload, ...store.messages]
+    },
     setErrors: (store, action) => {
       store.errors = action.payload
     } 
@@ -24,7 +27,7 @@ export default messages
 
 export const fetchMessageList = () => {
   return (dispatch) => {
-    fetch(`${MESSAGE_API}?per_page=8&page=1`) //the page nr needs to be a slug
+    fetch(MESSAGE_API)
     .then(res => res.json())
     .then(data => {
       if (data) {
