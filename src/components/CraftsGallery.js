@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 import sanityClient from '../client.js'
 
+/* import { useParams } from 'react-router' */
+
+import Loading from '../components/Loading'
+
 //grannlåtsbroderi: f7729ff6-0926-4cf8-8109-5edec479bbf6
 //ullprojekt: e232887b-8932-464a-b705-ff43bf7051dc
 //fritt broderi: 9640773c-73c6-47dd-b9d9-b8b63a93e2d1
@@ -12,15 +16,17 @@ import sanityClient from '../client.js'
 //trådslöjd: 99f6299b-d73d-46e6-a3b4-5566b9c607c6
 //cementgjutning: 55879e1b-2df3-4ec0-ba59-41fda5d3e621
 
-const CraftsGallery = () => {
+const CraftsGallery = ({ id }) => {
 const [category, setCategory] = useState(null)
 const [title, setTitle] = useState(null)
+
+/* const { id } = useParams() */
 
 //hard coded id for both fetches
 useEffect(() => {
   sanityClient
   .fetch(
-    `*[ _type == "post" && references("f7729ff6-0926-4cf8-8109-5edec479bbf6")]{
+    `*[ _type == 'post' && references('f7729ff6-0926-4cf8-8109-5edec479bbf6')] | order(order asc) {
       title,
       mainImage{
         asset->{
@@ -31,27 +37,20 @@ useEffect(() => {
     }`
   )
   .then((data) => setCategory(data))
-  .catch(console.error)
 
   sanityClient
   .fetch(
-    `*[ _type == "category" && _id =="f7729ff6-0926-4cf8-8109-5edec479bbf6"]{
+    `*[ _type == 'category' && _id =='f7729ff6-0926-4cf8-8109-5edec479bbf6']{
       title
     }`
   )
   .then((data) => setTitle(data))
-  .catch(console.error)
-  
 }, [])
 
-if (!title && !category) {
   return (
-    <p>
-      Loading...
-    </p>
-  )
-} else {
-  return (
+    <>
+    {!title && !category ?
+    <Loading /> : (
     <GalleryContainer>
 
     {title?.map((item) => (
@@ -65,7 +64,8 @@ if (!title && !category) {
       <ItemContainer key={item.mainImage.asset._id}>
         <ImageContainer>
         <Image
-          src={item.mainImage.asset.url}/>
+          src={item.mainImage.asset.url}
+          alt={item.slug}/>
         <Name>
           {item.title}
         </Name>
@@ -73,12 +73,13 @@ if (!title && !category) {
       </ItemContainer>
     ))}
     </CollectionContainer>
-
+    
     </GalleryContainer>
-
+    )}
+</>
   )
 }
-}
+
 
 export default CraftsGallery
 
@@ -88,12 +89,12 @@ const GalleryContainer = styled.div`
   align-items: center;
 `
 const CollectionContainer = styled.div`
-@media (min-width: 768px) {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+  justify-content: space-between;
+    &>* {
+      flex: flex: 0 0 33.3333%;
+    }
 `
 const ItemContainer = styled.div`
   margin-bottom: 10px;
@@ -106,51 +107,48 @@ const ItemContainer = styled.div`
     }
 `
 const Heading = styled.h2`
-font-family: 'Lato', sans-serif;
-font-weight: 200;
-font-size: 22px;
-color: #fff;
-padding: 10px;
-text-transform: uppercase;
-  @media (min-width: 768px) {
-    font-size: 34px;
-    padding: 20px;
-  }
-  @media (min-width: 1025px) {
-    font-size: 38px;
-  }
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 34px;
+      padding: 20px;
+    }
+    @media (min-width: 1025px) {
+      font-size: 38px;
+    }
 `
 const ImageContainer = styled.div`
-
+  background-color: #fff;
+  padding: 10px;
 `
 const Image = styled.img`
-width:200px;
-height:200px;
-  @media (min-width: 360px) {
-    width:250px;
-    height:250px;
+  width:200px;
+  height:200px;
+    @media (min-width: 360px) {
+      width:250px;
+      height:250px;
+    }
+    @media (min-width: 400px) {
+      width:300px;
+      height:300px;
+    }
+    @media (min-width: 768px) {
+      width:250px;
+      height:250px;
+    }
+    @media (min-width: 1025px) {
+      width:300px;
+      height:300px;
   }
-  @media (min-width: 400px) {
-    width:300px;
-    height:300px;
-  }
-  @media (min-width: 768px) {
-    width:250px;
-    height:250px;
-  }
-  @media (min-width: 1025px) {
-    width:300px;
-    height:300px;
-  }
-   &:hover {
-    height: auto;
-   }
 `
 const Name = styled.h4`
-background-color: #fff;
-font-size: 14px;
-padding: 5px 0;
-@media (min-width: 768px) {
-  font-size: 16px;
-}
+  font-size: 14px;
+  padding: 5px 0;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
 `

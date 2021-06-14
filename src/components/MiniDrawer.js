@@ -167,13 +167,13 @@ const MiniDrawer = ({ header, children }) => {
             {theme.direction === 'rtl' ? 
             <ChevronRightIcon
               style={{
-                color: '#ffffff',
+                color: '#fff',
                 fontSize: '35px'
               }}
             /> :
             <ChevronLeftIcon
               style={{
-                color: '#ffffff',
+                color: '#fff',
                 fontSize: '35px'
               }}
             />}
@@ -189,11 +189,11 @@ const MiniDrawer = ({ header, children }) => {
             style={{backgroundColor: '#bc0a1e'}}
           >
             <ListItemIcon>
-              <HomeIcon style={{color: '#ffffff'}} />
+              <HomeIcon style={{color: '#fff'}} />
             </ListItemIcon>
             <ListItemText
              primary='HEM'
-             style={{color: '#ffffff'}}
+             style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -205,11 +205,11 @@ const MiniDrawer = ({ header, children }) => {
             style={{backgroundColor: '#d6c667'}}
           >
             <ListItemIcon>
-              <PaletteIcon style={{color: '#ffffff'}}/>
+              <PaletteIcon style={{color: '#fff'}}/>
             </ListItemIcon>
             <ListItemText
               primary='HANTVERK'
-              style={{color: '#ffffff'}}
+              style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -222,12 +222,12 @@ const MiniDrawer = ({ header, children }) => {
           >
             <ListItemIcon>
               <PersonIcon
-                style={{color: '#ffffff'}}
+                style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
               primary='OM'
-              style={{color: '#ffffff'}}
+              style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -240,12 +240,12 @@ const MiniDrawer = ({ header, children }) => {
           >
             <ListItemIcon>
               <EventIcon 
-                style={{color: '#ffffff'}}
+                style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
               primary='SEVÄRT'
-              style={{color: '#ffffff'}}
+              style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -268,7 +268,7 @@ const MiniDrawer = ({ header, children }) => {
           </ListItem>
         </NavLink>
 
-        <MailLink href='mailto:darcy.winterhill@gmail.com'>
+        <MailLink href='mailto:lotta.winkler@gmail.com'>
           <ListItem
             button
             key='KONTAKT'

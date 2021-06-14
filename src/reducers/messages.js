@@ -19,7 +19,7 @@ const messages = createSlice({
     },
     setErrors: (store, action) => {
       store.errors = action.payload
-    } 
+    }
   }
 })
 
@@ -30,14 +30,11 @@ export const fetchMessageList = () => {
     fetch(MESSAGE_API)
     .then(res => res.json())
     .then(data => {
-      if (data) {
-        batch(() => {
-          dispatch(messages.actions.setMessages(data));
-          dispatch(messages.actions.setErrors(null));
-        })
-      } else {
-        dispatch(messages.actions.setErrors(data));
-      }
+      batch(() => {
+        dispatch(messages.actions.setMessages(data));
+        dispatch(messages.actions.setErrors(null));
+      })
     })
+    .catch((error) => dispatch(messages.actions.setErrors(error.message)))
   }
 }

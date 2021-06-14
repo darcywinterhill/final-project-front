@@ -31,7 +31,7 @@ const MessageForm = () => {
     fetch(MESSAGE_API, options)
       .then(res => res.json())
       .then((res) => {
-        if (res) {
+        if (res.ok) {
           dispatch(messages.actions.setSingleMessage(res))
         } else {
           dispatch(messages.actions.setErrors())
@@ -66,15 +66,15 @@ const MessageForm = () => {
           minLength='3'
           maxLength='140'
           required
+          placeholder='Lämna gärna ett litet avtryck...'
           value={messageInput}
           onChange={event => setMessageInput(event.target.value)}
         />
 
-        <Button
-          type='submit'
-        >
+        <Button type='submit'>
           SKICKA MEDDELANDE
-          <Icon className="far fa-paper-plane"></Icon>
+          <Icon className="far fa-paper-plane">
+          </Icon>
         </Button>
 
       </Form>
@@ -90,17 +90,14 @@ const FormContainer = styled.div`
   background-image: url(${messageimg});
   background-size: cover;
   overflow: hidden;
-  border: solid #ffffff 2px;
+  border: solid #fff 2px;
   border-radius: 12px;
   margin-bottom: 15px;
   padding: 15px;
   @media (min-width: 768px) {
     justify-content: flex-end;
   }
-   @media (min-width: 1025px) {
-    width: 20vw;
-    margin-right: 20px;
-  }
+
 `
 const Form = styled.form`
   display: flex;
@@ -109,9 +106,6 @@ const Form = styled.form`
     @media (min-width: 768px) {
       width: 50%;
     }
-    @media (min-width: 1025px) {
-      width: 100%;
-    }
 `
 const Label = styled.label`
   font-family: Lato, sans-serif;
@@ -119,10 +113,7 @@ const Label = styled.label`
   font-weight: bolder;
   color: #2a2522;
     @media (min-width: 768px) {
-      color: #ffffff;
-    }
-    @media (min-width: 1025px) {
-      color: #2a2522;
+      color: #fff;
     }
 `
 const NameInput = styled.input`
@@ -143,8 +134,8 @@ const Button = styled.button`
   height: 50px;
   background-color: #bc0a1e;
   font-family: Lato, sans-serif;
-  color: #ffffff;
-  border: dashed 2px #ffffff;
+  color: #fff;
+  border: dashed 2px #fff;
   border-radius: 10px;
   margin-top: 10px;
   cursor: pointer;

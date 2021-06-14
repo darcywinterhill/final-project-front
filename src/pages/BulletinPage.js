@@ -1,33 +1,45 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 
 import MiniDrawer from '../components/MiniDrawer'
 import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
+import Loading from '../components/Loading'
+
 /* import Stepper from '../components/UI/Stepper' */
 
 const BulletinPage = () => {
+  const messageItems = useSelector(store => store.messages.messages)
 
-  return (
-    <Main>
-      <MiniDrawer>
-        <Container>
-          <BulletinContainer>
-            <MessageForm />
-            <Backdrop
-              width='40vw'
-              flex='column'
-              align='center'>
-              <Messages />
-              {/* <Stepper /> */}
-            </Backdrop>
-          </BulletinContainer>
-        </Container>
-      </MiniDrawer>
-    </Main>
+  return (  
+    <>
+      {!messageItems ?
+      <Loading /> : (
+        <Main>
+          <MiniDrawer>
+            <Container>
+              <BulletinContainer>
+                <MessageForm />
+                <Backdrop
+                  width='60vw'
+                  flex='column'
+                  align='center'
+                >
+                  <Messages />
+                  {/* <Stepper /> */}
+                </Backdrop>
+              </BulletinContainer>
+            </Container>
+          </MiniDrawer>
+        </Main>
+      )}
+    </>
   )
 }
+
+
 
 export default BulletinPage
 
@@ -52,9 +64,9 @@ const BulletinContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-    @media (min-width: 1025px) {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: center;
-    }
+  @media (min-width: 1025px) {
+   
+    align-items: flex-start;
+    justify-content: center;
+  }
 `

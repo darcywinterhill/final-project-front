@@ -14,7 +14,7 @@ const EventPage = () => {
         <Container>
           <Backdrop
             flex='row'
-            justify='space-evenly'
+            justify='center'
             align='stretch'
             width='60vw'
           >

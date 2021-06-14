@@ -35,7 +35,7 @@ const GalleryCarousel = () => {
     <Main>
       <Carousel responsive={responsive}>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/grannlåtsbroderi'>
         <ImageContainer style={{ backgroundImage: `url(${img1})` }}>
           <BlurContainer>
             <Category>
@@ -45,7 +45,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/trådslöjd'>
         <ImageContainer style={{ backgroundImage: `url(${img2})` }}>
           <BlurContainer>
             <Category>
@@ -55,7 +55,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/cementgjurning'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -65,7 +65,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/frittbroderi'>
         <ImageContainer style={{ backgroundImage: `url(${img4})` }}>
           <BlurContainer>
             <Category>
@@ -75,7 +75,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/skinnläder'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -85,7 +85,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/tenntrådsbroderi'>
         <ImageContainer style={{ backgroundImage: `url(${img6})` }}>
           <BlurContainer>
             <Category>
@@ -95,7 +95,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/hälsomålning'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -105,7 +105,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/bildvävning'>
         <ImageContainer style={{ backgroundImage: `url(${img8})` }}>
           <BlurContainer>
             <Category>
@@ -115,7 +115,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category'>
+        <GalleryLink to='/category/ullprojekt'>
         <ImageContainer style={{ backgroundImage: `url(${img9})` }}>
           <BlurContainer>
             <Category>
@@ -130,7 +130,9 @@ const GalleryCarousel = () => {
   )
 }
 
+
 export default GalleryCarousel
+
 const Main = styled.div`
   padding-top: 80px;
   width: 72vw;
@@ -143,6 +145,8 @@ const Main = styled.div`
     }
 `
 const ImageContainer = styled.div`
+display: flex;
+flex-direction: column;
   width: 220px;
   height: 220px;
   margin: auto;
@@ -159,15 +163,18 @@ const ImageContainer = styled.div`
     }
 `
 const Category = styled.h3`
-font-family: Lato, sans-serif;
-font-size: 20px;
-color: #ffffff;
-text-decoration: none;
-text-transform: uppercase;
-padding-bottom: 10px;
-  @media (min-width: 768px) {
-    font-size: 26px;
-  }
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 2px;
+  background-color: rgb(42, 37, 34, 0.5);
+  border-radius: 5px;
+    @media (min-width: 768px) {
+      font-size: 26px;
+    }
 `
 const BlurContainer = styled.div`
   display: flex;
@@ -175,14 +182,15 @@ const BlurContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  border: solid #ffffff 2px;
+  border: solid #fff 2px;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
     &:hover {
       background-color: rgba(0, 0, 0, 0.0);
     }
     &:hover ${Category} {
       color: rgba(0, 0, 0, 0.0);
+      background-color: rgba(0, 0, 0, 0.0);
     }
 `
 const GalleryLink = styled(Link)`

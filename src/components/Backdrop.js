@@ -24,9 +24,18 @@ const Container = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding: 15px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 12px;
+  &>* {
+    flex: flex: 0 0 33.3333%;
+  }
     @media (min-width: 1025px) {
       width: ${props => props.width};
     }
 `
+//grid
+/* display: flex;
+flex-wrap: wrap;
+  &>* {
+    flex: flex: 0 0 33.3333%;
+  } */

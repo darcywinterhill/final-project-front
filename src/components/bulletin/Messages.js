@@ -8,20 +8,12 @@ import { fetchMessageList } from 'reducers/messages'
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
-  
+
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchMessageList())
   }, [dispatch])
-
-  if (!messageItems) {
-    return (
-      <p>
-        Loading...
-      </p>
-    )
-  } else {
 
   return (
     <MessageContainer>
@@ -41,18 +33,17 @@ const Messages = () => {
       </MessageNote>
     ))}
     </MessageContainer>
-
   )
 }
-}
+
 
 export default Messages
 
-//trouble with the flex when testing on really big screen
 const MessageContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
     @media (min-width: 768px) {
       flex-direction: row;
@@ -61,12 +52,12 @@ const MessageContainer = styled.div`
       justify-content: space-evenly;
     }
 `
-
 const MessageNote = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 100%
+  max-width: 200px;
   min-height: 200px;
   background-color: #d6c667;
   border-radius: 5px;
@@ -75,10 +66,12 @@ const MessageNote = styled.div`
   padding: 12px;
     @media (min-width: 768px) {
       width: 45%;
+      max-width: 250px;
       margin: 15px 15px;
     }
     @media (min-width: 1025px) {
-      width: 40%;
+      width: 28%;
+      max-width: 250px;
     }
     @media (min-width: 2000px) {
       width: 30%;

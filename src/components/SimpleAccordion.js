@@ -15,10 +15,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
-}));
+}))
 
 const SimpleAccordion = ({ children }) => {
-  const classes = useStyles();
+  const classes = useStyles()
+
   return (
 
     <div className={classes.root}>
@@ -28,7 +29,9 @@ const SimpleAccordion = ({ children }) => {
           aria-controls='panel1a-content'
           id='panel1a-header'
         >
-          <Typography className={classes.heading}>Tidigare sevärdheter</Typography>
+          <Typography className={classes.heading}>
+            Tidigare sevärdheter
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <PostItContainer>

@@ -64,21 +64,6 @@ const FrontPage = () => {
           </SectionLink>
         </Menu>
       </MenuContainer>
-{/*       <ShortInfoContainer>
-        <ShortInfo>
-          Välkommen in till en sida med samlad nybörjar- och skaparlust!
-        </ShortInfo>
-        <ShortInfo>
-          För dig som vill prova, testa, misslyckas och lyckas med hantverk för din egen kreativitets skull
-          <i
-            className='fas fa-heart'
-              style={{
-                marginLeft: '10px',
-                color: '#bc0a1e'
-              }}>
-          </i>
-        </ShortInfo>
-      </ShortInfoContainer> */}
     </Main>
   )
 }
@@ -164,27 +149,3 @@ const SectionLink = styled(Link)`
       font-size: 30px;
     }
 `
-/* const ShortInfoContainer = styled.div`
-  width: 80vw;
-  border: dashed #ffffff 2px;
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 12px;
-  background-color: rgb(42, 37, 34, 0.7);
-
-    @media (min-width: 768px) {
-      border: dashed #ffffff 3px;
-      padding: 25px;
-    }
-    @media (min-width: 1025px) {
-      width: 45vw;
-    }
-`
-const ShortInfo = styled.p`
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  
-    @media (min-width: 768px) {
-      font-size: 22px;
-    }
-` */
