@@ -157,9 +157,9 @@ flex-direction: column;
       width: 300px;
       height: 300px;
     }
-    @media (min-width: 1025px) {
-      width: 380px;
-      height: 380px;
+    @media (min-width: 1600px) {
+      width: 350px;
+      height: 350px;
     }
 `
 const Category = styled.h3`
