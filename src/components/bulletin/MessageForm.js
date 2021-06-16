@@ -31,7 +31,7 @@ const MessageForm = () => {
     fetch(MESSAGE_API, options)
       .then(res => res.json())
       .then((res) => {
-        if (res.ok) {
+        if (res) {
           dispatch(messages.actions.setSingleMessage(res))
         } else {
           dispatch(messages.actions.setErrors())
