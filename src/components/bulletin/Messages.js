@@ -84,13 +84,16 @@ const ContentContainer = styled.div`
 const MessageText = styled.p`
   color: #2a2522;
   padding: 12px 0;
+  font-size: 14px;
 `
 const MessageName = styled.p`
   color: #2a2522;
   align-self: flex-end;
   font-style: italic;
   padding-bottom: 12px;
+  font-size: 14px;
 `
 const MessageCreatedAt = styled.p`
   color: #2a2522;
+  font-size: 12px;
 `
