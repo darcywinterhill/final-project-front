@@ -135,7 +135,6 @@ const GalleryCarousel = () => {
 export default GalleryCarousel
 
 const Main = styled.div`
-  padding-top: 80px;
   width: 72vw;
   height: 60vh;
     @media (min-width: 768px) {

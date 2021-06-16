@@ -106,6 +106,9 @@ const Form = styled.form`
     @media (min-width: 768px) {
       width: 50%;
     }
+    @media (min-width: 1025px) {
+      width: 35%;
+    }
 `
 const Label = styled.label`
   font-family: Lato, sans-serif;
