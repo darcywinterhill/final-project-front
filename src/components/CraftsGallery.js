@@ -92,7 +92,7 @@ const CollectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0;
     @media (min-width: 768px) {
       flex: 0 0 48%;
