@@ -86,24 +86,24 @@ const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  width: 100%;
 `
 const CollectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
+  justify-content: flex-start;
+  width: 100%;
     @media (min-width: 768px) {
-      flex: 0 0 48%;
+      flex: 0 0 50%;
       &:not(:nth-child(2n+1)) {
-        margin-left: calc( (100% - (48% * 2)) / 1);
+        margin-left: calc( (100% - (50% * 2)) / 1);
       }
     }
     @media (min-width: 1025px) {
-      flex: 0 0 24%;
+      flex: 0 0 25%;
       &:not(:nth-child(4n+1)) {
-        margin-left: calc( (100% - (24% * 4)) / 3);
+        margin-left: calc( (100% - (25% * 4)) / 3);
     }
 `
 const ItemContainer = styled.div`
@@ -111,9 +111,11 @@ const ItemContainer = styled.div`
   padding: 5px;
     @media (min-width: 768px) {
       margin-bottom: 25px;
+      width: 50%;
     }
     @media (min-width: 1025px) {
       padding: 10px;
+      width: 25%;
     }
 `
 const Heading = styled.h2`
@@ -134,27 +136,31 @@ const Heading = styled.h2`
 const ImageContainer = styled.div`
   background-color: #fff;
   padding: 10px;
+  width: 100%;
 `
 const Image = styled.img`
-  width:200px;
-  height:200px;
-    @media (min-width: 360px) {
-      width:250px;
-      height:250px;
-    }
-    @media (min-width: 400px) {
-      width:300px;
-      height:300px;
-    }
-    @media (min-width: 768px) {
-      width:250px;
-      height:250px;
-    }
-    @media (min-width: 1025px) {
-      width:300px;
-      height:300px;
-  }
+  width: 100%;
+  height: auto;
 `
+
+/* width:200px;
+height:200px;
+  @media (min-width: 360px) {
+    width:250px;
+    height:250px;
+  }
+  @media (min-width: 400px) {
+    width:300px;
+    height:300px;
+  }
+  @media (min-width: 768px) {
+    width:250px;
+    height:250px;
+  }
+  @media (min-width: 1025px) {
+    width:300px;
+    height:300px;
+} */
 const Name = styled.h4`
   font-size: 14px;
   padding: 5px 0;

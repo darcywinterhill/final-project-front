@@ -155,12 +155,12 @@ flex-direction: column;
   overflow: hidden;
   border-radius: 12px;
     @media (min-width: 768px) {
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
     }
     @media (min-width: 1025px) {
-      width: 350px;
-      height: 350px;
+      width: 380px;
+      height: 380px;
     }
 `
 const Category = styled.h3`
