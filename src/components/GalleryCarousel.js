@@ -164,7 +164,7 @@ flex-direction: column;
 `
 const Category = styled.h3`
   font-family: Lato, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;

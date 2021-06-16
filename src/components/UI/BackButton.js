@@ -14,8 +14,9 @@ const BackButton = () => {
 export default BackButton
 
 const BackLink = styled.i`
-  font-size: 30px;
+  font-size: 35px;
   color: #fff;
+  margin-top: 20px;
     @media (min-width: 768px) {
       font-size: 50px;
     }
