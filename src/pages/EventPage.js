@@ -25,7 +25,7 @@ const EventPage = () => {
               text='Chocolate apple pie donut apple pie. Croissant marzipan bonbon. Sweet jelly-o apple pie. Jelly beans jelly beans icing jelly beans.'
             >
               <Link
-                href='https://google.com'
+                href='#'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -45,7 +45,15 @@ const EventPage = () => {
               place='Lorem ipsum'
               date='8/8 - 18/8 2021'
               text='Sesame snaps fruitcake muffin. Marzipan cookie jelly biscuit brownie caramels cheesecake. '
-            />
+            >
+              <Link
+                href='#'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+              <ReadMoreButton/>
+              </Link>
+            </PostIt>
 
             <SimpleAccordion>
               <PostIt

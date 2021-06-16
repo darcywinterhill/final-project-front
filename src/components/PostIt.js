@@ -24,8 +24,10 @@ const PostIt = ({ type, place, date, text, children }) => {
 export default PostIt
 
 const PostItContainer = styled.div`
+position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 90%;
   min-height: 200px;
   background-color: #d6c667;
