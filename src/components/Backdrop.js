@@ -26,16 +26,7 @@ const Container = styled.div`
   padding: 15px;
   background-color: #fff;
   border-radius: 12px;
-  &>* {
-    flex: flex: 0 0 33.3333%;
-  }
     @media (min-width: 1025px) {
       width: ${props => props.width};
     }
 `
-//grid
-/* display: flex;
-flex-wrap: wrap;
-  &>* {
-    flex: flex: 0 0 33.3333%;
-  } */

@@ -25,7 +25,7 @@ export const App = () => {
         <Switch>
           <Route path='/' exact component={FrontPage}/>
           <Route path='/collage' component={CollagePage}/>
-          <Route path='/category/:category' component={CraftPage} />${/*add :category after category*/}
+          <Route path='/category/:id' component={CraftPage}/>
           <Route path='/about' component={AboutPage}/>
           <Route path='/events' component={EventPage}/>
           <Route path='/bulletin' component={BulletinPage}/>

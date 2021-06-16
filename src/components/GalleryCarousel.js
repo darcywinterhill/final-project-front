@@ -30,12 +30,13 @@ const GalleryCarousel = () => {
       items: 1
     }
   }
+  
 
   return (
     <Main>
       <Carousel responsive={responsive}>
 
-        <GalleryLink to='/category/grannlåtsbroderi'>
+        <GalleryLink to='/category/f7729ff6-0926-4cf8-8109-5edec479bbf6'>
         <ImageContainer style={{ backgroundImage: `url(${img1})` }}>
           <BlurContainer>
             <Category>
@@ -45,7 +46,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/trådslöjd'>
+        <GalleryLink to='/category/99f6299b-d73d-46e6-a3b4-5566b9c607c6'>
         <ImageContainer style={{ backgroundImage: `url(${img2})` }}>
           <BlurContainer>
             <Category>
@@ -55,7 +56,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/cementgjurning'>
+        <GalleryLink to='/category/55879e1b-2df3-4ec0-ba59-41fda5d3e621'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -65,7 +66,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/frittbroderi'>
+        <GalleryLink to='/category/9640773c-73c6-47dd-b9d9-b8b63a93e2d1'>
         <ImageContainer style={{ backgroundImage: `url(${img4})` }}>
           <BlurContainer>
             <Category>
@@ -75,7 +76,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/skinnläder'>
+        <GalleryLink to='/category/46de1a3e-b774-4de0-9a07-0110ef0fdc36'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -85,7 +86,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/tenntrådsbroderi'>
+        <GalleryLink to='/category/bfba4621-5177-49b9-af53-4483371f12d9'>
         <ImageContainer style={{ backgroundImage: `url(${img6})` }}>
           <BlurContainer>
             <Category>
@@ -95,7 +96,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/hälsomålning'>
+        <GalleryLink to='/category/9957652e-b9f6-4c48-89e3-5e70362499cb'>
         <ImageContainer>
           <BlurContainer>
             <Category>
@@ -105,7 +106,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/bildvävning'>
+        <GalleryLink to='/category/45141845-0597-4154-8428-af9431bb86cd'>
         <ImageContainer style={{ backgroundImage: `url(${img8})` }}>
           <BlurContainer>
             <Category>
@@ -115,7 +116,7 @@ const GalleryCarousel = () => {
         </ImageContainer>
         </GalleryLink>
 
-        <GalleryLink to='/category/ullprojekt'>
+        <GalleryLink to='/category/e232887b-8932-464a-b705-ff43bf7051dc'>
         <ImageContainer style={{ backgroundImage: `url(${img9})` }}>
           <BlurContainer>
             <Category>

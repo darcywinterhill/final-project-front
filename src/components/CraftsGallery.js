@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 import sanityClient from '../client.js'
-
-/* import { useParams } from 'react-router' */
+import { useParams } from 'react-router'
 
 import Loading from '../components/Loading'
 
@@ -16,17 +15,17 @@ import Loading from '../components/Loading'
 //trådslöjd: 99f6299b-d73d-46e6-a3b4-5566b9c607c6
 //cementgjutning: 55879e1b-2df3-4ec0-ba59-41fda5d3e621
 
-const CraftsGallery = ({ id }) => {
+const CraftsGallery = () => {
 const [category, setCategory] = useState(null)
 const [title, setTitle] = useState(null)
 
-/* const { id } = useParams() */
+const { id } = useParams()
 
 //hard coded id for both fetches
 useEffect(() => {
   sanityClient
   .fetch(
-    `*[ _type == 'post' && references('f7729ff6-0926-4cf8-8109-5edec479bbf6')] | order(order asc) {
+    `*[ _type == 'post' && references('${id}')] | order(order asc) {
       title,
       mainImage{
         asset->{
@@ -40,12 +39,12 @@ useEffect(() => {
 
   sanityClient
   .fetch(
-    `*[ _type == 'category' && _id =='f7729ff6-0926-4cf8-8109-5edec479bbf6']{
+    `*[ _type == 'category' && _id =='${id}']{
       title
     }`
   )
   .then((data) => setTitle(data))
-}, [])
+}, [id])
 
   return (
     <>
@@ -87,13 +86,24 @@ const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 `
 const CollectionContainer = styled.div`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-    &>* {
-      flex: flex: 0 0 33.3333%;
+  justify-content: flex-start;
+  margin: 0;
+    @media (min-width: 768px) {
+      flex: 0 0 48%;
+      &:not(:nth-child(2n+1)) {
+        margin-left: calc( (100% - (48% * 2)) / 1);
+      }
+    }
+    @media (min-width: 1025px) {
+      flex: 0 0 24%;
+      &:not(:nth-child(4n+1)) {
+        margin-left: calc( (100% - (24% * 4)) / 3);
     }
 `
 const ItemContainer = styled.div`

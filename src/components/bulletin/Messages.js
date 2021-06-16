@@ -41,9 +41,9 @@ export default Messages
 
 const MessageContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
     @media (min-width: 768px) {
       flex-direction: row;
@@ -56,8 +56,7 @@ const MessageNote = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%
-  max-width: 200px;
+  width: 250px;
   min-height: 200px;
   background-color: #d6c667;
   border-radius: 5px;
