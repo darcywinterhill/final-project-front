@@ -46,6 +46,9 @@ const AboutPage = () => {
               Jag jobbade inom barnomsorgen länge och väl – tyckte om att vara i målarrummet med de små, se deras små alster växa fram.
             </AboutText>
             <AboutText>
+            2009 blev mormor till en flicka som syns ha ärvt mina skapargener - det gläder mig mycket. 2021 blev jag farmor till en liten tös som just nu är ett oskrivet blad - vad hon ska förgylla världen med får tiden utvisa.
+            </AboutText>
+            <AboutText>
               Cirka 2012 bytte jag bana. Jobbar fortfarande med människor, men äldre och med en annan problematik. Trivs bäst när jag får med mig några ner till hantverksrummet och ser hur de, trots olika hinder, kan skapa och få fram alster som är väl värda att njuta av.
             </AboutText>
             <AboutText>

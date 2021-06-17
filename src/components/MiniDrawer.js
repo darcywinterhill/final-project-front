@@ -126,10 +126,14 @@ const MiniDrawer = ({ header, children }) => {
             })}
           >
             <MenuIcon 
-              style={{
-                fontSize: '35px'
-              }}/>
+              style={{fontSize: '35px'}}
+            />
           </IconButton>
+          <Link to='/'
+          style={{
+            color: '#fff',
+            textDecoration: 'none'
+          }}>
           <Typography
             variant='h1'
             noWrap
@@ -141,6 +145,7 @@ const MiniDrawer = ({ header, children }) => {
           >
             TANTVERK
           </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer

@@ -6,6 +6,7 @@ import styled from 'styled-components/macro'
 
 import img1 from '../assets/gallery/grannlåtsbroderi.jpg'
 import img2 from '../assets/gallery/trådslöjd.jpg'
+import img3 from '../assets/gallery/cement.jpeg'
 import img4 from '../assets/gallery/broderi.jpg'
 import img6 from '../assets/gallery/tenntrådsslöjd.jpg'
 import img8 from '../assets/gallery/bildvävning.jpg'
@@ -57,7 +58,7 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/55879e1b-2df3-4ec0-ba59-41fda5d3e621'>
-        <ImageContainer>
+        <ImageContainer style={{ backgroundImage: `url(${img3})` }}>
           <BlurContainer>
             <Category>
               cementgjutning

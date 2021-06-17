@@ -57,10 +57,7 @@ const MessageNote = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 250px;
-  min-height: 200px;
-  background-color: #d6c667;
-  border-radius: 5px;
-  box-shadow: 4px 4px 6px rgba(33,33,33,.7);
+  background-color: #fff;
   margin: 10px 5px;
   padding: 12px;
     @media (min-width: 768px) {
@@ -82,18 +79,29 @@ const ContentContainer = styled.div`
   flex-direction: column;
 `
 const MessageText = styled.p`
+  font-family: 'Shadows Into Light Two', cursive;
   color: #2a2522;
   padding: 12px 0;
-  font-size: 14px;
+  font-size: 16px;
+  @media (min-width: 1025px) {
+    font-size: 18px;
+  }
 `
 const MessageName = styled.p`
+  font-family: 'Shadows Into Light Two', cursive;
   color: #2a2522;
-  align-self: flex-end;
   font-style: italic;
   padding-bottom: 12px;
-  font-size: 14px;
+  font-size: 16px;
+  @media (min-width: 1025px) {
+    font-size: 18px;
+  }
 `
 const MessageCreatedAt = styled.p`
-  color: #2a2522;
+  color: #9e9391;
   font-size: 12px;
+  align-self: flex-end;
+  @media (min-width: 1025px) {
+    font-size: 14px;
+  }
 `
