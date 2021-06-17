@@ -5,7 +5,9 @@ import styled from 'styled-components/macro'
 const BackButton = () => {
   return (
     <NavLink to='/collage'>
-    <BackLink className='fas fa-arrow-alt-circle-left'>
+    <BackLink
+      className='fas fa-arrow-alt-circle-left'
+    >
     </BackLink>
     </NavLink>
   )

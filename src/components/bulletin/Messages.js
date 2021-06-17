@@ -58,7 +58,7 @@ const MessageNote = styled.div`
   justify-content: space-between;
   width: 250px;
   background-color: #faefa5;
-  background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
+  background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
   margin: 10px 5px;
   padding: 12px;
     @media (min-width: 768px) {
@@ -99,7 +99,7 @@ const MessageName = styled.p`
   }
 `
 const MessageCreatedAt = styled.p`
-  color: #9e9391;
+  color: #2a2522;
   font-size: 12px;
   align-self: flex-end;
   @media (min-width: 1025px) {

@@ -22,23 +22,33 @@ const SimpleAccordion = ({ children }) => {
 
   return (
 
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+    >
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel1a-content'
           id='panel1a-header'
           style={{
-            backgroundColor: '#d6c667'
+            backgroundColor: '#989161',
+            backgroundImage: 'url("https://www.transparenttextures.com/patterns/cardboard-flat.png")',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
           }}
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+          >
             Tidigare händelser
           </Typography>
         </AccordionSummary>
         <AccordionDetails
           style={{
-            backgroundColor: '#d6c667'
+            backgroundColor: '#989161',
+            backgroundImage: 'url("https://www.transparenttextures.com/patterns/cardboard-flat.png")',
+            borderBottomLeftRadius: '5px',
+            borderBottomRightRadius: '5px'
           }}>
           <PostItContainer>
             {children}

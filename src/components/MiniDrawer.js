@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   },
   content: {
@@ -102,7 +101,9 @@ const MiniDrawer = ({ header, children }) => {
   }
 
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+    >
       <CssBaseline />
       <AppBar
         position='fixed'
@@ -126,7 +127,9 @@ const MiniDrawer = ({ header, children }) => {
             })}
           >
             <MenuIcon 
-              style={{fontSize: '35px'}}
+              style={{
+                fontSize: '35px'
+              }}
             />
           </IconButton>
           <Link to='/'
@@ -137,11 +140,11 @@ const MiniDrawer = ({ header, children }) => {
           <Typography
             variant='h1'
             noWrap
-              style={{
-                fontFamily: 'Noto Serif SC',
-                fontSize: '30px',
-                fontWeight: 'bolder'
-              }}
+            style={{
+              fontFamily: 'Noto Serif SC',
+              fontSize: '30px',
+              fontWeight: 'bolder'
+            }}
           >
             TANTVERK
           </Typography>
@@ -168,7 +171,9 @@ const MiniDrawer = ({ header, children }) => {
           }}
           className={classes.toolbar}
         >
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton
+            onClick={handleDrawerClose}
+          >
             {theme.direction === 'rtl' ? 
             <ChevronRightIcon
               style={{
@@ -191,14 +196,22 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
             button
             key='HEM'
-            style={{backgroundColor: '#bc0a1e'}}
+            style={{
+              backgroundColor: '#bc0a1e'
+            }}
           >
             <ListItemIcon>
-              <HomeIcon style={{color: '#fff'}} />
+              <HomeIcon
+                style={{
+                  color: '#fff'
+                }}
+              />
             </ListItemIcon>
             <ListItemText
              primary='HEM'
-             style={{color: '#fff'}}
+             style={{
+               color: '#fff'
+              }}
             />
           </ListItem>
         </NavLink>
@@ -207,14 +220,22 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem 
             button
             key='HANTVERK'
-            style={{backgroundColor: '#d6c667'}}
+            style={{
+              backgroundColor: '#d6c667'
+            }}
           >
             <ListItemIcon>
-              <PaletteIcon style={{color: '#fff'}}/>
+              <PaletteIcon
+                style={{
+                  color: '#fff'
+                }}
+              />
             </ListItemIcon>
             <ListItemText
               primary='HANTVERK'
-              style={{color: '#fff'}}
+              style={{
+                color: '#fff'
+              }}
             />
           </ListItem>
         </NavLink>
@@ -223,16 +244,22 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
            button
            key='OM'
-           style={{backgroundColor: '#f65f69'}}
+           style={{
+             backgroundColor: '#f65f69'
+            }}
           >
             <ListItemIcon>
               <PersonIcon
-                style={{color: '#fff'}}
+                style={{
+                  color: '#fff'
+                }}
               />
             </ListItemIcon>
             <ListItemText
               primary='OM'
-              style={{color: '#fff'}}
+              style={{
+                color: '#fff'
+              }}
             />
           </ListItem>
         </NavLink>
@@ -241,16 +268,22 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
             button
             key='SEVÄRT'
-            style={{backgroundColor: '#e70410'}}
+            style={{
+              backgroundColor: '#e70410'
+            }}
           >
             <ListItemIcon>
               <EventIcon 
-                style={{color: '#fff'}}
+                style={{
+                  color: '#fff'
+                }}
               />
             </ListItemIcon>
             <ListItemText
               primary='SEVÄRT'
-              style={{color: '#fff'}}
+              style={{
+                color: '#fff'
+              }}
             />
           </ListItem>
         </NavLink>
@@ -259,41 +292,62 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
             button
             key='ANSLAGSTAVLA'
-            style={{backgroundColor: '#70731b'}}
+            style={{
+              backgroundColor: '#70731b'
+            }}
           >
             <ListItemIcon>
               <MessageIcon
-                style={{color: '#ffffff'}}
+                style={{
+                  color: '#fff'
+                }}
               />
             </ListItemIcon>
             <ListItemText
               primary='ANSLAGSTAVLA'
-              style={{color: '#ffffff'}}
+              style={{
+                color: '#fff'
+              }}
             />
           </ListItem>
         </NavLink>
 
-        <MailLink href='mailto:lotta.winkler@gmail.com'>
+        <MailLink
+          href='mailto:lotta.winkler@gmail.com'
+        >
           <ListItem
             button
             key='KONTAKT'
-            style={{backgroundColor: '#ffffff'}}
+            style={{
+              backgroundColor: '#fff'
+            }}
           >
             <ListItemIcon>
               <MailOutlineIcon
-                style={{color: '#2a2522'}}
+                style={{
+                  color: '#2a2522'
+                }}
               />
             </ListItemIcon>
             <ListItemText
               primary='KONTAKT'
-              style={{color: '#2a2522'}}
+              style={{
+                color: '#2a2522'
+              }}
             />
           </ListItem>
           </MailLink>
         </List>
       </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} style={{paddingTop: '100px'}} />
+      <main
+        className={classes.content}
+      >
+        <div
+          className={classes.toolbar}
+          style={{
+            paddingTop: '100px'
+          }}
+        />
           {children}
       </main>
     </div>

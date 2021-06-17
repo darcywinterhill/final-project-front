@@ -22,28 +22,28 @@ const CraftPage = () => {
 export default CraftPage
 
 const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #2a2522;
   min-height: 100vh;
   width: 100%;
   padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `
 const Container = styled.div`
-width: 60vw;
-display: flex;
-flex-direction: column;
-  @media (min-width: 360px) {
-    width: 70vw;
-  }
-  @media (min-width: 400px) {
-    width: 75vw;
-  }
-  @media (min-width: 768px) {
-    width: 80vw;
-  }
-  @media (min-width: 1025px) {
-    width: 90vw;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+    @media (min-width: 360px) {
+      width: 70vw;
+    }
+    @media (min-width: 400px) {
+      width: 75vw;
+    }
+    @media (min-width: 768px) {
+      width: 80vw;
+    }
+    @media (min-width: 1025px) {
+      width: 90vw;
+    }
 `

@@ -11,13 +11,12 @@ import bgimage from '../assets/fabric-mobile.jpg'
 const FrontPage = () => {
   return (
     <Main>
-
       <HeaderTitle>
         TANTVERK
       </HeaderTitle>
-
       <MenuContainer>
         <Menu>
+
           <SectionLink to='/collage'>
           <ListItem>
             <PaletteIcon
@@ -29,6 +28,7 @@ const FrontPage = () => {
               hantverk
           </ListItem>
           </SectionLink>
+
           <SectionLink to='/about'>
           <ListItem>
             <PersonIcon
@@ -40,6 +40,7 @@ const FrontPage = () => {
               om
           </ListItem>
           </SectionLink>
+
           <SectionLink to='/events'>
           <ListItem>
             <EventIcon
@@ -51,6 +52,7 @@ const FrontPage = () => {
               sevärt
           </ListItem>
           </SectionLink>
+
           <SectionLink to='/bulletin'>
           <ListItem>
             <MessageIcon
@@ -62,6 +64,7 @@ const FrontPage = () => {
               anslagstavla
           </ListItem>
           </SectionLink>
+
         </Menu>
       </MenuContainer>
     </Main>
@@ -84,7 +87,7 @@ const Main = styled.main`
 `
 const HeaderTitle = styled.h1`
   font-family: 'Noto Serif SC', serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 48px;
   border-bottom: dashed white 2px;
   border-right: dashed white 2px;
@@ -92,8 +95,8 @@ const HeaderTitle = styled.h1`
   padding: 0 10px;
     @media (min-width: 768px) {
       font-size: 66px;
-      border-bottom: dashed #ffffff 3px;
-      border-right: dashed #ffffff 3px;
+      border-bottom: dashed #fff 3px;
+      border-right: dashed #fff 3px;
       padding: 0 15px;
     }
     @media (min-width: 1025px) {
@@ -101,10 +104,10 @@ const HeaderTitle = styled.h1`
     }
 `
 const MenuContainer = styled.div`
-  border-left: dashed #ffffff 2px;
+  border-left: dashed #fff 2px;
   padding-bottom: 30px;
     @media (min-width: 768px) {
-      border-left: dashed #ffffff 3px;
+      border-left: dashed #fff 3px;
     }
 `
 const Menu = styled.ul`
@@ -121,7 +124,7 @@ const ListItem = styled.li`
 `
 const SectionLink = styled(Link)`
   font-family: 'Lato', sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 22px;
   text-decoration: none;
   text-transform: uppercase;
@@ -136,7 +139,7 @@ const SectionLink = styled(Link)`
       left: 0;
       width: 100%;
       height: 2px;
-      background: #ffffff;
+      background: #fff;
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 0.5s;

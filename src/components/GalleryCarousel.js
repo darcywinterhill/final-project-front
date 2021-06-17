@@ -38,7 +38,11 @@ const GalleryCarousel = () => {
       <Carousel responsive={responsive}>
 
         <GalleryLink to='/category/f7729ff6-0926-4cf8-8109-5edec479bbf6'>
-        <ImageContainer style={{ backgroundImage: `url(${img1})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img1})`
+          }}
+        >
           <BlurContainer>
             <Category>
               grannlåtsbroderi
@@ -48,7 +52,11 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/99f6299b-d73d-46e6-a3b4-5566b9c607c6'>
-        <ImageContainer style={{ backgroundImage: `url(${img2})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img2})`
+          }}
+        >
           <BlurContainer>
             <Category>
               trådslöjd
@@ -58,7 +66,11 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/55879e1b-2df3-4ec0-ba59-41fda5d3e621'>
-        <ImageContainer style={{ backgroundImage: `url(${img3})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img3})`
+          }}
+        >
           <BlurContainer>
             <Category>
               cementgjutning
@@ -68,7 +80,11 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/9640773c-73c6-47dd-b9d9-b8b63a93e2d1'>
-        <ImageContainer style={{ backgroundImage: `url(${img4})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img4})`
+          }}
+        >
           <BlurContainer>
             <Category>
               fritt broderi
@@ -88,7 +104,11 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/bfba4621-5177-49b9-af53-4483371f12d9'>
-        <ImageContainer style={{ backgroundImage: `url(${img6})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img6})`
+          }}
+        >
           <BlurContainer>
             <Category>
               tenntrådsbroderi
@@ -108,7 +128,11 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/45141845-0597-4154-8428-af9431bb86cd'>
-        <ImageContainer style={{ backgroundImage: `url(${img8})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img8})`
+          }}
+        >
           <BlurContainer>
             <Category>
               bildvävning
@@ -118,7 +142,11 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/e232887b-8932-464a-b705-ff43bf7051dc'>
-        <ImageContainer style={{ backgroundImage: `url(${img9})` }}>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img9})`
+          }}
+        >
           <BlurContainer>
             <Category>
               ullprojekt
@@ -146,8 +174,8 @@ const Main = styled.div`
     }
 `
 const ImageContainer = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 220px;
   height: 220px;
   margin: auto;

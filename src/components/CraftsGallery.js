@@ -5,23 +5,12 @@ import { useParams } from 'react-router'
 
 import Loading from '../components/Loading'
 
-//grannlåtsbroderi: f7729ff6-0926-4cf8-8109-5edec479bbf6
-//ullprojekt: e232887b-8932-464a-b705-ff43bf7051dc
-//fritt broderi: 9640773c-73c6-47dd-b9d9-b8b63a93e2d1
-//bildvävning: 45141845-0597-4154-8428-af9431bb86cd
-//hälsomålning: 9957652e-b9f6-4c48-89e3-5e70362499cb
-//tenntrådsbroderi: bfba4621-5177-49b9-af53-4483371f12d9
-//skinn/läder: 46de1a3e-b774-4de0-9a07-0110ef0fdc36
-//trådslöjd: 99f6299b-d73d-46e6-a3b4-5566b9c607c6
-//cementgjutning: 55879e1b-2df3-4ec0-ba59-41fda5d3e621
-
 const CraftsGallery = () => {
 const [category, setCategory] = useState(null)
 const [title, setTitle] = useState(null)
 
 const { id } = useParams()
 
-//hard coded id for both fetches
 useEffect(() => {
   sanityClient
   .fetch(
@@ -48,37 +37,40 @@ useEffect(() => {
 
   return (
     <>
-    {!title && !category ?
-    <Loading /> : (
-    <GalleryContainer>
+      {!title && !category ?
+      <Loading /> : (
+      <GalleryContainer>
 
-    {title?.map((item) => (
-      <Heading key={item.title}>
-      {item.title}
-    </Heading>
-    ))}
+      {title?.map((item) => (
+        <Heading
+          key={item.title}
+        >
+        {item.title}
+      </Heading>
+      ))}
 
-    <CollectionContainer>
-    {category?.map((item) => (
-      <ItemContainer key={item.mainImage.asset._id}>
-        <ImageContainer>
-        <Image
-          src={item.mainImage.asset.url}
-          alt={item.slug}/>
-        <Name>
-          {item.title}
-        </Name>
-        </ImageContainer>
-      </ItemContainer>
-    ))}
-    </CollectionContainer>
-    
-    </GalleryContainer>
-    )}
-</>
+      <CollectionContainer>
+      {category?.map((item) => (
+        <ItemContainer
+          key={item.mainImage.asset._id}
+        >
+          <ImageContainer>
+          <Image
+            src={item.mainImage.asset.url}
+            alt={item.slug}/>
+          <Name>
+            {item.title}
+          </Name>
+          </ImageContainer>
+        </ItemContainer>
+      ))}
+      </CollectionContainer>
+      
+      </GalleryContainer>
+      )}
+    </>
   )
 }
-
 
 export default CraftsGallery
 
@@ -142,25 +134,6 @@ const Image = styled.img`
   width: 100%;
   height: auto;
 `
-
-/* width:200px;
-height:200px;
-  @media (min-width: 360px) {
-    width:250px;
-    height:250px;
-  }
-  @media (min-width: 400px) {
-    width:300px;
-    height:300px;
-  }
-  @media (min-width: 768px) {
-    width:250px;
-    height:250px;
-  }
-  @media (min-width: 1025px) {
-    width:300px;
-    height:300px;
-} */
 const Name = styled.h4`
   font-size: 14px;
   padding: 5px 0;

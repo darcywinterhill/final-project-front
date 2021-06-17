@@ -73,7 +73,7 @@ const MessageForm = () => {
 
         <Button type='submit'>
           SKICKA MEDDELANDE
-          <Icon className="far fa-paper-plane">
+          <Icon className='far fa-paper-plane'>
           </Icon>
         </Button>
 
