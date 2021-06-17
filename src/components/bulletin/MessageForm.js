@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
+import Swal from 'sweetalert2'
 
 import messages from 'reducers/messages'
 
@@ -31,10 +32,11 @@ const MessageForm = () => {
     fetch(MESSAGE_API, options)
       .then(res => res.json())
       .then((res) => {
-        if (res) {
+        if (res.success) {
           dispatch(messages.actions.setSingleMessage(res))
         } else {
-          dispatch(messages.actions.setErrors())
+          Swal.fire('Ett meddelande får vara mellan 3 och 140 tecken långt.', '🐘')
+          dispatch(messages.actions.setErrors(res))
         }
       })
       setMessageInput('')

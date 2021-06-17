@@ -8,7 +8,9 @@ import img1 from '../assets/gallery/grannlåtsbroderi.jpg'
 import img2 from '../assets/gallery/trådslöjd.jpg'
 import img3 from '../assets/gallery/cement.jpeg'
 import img4 from '../assets/gallery/broderi.jpg'
+import img5 from '../assets/gallery/skinnläder.jpeg'
 import img6 from '../assets/gallery/tenntrådsslöjd.jpg'
+import img7 from '../assets/gallery/hälsomålning.jpg'
 import img8 from '../assets/gallery/bildvävning.jpg'
 import img9 from '../assets/gallery/ullprojekt.jpg'
 
@@ -94,7 +96,10 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/46de1a3e-b774-4de0-9a07-0110ef0fdc36'>
-        <ImageContainer>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img5})`
+          }}>
           <BlurContainer>
             <Category>
               skinn/läder
@@ -118,7 +123,10 @@ const GalleryCarousel = () => {
         </GalleryLink>
 
         <GalleryLink to='/category/9957652e-b9f6-4c48-89e3-5e70362499cb'>
-        <ImageContainer>
+        <ImageContainer
+          style={{
+            backgroundImage: `url(${img7})`
+          }}>
           <BlurContainer>
             <Category>
               hälsomålning
@@ -135,7 +143,7 @@ const GalleryCarousel = () => {
         >
           <BlurContainer>
             <Category>
-              bildvävning
+              vävning
             </Category>
           </BlurContainer>
         </ImageContainer>
