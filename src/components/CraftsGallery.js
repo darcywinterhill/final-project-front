@@ -11,26 +11,28 @@ const [title, setTitle] = useState(null)
 
 const { id } = useParams()
 
-useEffect(() => {
-  sanityClient
-  .fetch(
-    `*[ _type == 'post' && references('${id}')] | order(order asc) {
-      title,
-      mainImage{
-        asset->{
-        _id,
-        url
-        }
-      },
-    }`
-  )
-  .then((data) => setCategory(data))
+  useEffect(() => {
+    sanityClient
+    .fetch(
+      `*[ _type == 'post' && references($id)] | order(order asc) {
+        title,
+        mainImage{
+          asset->{
+          _id,
+          url
+          }
+        },
+      }`,
+      {id}
+    )
+    .then((data) => setCategory(data))
 
   sanityClient
   .fetch(
-    `*[ _type == 'category' && _id =='${id}']{
+    `*[ _type == 'category' && _id ==($id)]{
       title
-    }`
+    }`,
+    {id}
   )
   .then((data) => setTitle(data))
 }, [id])
@@ -101,6 +103,7 @@ const CollectionContainer = styled.div`
 const ItemContainer = styled.div`
   margin-bottom: 10px;
   padding: 5px;
+
     @media (min-width: 768px) {
       margin-bottom: 25px;
       width: 50%;
