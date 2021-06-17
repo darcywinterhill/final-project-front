@@ -28,12 +28,18 @@ const SimpleAccordion = ({ children }) => {
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel1a-content'
           id='panel1a-header'
+          style={{
+            backgroundColor: '#d6c667'
+          }}
         >
           <Typography className={classes.heading}>
-            Tidigare sevärdheter
+            Tidigare händelser
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails
+          style={{
+            backgroundColor: '#d6c667'
+          }}>
           <PostItContainer>
             {children}
           </PostItContainer>

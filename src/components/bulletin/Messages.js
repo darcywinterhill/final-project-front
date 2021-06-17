@@ -57,7 +57,8 @@ const MessageNote = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 250px;
-  background-color: #fff;
+  background-color: #faefa5;
+  background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
   margin: 10px 5px;
   padding: 12px;
     @media (min-width: 768px) {

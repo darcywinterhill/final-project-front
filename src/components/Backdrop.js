@@ -24,7 +24,8 @@ const Container = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding: 15px;
-  background-color: #fff;
+  background-color: #faefa5;
+background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
   border-radius: 12px;
     @media (min-width: 1025px) {
       width: ${props => props.width};

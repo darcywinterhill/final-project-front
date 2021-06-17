@@ -30,7 +30,7 @@ position: relative;
   align-items: flex-start;
   width: 90%;
   min-height: 200px;
-  background-color: #d6c667;
+  background-color: #fff;
   padding: 10px;
   margin: 0 15px 15px 15px;
   border-radius: 5px;
