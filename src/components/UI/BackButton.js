@@ -1,19 +1,15 @@
 import React from 'react'
-import {/*  Link, */ useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
-/* import { HashLink as Link } from 'react-router-hash-link' */
 
 const BackButton = () => {
-  const history = useHistory()
-
   return (
-    /* <NavLink to='/collages'> */
+    <NavLink to='/collage'>
     <BackLink
       className='fas fa-arrow-alt-circle-left'
-      onClick={() => history.goBack()}
     >
     </BackLink>
-    /* </NavLink> */
+    </NavLink>
   )
 }
 
@@ -34,6 +30,6 @@ const BackLink = styled.i`
       margin-left: 7%;
     }
 `
-/* const NavLink = styled(Link)`
+const NavLink = styled(Link)`
   text-decoration: none;
-` */
+`
