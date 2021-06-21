@@ -5,14 +5,16 @@ import moment from 'moment'
 import styled from 'styled-components/macro'
 
 import { MESSAGE_API } from '../../reusable/urls'
+
 import messages from '../../reducers/messages'
+
 import Loading from '../Loading'
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
 
-  const [totalPages, setTotalPages] = useState();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState()
+  const [currentPage, setCurrentPage] = useState(1)
   
   const dispatch = useDispatch()
 
@@ -25,10 +27,10 @@ const Messages = () => {
           dispatch(messages.actions.setMessages(data.messages))
           dispatch(messages.actions.setErrors(null))
 
-          const totalPages = data.totalPages;
+          const totalPages = data.totalPages
           setTotalPages(totalPages)
       
-          const currentPage = data.currentPage;
+          const currentPage = data.currentPage
           setCurrentPage(currentPage)
         })
       } 
@@ -37,11 +39,11 @@ const Messages = () => {
 
 }, [currentPage, dispatch])
 
-  const moveNextPage = () => {
+  const nextPage = () => {
     setCurrentPage(parseInt(currentPage) + 1)
   }
 
-  const movePreviousPage = () => {
+  const previousPage = () => {
     setCurrentPage(parseInt(currentPage) - 1)
   }
 
@@ -68,27 +70,33 @@ const Messages = () => {
         </MessageContainer>
       )}
 
-      <ButtonContainer>
+      <PageContainer>
         <PageText>
           Sida {currentPage} / {totalPages}
         </PageText>
-        <PageButton
-          type='button'
-          onClick={movePreviousPage}
-          disabled={parseInt(currentPage) === 1}
-        >
-          <i className="fas fa-arrow-left">
-          </i>
-        </PageButton>
-        <PageButton
-          type='button'
-          onClick={moveNextPage}
-          disabled={parseInt(currentPage) === totalPages}
-        >
-          <i className='fas fa-arrow-right'>
-          </i>
-        </PageButton>
-      </ButtonContainer>
+        <ButtonContainer>
+          <PageButton
+            type='button'
+            onClick={previousPage}
+            disabled={parseInt(currentPage) === 1}
+          >
+            <Icon
+              className='fas fa-arrow-left'
+            >
+            </Icon>
+          </PageButton>
+          <PageButton
+            type='button'
+            onClick={nextPage}
+            disabled={parseInt(currentPage) === totalPages}
+          >
+            <Icon
+              className='fas fa-arrow-right'
+            >
+            </Icon>
+          </PageButton>
+        </ButtonContainer>
+      </PageContainer>
 
     </>
   )
@@ -163,11 +171,36 @@ const MessageCreatedAt = styled.p`
     font-size: 14px;
   }
 `
+const PageContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 90%;
+margin-top: 25px;
+`
 const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 `
 const PageText = styled.p`
-
 `
-const PageButton = styled.button``
+const PageButton = styled.button`
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+    &:disabled {
+      cursor: context-menu;
+    }
+    @media (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+`
+const Icon = styled.i`
+  font-size: 14px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+`

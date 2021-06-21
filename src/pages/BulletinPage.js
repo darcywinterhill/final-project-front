@@ -6,8 +6,6 @@ import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
 
-/* import Stepper from '../components/UI/Stepper' */
-
 const BulletinPage = () => {
 
   return (  
@@ -22,8 +20,6 @@ const BulletinPage = () => {
               align='center'
             >
               <Messages />
-
-              {/* <Stepper /> */}
             </Backdrop>
           </BulletinContainer>
         </Container>
@@ -31,8 +27,6 @@ const BulletinPage = () => {
     </Main>
   )
 }
-
-
 
 export default BulletinPage
 
