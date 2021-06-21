@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 /* import { useSelector } from 'react-redux' */
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import MobileStepper from '@material-ui/core/MobileStepper'
@@ -37,16 +37,17 @@ const Stepper = () => {
 
   const classes = useStyles();
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [currentPage, setCurrentPage] = useState(1)
+  /* const [activeStep, setActiveStep] = React.useState(0); */
   const maxSteps = Pages.length;
 
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1)
+    setCurrentPage((prevActiveStep) => prevActiveStep + 1)
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1)
+    setCurrentPage((prevActiveStep) => prevActiveStep - 1)
   };
 
   return (
@@ -55,12 +56,12 @@ const Stepper = () => {
         steps={maxSteps}
         position='static'
         variant='text'
-        activeStep={activeStep}
+        currentPage={currentPage}
         nextButton={
           <Button
             size='small'
             onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
+            disabled={currentPage === maxSteps - 1}
           >
             Nästa
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
@@ -70,7 +71,7 @@ const Stepper = () => {
           <Button
             size='small'
             onClick={handleBack}
-            disabled={activeStep === 0}
+            disabled={currentPage === 0}
           >
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             Tillbaka

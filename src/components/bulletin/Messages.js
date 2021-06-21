@@ -1,20 +1,62 @@
   
-import React, { useEffect }  from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect, useState }  from 'react'
+import { useDispatch, useSelector, batch } from 'react-redux'
 import moment from 'moment'
 import styled from 'styled-components/macro'
 
-import { fetchMessageList } from 'reducers/messages'
+import { MESSAGE_API } from '../../reusable/urls'
+import messages from '../../reducers/messages'
+/* import { fetchMessageList } from 'reducers/messages' */
 import Loading from '../Loading'
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
+
+  const [totalPages, setTotalPages] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
   
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchMessageList())
-  }, [dispatch])
+    fetch(`${MESSAGE_API}?page=${currentPage}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        batch(() => {
+          dispatch(messages.actions.setMessages(data))
+          dispatch(messages.actions.setErrors(null))
+
+          const totalPages = data.totalPages;
+          setTotalPages(totalPages)
+      
+          const currentPage = data.currentPage;
+          setCurrentPage(currentPage)
+        })
+      } 
+    })
+    .catch((error) => dispatch(messages.actions.setErrors(error.message)))
+
+}, [currentPage, dispatch])
+
+/*   useEffect(() => {
+    dispatch(fetchMessageList(currentPage))
+
+    const totalPages = totalPages;
+    setTotalPages(totalPages);
+
+    const currentPage = currentPage;
+    setCurrentPage(currentPage);
+
+  }, [dispatch, currentPage])
+
+  */
+  const moveNextPage = () => {
+    setCurrentPage(parseInt(currentPage) + 1);
+  }
+
+  const movePreviousPage = () => {
+    setCurrentPage(parseInt(currentPage) - 1);
+  }
 
   return (
     <>
@@ -38,6 +80,13 @@ const Messages = () => {
           ))}
         </MessageContainer>
       )}
+
+      <div className="page-buttons-container">
+        <p>Page {currentPage} / {totalPages}</p>
+        <button className="page-button" type="button" onClick={movePreviousPage} disabled={parseInt(currentPage) === 1}>Recent Thoughts</button>
+        <button className="page-button" type="button" onClick={moveNextPage} disabled={parseInt(currentPage) === totalPages}>Older Thoughts</button>
+      </div>
+
     </>
   )
 }

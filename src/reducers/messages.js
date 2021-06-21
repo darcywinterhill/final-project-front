@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { batch } from 'react-redux'
+/* import { batch } from 'react-redux'
 
-import { MESSAGE_API } from 'reusable/urls'
+import { MESSAGE_API } from 'reusable/urls' */
 
 const messages = createSlice({
 
@@ -25,12 +25,12 @@ const messages = createSlice({
 
 export default messages
 
-export const fetchMessageList = () => {
+/* export const fetchMessageList = (currentPage) => {
+
   return (dispatch) => {
-    fetch(`${MESSAGE_API}?per_page=8&page=1`)
+    fetch(`${MESSAGE_API}?per_page=8&page=${currentPage}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       batch(() => {
         dispatch(messages.actions.setMessages(data))
         dispatch(messages.actions.setErrors(null))
@@ -38,4 +38,4 @@ export const fetchMessageList = () => {
     })
     .catch((error) => dispatch(messages.actions.setErrors(error.message)))
   }
-}
+} */

@@ -22,6 +22,7 @@ const BulletinPage = () => {
               align='center'
             >
               <Messages />
+
               {/* <Stepper /> */}
             </Backdrop>
           </BulletinContainer>
