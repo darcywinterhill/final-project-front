@@ -8,7 +8,7 @@ import { fetchMessageList } from 'reducers/messages'
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
-
+  
   const dispatch = useDispatch()
 
   useEffect(() => {

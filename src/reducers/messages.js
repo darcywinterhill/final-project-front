@@ -31,7 +31,7 @@ export const fetchMessageList = () => {
     .then(res => res.json())
     .then(data => {
       batch(() => {
-        dispatch(messages.actions.setMessages(data))
+        dispatch(messages.actions.setMessages(data.messages))
         dispatch(messages.actions.setErrors(null))
       })
     })

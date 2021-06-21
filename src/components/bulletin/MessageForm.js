@@ -33,12 +33,12 @@ const MessageForm = () => {
       .then(res => res.json())
       .then((res) => {
         if (res.success) {
-          dispatch(messages.actions.setSingleMessage(res))
+          dispatch(messages.actions.setSingleMessage(res.newMessage))
         } else {
           Swal.fire({
             icon: 'info',
             width: '200px',
-            title: '🐘🐘🐘',
+            title: '',
             text: 'Ett meddelande får vara mellan 3 och 140 tecken långt.',
             })
           dispatch(messages.actions.setErrors(res))
