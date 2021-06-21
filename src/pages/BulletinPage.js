@@ -1,41 +1,33 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 
 import MiniDrawer from '../components/MiniDrawer'
 import Backdrop from '../components/Backdrop'
 import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
-import Loading from '../components/Loading'
 
 /* import Stepper from '../components/UI/Stepper' */
 
 const BulletinPage = () => {
-  const messageItems = useSelector(store => store.messages.messages)
 
   return (  
-    <>
-      {!messageItems ?
-      <Loading /> : (
-        <Main>
-          <MiniDrawer>
-            <Container>
-              <BulletinContainer>
-                <MessageForm />
-                <Backdrop
-                  width='100%'
-                  flex='column'
-                  align='center'
-                >
-                  <Messages />
-                  {/* <Stepper /> */}
-                </Backdrop>
-              </BulletinContainer>
-            </Container>
-          </MiniDrawer>
-        </Main>
-      )}
-    </>
+    <Main>
+      <MiniDrawer>
+        <Container>
+          <BulletinContainer>
+            <MessageForm />
+            <Backdrop
+              width='100%'
+              flex='column'
+              align='center'
+            >
+              <Messages />
+              {/* <Stepper /> */}
+            </Backdrop>
+          </BulletinContainer>
+        </Container>
+      </MiniDrawer>
+    </Main>
   )
 }
 

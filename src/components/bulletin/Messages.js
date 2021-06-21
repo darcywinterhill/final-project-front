@@ -5,6 +5,7 @@ import moment from 'moment'
 import styled from 'styled-components/macro'
 
 import { fetchMessageList } from 'reducers/messages'
+import Loading from '../Loading'
 
 const Messages = () => {
   const messageItems = useSelector(store => store.messages.messages)
@@ -16,23 +17,28 @@ const Messages = () => {
   }, [dispatch])
 
   return (
-    <MessageContainer>
-    {messageItems.map((message) => (
-      <MessageNote key={message._id}>
-        <MessageText>
-          {message.message}
-        </MessageText>
-        <ContentContainer>
-          <MessageName>
-            / {message.name}
-          </MessageName>
-          <MessageCreatedAt>
-            {moment(message.createdAt).fromNow()}
-          </MessageCreatedAt>
-        </ContentContainer>
-      </MessageNote>
-    ))}
-    </MessageContainer>
+    <>
+      {!messageItems.length ?
+      <Loading /> : (
+        <MessageContainer>
+          {messageItems.map((message) => (
+            <MessageNote key={message._id}>
+              <MessageText>
+                {message.message}
+              </MessageText>
+              <ContentContainer>
+                <MessageName>
+                  / {message.name}
+                </MessageName>
+                <MessageCreatedAt>
+                  {moment(message.createdAt).fromNow()}
+                </MessageCreatedAt>
+              </ContentContainer>
+            </MessageNote>
+          ))}
+        </MessageContainer>
+      )}
+    </>
   )
 }
 

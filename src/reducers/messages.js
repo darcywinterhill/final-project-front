@@ -30,8 +30,9 @@ export const fetchMessageList = () => {
     fetch(`${MESSAGE_API}?per_page=8&page=1`)
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       batch(() => {
-        dispatch(messages.actions.setMessages(data.messages))
+        dispatch(messages.actions.setMessages(data))
         dispatch(messages.actions.setErrors(null))
       })
     })
