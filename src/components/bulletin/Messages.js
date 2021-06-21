@@ -6,7 +6,6 @@ import styled from 'styled-components/macro'
 
 import { MESSAGE_API } from '../../reusable/urls'
 import messages from '../../reducers/messages'
-/* import { fetchMessageList } from 'reducers/messages' */
 import Loading from '../Loading'
 
 const Messages = () => {
@@ -23,7 +22,7 @@ const Messages = () => {
     .then(data => {
       if (data.success) {
         batch(() => {
-          dispatch(messages.actions.setMessages(data))
+          dispatch(messages.actions.setMessages(data.messages))
           dispatch(messages.actions.setErrors(null))
 
           const totalPages = data.totalPages;
@@ -38,24 +37,12 @@ const Messages = () => {
 
 }, [currentPage, dispatch])
 
-/*   useEffect(() => {
-    dispatch(fetchMessageList(currentPage))
-
-    const totalPages = totalPages;
-    setTotalPages(totalPages);
-
-    const currentPage = currentPage;
-    setCurrentPage(currentPage);
-
-  }, [dispatch, currentPage])
-
-  */
   const moveNextPage = () => {
-    setCurrentPage(parseInt(currentPage) + 1);
+    setCurrentPage(parseInt(currentPage) + 1)
   }
 
   const movePreviousPage = () => {
-    setCurrentPage(parseInt(currentPage) - 1);
+    setCurrentPage(parseInt(currentPage) - 1)
   }
 
   return (
@@ -81,11 +68,27 @@ const Messages = () => {
         </MessageContainer>
       )}
 
-      <div className="page-buttons-container">
-        <p>Page {currentPage} / {totalPages}</p>
-        <button className="page-button" type="button" onClick={movePreviousPage} disabled={parseInt(currentPage) === 1}>Recent Thoughts</button>
-        <button className="page-button" type="button" onClick={moveNextPage} disabled={parseInt(currentPage) === totalPages}>Older Thoughts</button>
-      </div>
+      <ButtonContainer>
+        <PageText>
+          Sida {currentPage} / {totalPages}
+        </PageText>
+        <PageButton
+          type='button'
+          onClick={movePreviousPage}
+          disabled={parseInt(currentPage) === 1}
+        >
+          <i className="fas fa-arrow-left">
+          </i>
+        </PageButton>
+        <PageButton
+          type='button'
+          onClick={moveNextPage}
+          disabled={parseInt(currentPage) === totalPages}
+        >
+          <i className='fas fa-arrow-right'>
+          </i>
+        </PageButton>
+      </ButtonContainer>
 
     </>
   )
@@ -160,3 +163,11 @@ const MessageCreatedAt = styled.p`
     font-size: 14px;
   }
 `
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const PageText = styled.p`
+
+`
+const PageButton = styled.button``
