@@ -56,13 +56,13 @@ const MessageNote = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 250px;
+  width: 100%;
+  max-width: 400px;
   background-color: #faefa5;
   background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
   margin: 10px 5px;
-  padding: 12px;
     @media (min-width: 768px) {
-      width: 45%;
+      width: 40%;
       max-width: 250px;
       margin: 15px 15px;
     }
@@ -99,9 +99,8 @@ const MessageName = styled.p`
   }
 `
 const MessageCreatedAt = styled.p`
-  color: #2a2522;
+  color: grey;
   font-size: 12px;
-  align-self: flex-end;
   @media (min-width: 1025px) {
     font-size: 14px;
   }

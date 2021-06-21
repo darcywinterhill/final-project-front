@@ -88,7 +88,9 @@ const CollectionContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 370px;
     @media (min-width: 768px) {
+      margin-bottom: 200px;
       flex: 0 0 50%;
       &:not(:nth-child(2n+1)) {
         margin-left: calc( (100% - (50% * 2)) / 1);

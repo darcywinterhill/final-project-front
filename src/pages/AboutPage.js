@@ -49,7 +49,7 @@ const AboutPage = () => {
               Cirka 2012 bytte jag bana. Jobbar fortfarande med människor, men äldre och med en annan problematik. Trivs bäst när jag får med mig några ner till hantverksrummet och ser hur de, trots olika hinder, kan skapa och få fram alster som är väl värda att njuta av.
             </AboutText>
             <AboutText>
-            2009 blev mormor till en flicka som syns ha ärvt mina skapargener - det gläder mig mycket. 2021 blev jag farmor till en liten tös som just nu är ett oskrivet blad - vad hon ska förgylla världen med får tiden utvisa.
+              Augusti -09 blev mormor till en flicka som syns ha ärvt mina skapargener - det gläder mig mycket. I juni -21 blev jag farmor till en liten tös som just nu är ett oskrivet blad - vad hon ska förgylla världen med får tiden utvisa.
             </AboutText>
             <AboutText>
               Nu tillbaka till mitt skapande. Är medlem i Örebro Slöjdförening och har varit med på en hel del av deras endagars "prova-på". Jag har varit med på Hälsomålningskurs och kommer att fortsätta med den. Jag har

@@ -129,7 +129,7 @@ const GalleryCarousel = () => {
           }}>
           <BlurContainer>
             <Category>
-              hälsomålning
+              skapa med färg
             </Category>
           </BlurContainer>
         </ImageContainer>
@@ -173,7 +173,7 @@ export default GalleryCarousel
 
 const Main = styled.div`
   width: 72vw;
-  height: 60vh;
+  
     @media (min-width: 768px) {
       width: 84vw;
     }
@@ -184,8 +184,8 @@ const Main = styled.div`
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   margin: auto;
   background-size: cover;
   overflow: hidden;

@@ -35,7 +35,12 @@ const MessageForm = () => {
         if (res.success) {
           dispatch(messages.actions.setSingleMessage(res))
         } else {
-          Swal.fire('Ett meddelande får vara mellan 3 och 140 tecken långt.', '🐘')
+          Swal.fire({
+            icon: 'info',
+            width: '200px',
+            title: '🐘🐘🐘',
+            text: 'Ett meddelande får vara mellan 3 och 140 tecken långt.',
+            })
           dispatch(messages.actions.setErrors(res))
         }
       })

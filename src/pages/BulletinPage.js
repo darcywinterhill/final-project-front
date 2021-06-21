@@ -23,7 +23,7 @@ const BulletinPage = () => {
               <BulletinContainer>
                 <MessageForm />
                 <Backdrop
-                  width='60vw'
+                  width='100%'
                   flex='column'
                   align='center'
                 >
@@ -56,16 +56,14 @@ const Main = styled.main`
 `
 const Container = styled.div`
   width: 100%;
-    @media (min-width: 1025px) {
-      width: 60vw;
-    }
 `
 const BulletinContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 75vw;
   @media (min-width: 1025px) {
-   
+    width: 60vw;
     align-items: flex-start;
     justify-content: center;
   }

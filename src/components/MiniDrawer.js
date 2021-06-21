@@ -114,7 +114,7 @@ const MiniDrawer = ({ header, children }) => {
         <Toolbar
           style={{
             backgroundColor: '#581314',
-            height: '100px'
+            height: '100px',
           }}
         >
           <IconButton
@@ -341,6 +341,9 @@ const MiniDrawer = ({ header, children }) => {
       </Drawer>
       <main
         className={classes.content}
+        style={{
+          padding: '10px'
+        }}
       >
         <div
           className={classes.toolbar}

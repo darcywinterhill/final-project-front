@@ -56,4 +56,3 @@ input.checkbox-menu[type='checkbox']:checked ~ div.menu-block {
   -o-transition: all 0.25s;
   transition: all 0.25s;
 }
-

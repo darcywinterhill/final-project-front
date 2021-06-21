@@ -4,6 +4,8 @@ import styled from 'styled-components/macro'
 import BackButton from '../components/UI/BackButton'
 import MiniDrawer from '../components/MiniDrawer'
 import CraftsGallery from '../components/CraftsGallery'
+import NavLinks from '../components/UI/NavLinks'
+import Footer from '../components/Footer'
 
 const CraftPage = () => {
 
@@ -12,9 +14,14 @@ const CraftPage = () => {
       <MiniDrawer>
         <Container>
           <CraftsGallery />
-          <BackButton />
+
         </Container>
+
       </MiniDrawer>
+      <Footer>
+          <BackButton/>
+          <NavLinks />
+          </Footer>
     </Main>
   )
 }
@@ -22,17 +29,19 @@ const CraftPage = () => {
 export default CraftPage
 
 const Main = styled.main`
+position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #2a2522;
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 `
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 60vw;
     @media (min-width: 360px) {
       width: 70vw;
