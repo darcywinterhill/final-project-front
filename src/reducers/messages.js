@@ -27,7 +27,7 @@ export default messages
 
 export const fetchMessageList = () => {
   return (dispatch) => {
-    fetch(MESSAGE_API)
+    fetch(`${MESSAGE_API}?per_page=8&page=1`)
     .then(res => res.json())
     .then(data => {
       batch(() => {
