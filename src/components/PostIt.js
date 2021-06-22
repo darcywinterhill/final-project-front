@@ -1,7 +1,13 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-const PostIt = ({ type, place, date, text, children }) => {
+const PostIt = ({
+  type,
+  place,
+  date,
+  text,
+  children
+}) => {
   return (
     <PostItContainer>
       <TypeText>

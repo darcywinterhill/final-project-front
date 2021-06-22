@@ -7,7 +7,6 @@ import MessageForm from '../components/bulletin/MessageForm'
 import Messages from '../components/bulletin/Messages'
 
 const BulletinPage = () => {
-
   return (  
     <Main>
       <MiniDrawer>
@@ -17,8 +16,7 @@ const BulletinPage = () => {
             <Backdrop
               width='100%'
               flex='column'
-              align='center'
-            >
+              align='center'>
               <Messages />
             </Backdrop>
           </BulletinContainer>
@@ -49,9 +47,9 @@ const BulletinContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 75vw;
-  @media (min-width: 1025px) {
-    width: 60vw;
-    align-items: flex-start;
-    justify-content: center;
-  }
+    @media (min-width: 1025px) {
+      width: 60vw;
+      align-items: flex-start;
+      justify-content: center;
+    }
 `

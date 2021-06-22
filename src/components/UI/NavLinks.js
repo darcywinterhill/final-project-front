@@ -76,14 +76,14 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 65%;
-  @media (min-width: 768px) {
-    width: 90%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  @media (min-width: 1025px) {
-    width: 90%;
-    justify-content: space-evenly;
-  }
+    @media (min-width: 768px) {
+      width: 90%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media (min-width: 1025px) {
+      width: 90%;
+      justify-content: space-evenly;
+    }
 `

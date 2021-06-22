@@ -21,10 +21,7 @@ const SimpleAccordion = ({ children }) => {
   const classes = useStyles()
 
   return (
-
-    <div
-      className={classes.root}
-    >
+    <div className={classes.root}>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -35,11 +32,8 @@ const SimpleAccordion = ({ children }) => {
             backgroundImage: 'url("https://www.transparenttextures.com/patterns/cardboard-flat.png")',
             borderTopLeftRadius: '5px',
             borderTopRightRadius: '5px'
-          }}
-        >
-          <Typography
-            className={classes.heading}
-          >
+          }}>
+          <Typography className={classes.heading}>
             Tidigare händelser
           </Typography>
         </AccordionSummary>

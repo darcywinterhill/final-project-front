@@ -6,10 +6,10 @@ import { useParams } from 'react-router'
 import Loading from '../components/Loading'
 
 const CraftsGallery = () => {
-const [category, setCategory] = useState(null)
-const [title, setTitle] = useState(null)
+  const [category, setCategory] = useState(null)
+  const [title, setTitle] = useState(null)
 
-const { id } = useParams()
+  const { id } = useParams()
 
   useEffect(() => {
     sanityClient
@@ -27,48 +27,45 @@ const { id } = useParams()
     )
     .then((data) => setCategory(data))
 
-  sanityClient
-  .fetch(
-    `*[ _type == 'category' && _id ==($id)]{
-      title
-    }`,
-    {id}
-  )
-  .then((data) => setTitle(data))
-}, [id])
+    sanityClient
+    .fetch(
+      `*[ _type == 'category' && _id ==($id)]{
+        title
+      }`,
+      {id}
+    )
+    .then((data) => setTitle(data))
+  }, [id])
 
   return (
     <>
       {!title && !category ?
-      <Loading /> : (
-      <GalleryContainer>
+        <Loading /> : (
+        <GalleryContainer>
 
-      {title?.map((item) => (
-        <Heading
-          key={item.title}
-        >
-        {item.title}
-      </Heading>
-      ))}
-
-      <CollectionContainer>
-      {category?.map((item) => (
-        <ItemContainer
-          key={item.mainImage.asset._id}
-        >
-          <ImageContainer>
-          <Image
-            src={item.mainImage.asset.url}
-            alt={item.slug}/>
-          <Name>
+        {title?.map((item) => (
+          <Heading key={item.title}>
             {item.title}
-          </Name>
-          </ImageContainer>
-        </ItemContainer>
-      ))}
-      </CollectionContainer>
-      
-      </GalleryContainer>
+          </Heading>
+        ))}
+
+        <CollectionContainer>
+          {category?.map((item) => (
+            <ItemContainer key={item.mainImage.asset._id}>
+              <ImageContainer>
+                <Image
+                  src={item.mainImage.asset.url}
+                  alt={item.slug}
+                />
+                <Name>
+                  {item.title}
+                </Name>
+              </ImageContainer>
+            </ItemContainer>
+          ))}
+        </CollectionContainer>
+        
+        </GalleryContainer>
       )}
     </>
   )
@@ -105,7 +102,6 @@ const CollectionContainer = styled.div`
 const ItemContainer = styled.div`
   margin-bottom: 10px;
   padding: 5px;
-
     @media (min-width: 768px) {
       margin-bottom: 25px;
       width: 50%;

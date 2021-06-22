@@ -10,13 +10,11 @@ const CollagePage = () => {
   return (
     <Main>
       <MiniDrawer>
-        
         <GalleryCarousel />
-
       </MiniDrawer>
       <Footer>
         <NavLinks />
-        </Footer>
+      </Footer>
     </Main>
   )
 }

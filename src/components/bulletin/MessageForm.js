@@ -38,10 +38,10 @@ const MessageForm = () => {
           Swal.fire({
             icon: 'info',
             width: '200px',
-            title: '',
+            title: '🐘🐘🐘',
             text: 'Ett meddelande får vara mellan 3 och 140 tecken långt.',
             })
-          dispatch(messages.actions.setErrors(res))
+          dispatch(messages.actions.setErrors(res.errors))
         }
       })
       setMessageInput('')
@@ -101,10 +101,9 @@ const FormContainer = styled.div`
   border-radius: 12px;
   margin-bottom: 15px;
   padding: 15px;
-  @media (min-width: 768px) {
-    justify-content: flex-end;
-  }
-
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
 `
 const Form = styled.form`
   display: flex;

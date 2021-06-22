@@ -16,19 +16,17 @@ const EventPage = () => {
             flex='row'
             justify='center'
             align='stretch'
-            width='60vw'
-          >
+            width='60vw'>
+
             <PostIt
               type='Utställning'
               place='Lorem ipsum'
               date='23/11 - 1/12 2021'
-              text='Chocolate apple pie donut apple pie. Croissant marzipan bonbon. Sweet jelly-o apple pie. Jelly beans jelly beans icing jelly beans.'
-            >
+              text='Chocolate apple pie donut apple pie. Croissant marzipan bonbon. Sweet jelly-o apple pie. Jelly beans jelly beans icing jelly beans.'>
               <Link
                 href='#'
                 target='_blank'
-                rel='noopener noreferrer'
-              >
+                rel='noopener noreferrer'>
                <ReadMoreButton/>
               </Link>
             </PostIt>
@@ -44,13 +42,11 @@ const EventPage = () => {
               type='Försäljning'
               place='Lorem ipsum'
               date='8/8 - 18/8 2021'
-              text='Sesame snaps fruitcake muffin. Marzipan cookie jelly biscuit brownie caramels cheesecake. '
-            >
+              text='Sesame snaps fruitcake muffin. Marzipan cookie jelly biscuit brownie caramels cheesecake.'>
               <Link
                 href='#'
                 target='_blank'
-                rel='noopener noreferrer'
-              >
+                rel='noopener noreferrer'>
               <ReadMoreButton/>
               </Link>
             </PostIt>

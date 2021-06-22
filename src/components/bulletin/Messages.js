@@ -36,8 +36,7 @@ const Messages = () => {
       } 
     })
     .catch((error) => dispatch(messages.actions.setErrors(error.message)))
-
-}, [currentPage, dispatch])
+  }, [currentPage, dispatch])
 
   const nextPage = () => {
     setCurrentPage(parseInt(currentPage) + 1)
@@ -50,7 +49,7 @@ const Messages = () => {
   return (
     <>
       {!messageItems.length ?
-      <Loading /> : (
+        <Loading /> : (
         <MessageContainer>
           {messageItems.map((message) => (
             <MessageNote key={message._id}>
@@ -78,21 +77,15 @@ const Messages = () => {
           <PageButton
             type='button'
             onClick={previousPage}
-            disabled={parseInt(currentPage) === 1}
-          >
-            <Icon
-              className='fas fa-arrow-left'
-            >
+            disabled={parseInt(currentPage) === 1}>
+            <Icon className='fas fa-arrow-left'>
             </Icon>
           </PageButton>
           <PageButton
             type='button'
             onClick={nextPage}
-            disabled={parseInt(currentPage) === totalPages}
-          >
-            <Icon
-              className='fas fa-arrow-right'
-            >
+            disabled={parseInt(currentPage) === totalPages}>
+            <Icon className='fas fa-arrow-right'>
             </Icon>
           </PageButton>
         </ButtonContainer>
@@ -101,7 +94,6 @@ const Messages = () => {
     </>
   )
 }
-
 
 export default Messages
 
@@ -150,9 +142,9 @@ const MessageText = styled.p`
   color: #2a2522;
   padding: 12px 0;
   font-size: 16px;
-  @media (min-width: 1025px) {
-    font-size: 18px;
-  }
+    @media (min-width: 1025px) {
+      font-size: 18px;
+    }
 `
 const MessageName = styled.p`
   font-family: 'Shadows Into Light Two', cursive;
@@ -160,23 +152,23 @@ const MessageName = styled.p`
   font-style: italic;
   padding-bottom: 12px;
   font-size: 16px;
-  @media (min-width: 1025px) {
-    font-size: 18px;
-  }
+    @media (min-width: 1025px) {
+      font-size: 18px;
+    }
 `
 const MessageCreatedAt = styled.p`
   color: grey;
   font-size: 12px;
-  @media (min-width: 1025px) {
-    font-size: 14px;
-  }
+    @media (min-width: 1025px) {
+      font-size: 14px;
+    }
 `
 const PageContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 90%;
-margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-top: 25px;
 `
 const ButtonContainer = styled.div`
   display: flex;

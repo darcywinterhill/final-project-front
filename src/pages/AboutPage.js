@@ -14,8 +14,7 @@ const AboutPage = () => {
         <Container>
           <Backdrop
             flex='column'
-            width='50vw'
-          >
+            width='50vw'>
             <ProfileImg />
             <TitleText>
               Lotta Winkler
@@ -155,21 +154,17 @@ const ItalicText = styled.p`
    @media (min-width: 768px) {
      font-size: 16px;
    }
-   @media (min-width: 1025px) {
-  }
-
 `
 const EndText = styled.p`
   font-size: 16px;
   padding: 15px 0;
   font-style: italic;
   align-self: flex-end;
-   @media (min-width: 768px) {
-     font-size: 18px;
-     padding: 10px;
-   }
-  @media (min-width: 1025px) {
-    padding: 30px;
-  }
-
+    @media (min-width: 768px) {
+      font-size: 18px;
+      padding: 10px;
+    }
+    @media (min-width: 1025px) {
+      padding: 30px;
+    }
 `

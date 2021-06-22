@@ -1,7 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-const Backdrop = ({ children, flex, justify, align, width }) => {
+const Backdrop = ({
+  children,
+  flex,
+  justify,
+  align,
+  width
+}) => {
+  
   return (
     <Container
       flex={flex}

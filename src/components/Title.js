@@ -3,9 +3,9 @@ import styled from 'styled-components/macro'
 
 const Title = ({ title }) => {
   return (
-      <TitleText>
-        {title}
-      </TitleText>
+    <TitleText>
+      {title}
+    </TitleText>
   )
 }
 

@@ -8,20 +8,17 @@ import NavLinks from '../components/UI/NavLinks'
 import Footer from '../components/Footer'
 
 const CraftPage = () => {
-
   return (
     <Main>
       <MiniDrawer>
         <Container>
           <CraftsGallery />
-
         </Container>
-
       </MiniDrawer>
       <Footer>
-          <BackButton/>
-          <NavLinks />
-          </Footer>
+        <BackButton/>
+        <NavLinks />
+      </Footer>
     </Main>
   )
 }
@@ -29,7 +26,7 @@ const CraftPage = () => {
 export default CraftPage
 
 const Main = styled.main`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

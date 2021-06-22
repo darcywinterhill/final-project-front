@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const MiniDrawer = ({ header, children }) => {
+const MiniDrawer = ({ /* header,  */children }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -101,22 +101,18 @@ const MiniDrawer = ({ header, children }) => {
   }
 
   return (
-    <div
-      className={classes.root}
-    >
+    <div className={classes.root}>
       <CssBaseline />
       <AppBar
         position='fixed'
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
-        })}
-      >
+        })}>
         <Toolbar
           style={{
             backgroundColor: '#581314',
             height: '100px',
-          }}
-        >
+          }}>
           <IconButton
             color='inherit'
             aria-label='open drawer'
@@ -124,30 +120,25 @@ const MiniDrawer = ({ header, children }) => {
             edge='start'
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
-            })}
-          >
-            <MenuIcon 
-              style={{
-                fontSize: '35px'
-              }}
+            })}>
+            <MenuIcon style={{fontSize: '35px'}}
             />
           </IconButton>
           <Link to='/'
-          style={{
-            color: '#fff',
-            textDecoration: 'none'
-          }}>
-          <Typography
-            variant='h1'
-            noWrap
             style={{
-              fontFamily: 'Noto Serif SC',
-              fontSize: '30px',
-              fontWeight: 'bolder'
-            }}
-          >
-            TANTVERK
-          </Typography>
+              color: '#fff',
+              textDecoration: 'none'
+            }}>
+            <Typography
+              variant='h1'
+              noWrap
+              style={{
+                fontFamily: 'Noto Serif SC',
+                fontSize: '30px',
+                fontWeight: 'bolder'
+              }}>
+              TANTVERK
+            </Typography>
           </Link>
         </Toolbar>
       </AppBar>
@@ -162,18 +153,14 @@ const MiniDrawer = ({ header, children }) => {
             [classes.drawerOpen]: open,
             [classes.drawerClose]: !open,
           }),
-        }}
-      >
+        }}>
         <div 
           style={{
             backgroundColor: '#2a2522',
             height: '100px'
           }}
-          className={classes.toolbar}
-        >
-          <IconButton
-            onClick={handleDrawerClose}
-          >
+          className={classes.toolbar}>
+          <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? 
             <ChevronRightIcon
               style={{
@@ -196,22 +183,14 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
             button
             key='HEM'
-            style={{
-              backgroundColor: '#bc0a1e'
-            }}
-          >
+            style={{backgroundColor: '#bc0a1e'}}>
             <ListItemIcon>
-              <HomeIcon
-                style={{
-                  color: '#fff'
-                }}
+              <HomeIcon style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
              primary='HEM'
-             style={{
-               color: '#fff'
-              }}
+             style={{ color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -220,22 +199,14 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem 
             button
             key='HANTVERK'
-            style={{
-              backgroundColor: '#d6c667'
-            }}
-          >
+            style={{backgroundColor: '#d6c667'}}>
             <ListItemIcon>
-              <PaletteIcon
-                style={{
-                  color: '#fff'
-                }}
+              <PaletteIcon style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
               primary='HANTVERK'
-              style={{
-                color: '#fff'
-              }}
+              style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -244,15 +215,9 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
            button
            key='OM'
-           style={{
-             backgroundColor: '#f65f69'
-            }}
-          >
+           style={{backgroundColor: '#f65f69'}}>
             <ListItemIcon>
-              <PersonIcon
-                style={{
-                  color: '#fff'
-                }}
+              <PersonIcon style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
@@ -268,22 +233,14 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
             button
             key='SEVÄRT'
-            style={{
-              backgroundColor: '#e70410'
-            }}
-          >
+            style={{backgroundColor: '#e70410'}}>
             <ListItemIcon>
-              <EventIcon 
-                style={{
-                  color: '#fff'
-                }}
+              <EventIcon style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
               primary='SEVÄRT'
-              style={{
-                color: '#fff'
-              }}
+              style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
@@ -292,48 +249,30 @@ const MiniDrawer = ({ header, children }) => {
           <ListItem
             button
             key='ANSLAGSTAVLA'
-            style={{
-              backgroundColor: '#70731b'
-            }}
-          >
+            style={{backgroundColor: '#70731b'}}>
             <ListItemIcon>
-              <MessageIcon
-                style={{
-                  color: '#fff'
-                }}
+              <MessageIcon style={{color: '#fff'}}
               />
             </ListItemIcon>
             <ListItemText
               primary='ANSLAGSTAVLA'
-              style={{
-                color: '#fff'
-              }}
+              style={{color: '#fff'}}
             />
           </ListItem>
         </NavLink>
 
-        <MailLink
-          href='mailto:lotta.winkler@gmail.com'
-        >
+        <MailLink href='mailto:lotta.winkler@gmail.com'>
           <ListItem
             button
             key='KONTAKT'
-            style={{
-              backgroundColor: '#fff'
-            }}
-          >
+            style={{backgroundColor: '#fff'}}>
             <ListItemIcon>
-              <MailOutlineIcon
-                style={{
-                  color: '#2a2522'
-                }}
+              <MailOutlineIcon style={{color: '#2a2522'}}
               />
             </ListItemIcon>
             <ListItemText
               primary='KONTAKT'
-              style={{
-                color: '#2a2522'
-              }}
+              style={{color: '#2a2522'}}
             />
           </ListItem>
           </MailLink>
@@ -341,20 +280,15 @@ const MiniDrawer = ({ header, children }) => {
       </Drawer>
       <main
         className={classes.content}
-        style={{
-          padding: '10px'
-        }}
-      >
+        style={{padding: '10px'}}>
         <div
           className={classes.toolbar}
-          style={{
-            paddingTop: '100px'
-          }}
+          style={{paddingTop: '100px'}}
         />
           {children}
       </main>
     </div>
-  );
+  )
 }
 
 export default MiniDrawer

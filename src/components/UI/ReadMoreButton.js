@@ -14,8 +14,7 @@ const ReadMoreButton = () => {
   return (
     <Button
       size='small'
-      className={classes.margin}
-    >
+      className={classes.margin}>
       LÄS MER
     </Button>
   )

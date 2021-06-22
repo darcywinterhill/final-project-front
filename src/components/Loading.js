@@ -14,21 +14,17 @@ const Loading = () => {
           margin: 'auto'
         }} 
         loop
-        autoplay
-      >
+        autoplay>
       </lottie-player>
     </LottieContainer>
   )
 }
-
 
 export default Loading
 
 const LottieContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
