@@ -166,7 +166,7 @@ const ImageContainer = styled.div`
 `
 const Category = styled.h3`
   font-family: Lato, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;

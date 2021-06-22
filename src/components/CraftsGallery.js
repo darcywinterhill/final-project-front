@@ -55,7 +55,7 @@ const CraftsGallery = () => {
               <ImageContainer>
                 <Image
                   src={item.mainImage.asset.url}
-                  alt={item.slug}
+                  alt={item.title}
                 />
                 <Name>
                   {item.title}

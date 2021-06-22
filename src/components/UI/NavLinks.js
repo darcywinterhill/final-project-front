@@ -49,6 +49,9 @@ const NavLink = styled(Link)`
   margin: 2.5px 10px;
   color: #fff;
   font-size: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
     @media (min-width: 768px) {
       margin: 2.5px 10px 5px 10px;
       font-size: 16px;

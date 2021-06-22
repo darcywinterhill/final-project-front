@@ -24,6 +24,8 @@ import HomeIcon from '@material-ui/icons/Home'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import styled from 'styled-components/macro'
 
+import ScrollToTop from '../components/UI/ScrollToTop'
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -87,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const MiniDrawer = ({ /* header,  */children }) => {
+const MiniDrawer = ({ children }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -101,7 +103,9 @@ const MiniDrawer = ({ /* header,  */children }) => {
   }
 
   return (
+    
     <div className={classes.root}>
+      <ScrollToTop />
       <CssBaseline />
       <AppBar
         position='fixed'

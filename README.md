@@ -31,4 +31,5 @@ Add components in the `src` folder and use them in `src/app.js` to get started.
 
 ## Live
 
-https://tantverk.netlify.app/
+* Frontend: `https://tantverk.netlify.app/`
+* Backend: `https://tantverk.herokuapp.com/`
