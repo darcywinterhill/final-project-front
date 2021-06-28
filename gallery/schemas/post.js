@@ -4,9 +4,9 @@ export default {
   type: 'document',
   fields: [
     {
-      name: "order",
-      title: "Order",
-      type: "number",
+      name: 'order',
+      title: 'Order',
+      type: 'number',
       hidden: true,
     },
     {

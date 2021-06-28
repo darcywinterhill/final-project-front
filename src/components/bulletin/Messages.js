@@ -1,4 +1,3 @@
-  
 import React, { useEffect, useState }  from 'react'
 import { useDispatch, useSelector, batch } from 'react-redux'
 import moment from 'moment'
@@ -20,28 +19,27 @@ const Messages = () => {
 
   useEffect(() => {
     fetch(`${MESSAGE_API}?page=${currentPage}`)
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        batch(() => {
-          dispatch(messages.actions.setMessages(data.messages))
-          dispatch(messages.actions.setErrors(null))
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          batch(() => {
+            dispatch(messages.actions.setMessages(data.messages))
+            dispatch(messages.actions.setErrors(null))
 
-          const totalPages = data.totalPages
-          setTotalPages(totalPages)
-      
-          const currentPage = data.currentPage
-          setCurrentPage(currentPage)
-        })
-      } 
-    })
+            const totalPages = data.totalPages
+            setTotalPages(totalPages)
+            const currentPage = data.currentPage
+            setCurrentPage(currentPage)
+          })
+        } 
+      })
     .catch((error) => dispatch(messages.actions.setErrors(error.message)))
   }, [currentPage, dispatch])
 
   const nextPage = () => {
     setCurrentPage(parseInt(currentPage) + 1)
   }
-
+  
   const previousPage = () => {
     setCurrentPage(parseInt(currentPage) - 1)
   }

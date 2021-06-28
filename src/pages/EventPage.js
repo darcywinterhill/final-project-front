@@ -17,7 +17,8 @@ const EventPage = () => {
             justify='center'
             align='stretch'
             width='60vw'>
-
+            
+            {/*Mockup events and exhibitions to be replaced with real ones later. Dead links atm */}
             <PostIt
               type='Utställning'
               place='Lorem ipsum'

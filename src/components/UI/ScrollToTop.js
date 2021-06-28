@@ -14,4 +14,4 @@ const ScrollToTop = ({ history })=> {
   return (null)
 }
 
-export default withRouter(ScrollToTop)
+export default withRouter(ScrollToTop) 
