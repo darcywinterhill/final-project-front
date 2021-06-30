@@ -26,6 +26,8 @@ At first using a CMS platform was a stretch goal because it was something comple
 
 One of the last things I did was adding the pagination to both the back- and frontend on the bulletin page, only displaying 8 messages at a time.
 
+!Backend deployed on Heroku so hours may run out for the month and then the bulletin board can't connect to the database.
+
 ### Dependencies Frontend
 
 * react
