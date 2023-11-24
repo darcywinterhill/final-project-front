@@ -4,6 +4,8 @@ Final project @ Technigo Bootcamp
 
 This is the final project at Technigo Bootcamp and it's a homepage for my mom and her crafts projects. The project included building both a back- and frontend as well as using Sanity for some content management.
 
+*** NOTE *** Herokuapp is not active - and therefore the bulletin board is not working atm.
+
 ## Process
 
 I started by sketching up a possible structure together with my mom where we decided what kind of features she wanted and which craft categories she wanted to display on the page.
